@@ -1,0 +1,44 @@
+Professor Venkataraman,
+
+I went over my derivations and they seem correct. From the "thesis_parts.pdf" document, paginating according to the document corners, page 19 starts the derivation wrt $\dot q_i$. This generalized coordinate reference incorporates all of the information and the final result does not include $\delta \dot q_i$ anywhere, so I think we are in the clear.
+
+Furthermore, I worked out
+
+\[ -\frac{\text d}{\text dt}\left[ \frac{\partial T}{\partial \dot u} \right] \]
+in terms of $ u = s-(h_v+h_w) $ and I precisely recovered the result when working it out in $u$ then making the substitution, up to the variation on $u$. From there we have
+
+\[ \int_{t_i}^{t_f} -\frac{\text d}{\text dt}\left[ \frac{\partial T}{\partial \dot u} \right]\delta u\text{ d}t = \int_{t_i}^{t_f}\left(-\int_0^L \rho A[\ddot u - \dot \Omega v-\Omega \dot v]\text{ d}x\right)\delta u\text{ d}t, \]
+and given that
+
+\[ \delta u =  \frac{\partial u}{\partial s}\delta s+\frac{\partial u}{\partial h_v}\delta h_v + \frac{\partial u}{\partial h_w}\delta h_w, \]
+we can write
+
+\[ \int_{t_i}^{t_f} -\frac{\text d}{\text dt}\left[ \frac{\partial T}{\partial \dot u} \right]\delta u\text{ d}t = \int_{t_i}^{t_f}\left(-\int_0^L \rho A[\ddot u - \dot \Omega v-\Omega \dot v]\text{ d}x\right)\left(\frac{\partial u}{\partial s}\delta s+\frac{\partial u}{\partial h_v}\delta h_v + \frac{\partial u}{\partial h_w}\delta h_w\right)\text{ d}t, \]
+or equivalently
+
+\[ \int_{t_i}^{t_f} -\frac{\text d}{\text dt}\left[ \frac{\partial T}{\partial \dot u} \right]\delta u\text{ d}t = \int_{t_i}^{t_f}\left(-\int_0^L \rho A[\ddot u - \dot \Omega v-\Omega \dot v]\text{ d}x\right)\left(\delta s - \delta h_v - \delta h_w\right)\text{ d}t. \]
+The computation of $\delta h_v,\delta h_w$ results in
+
+\[ \delta h_v = \frac{1}{2}\int_0^x\delta \tau\text{ d}\eta = \frac{1}{2}\int_0^x\frac{\partial \tau}{\partial v_{\eta}}\delta v_{\eta}\text{ d}\eta, \]
+where
+
+\[\tau = \left(\frac{\partial v}{\partial \eta}\right)^2, \]
+and
+
+\[ v_{\eta} = \frac{\partial v}{\partial \eta}. \]
+Applying integration by parts yields
+
+\[ \delta h_v = \left.v_{\eta}\delta v\right|_0^x - \int_0^x\frac{\partial^2 v}{\partial \eta^2}\delta v\text{ d}\eta. \]
+Substitution yields
+
+\[ \int_{t_i}^{t_f} -\frac{\text d}{\text dt}\left[ \frac{\partial T}{\partial \dot u} \right]\delta u\text{ d}t = \int_{t_i}^{t_f}\left(-\int_0^L \rho A[\ddot u - \dot \Omega v-\Omega \dot v]\text{ d}x\right)\left(\delta s - \left.v_{\eta}\delta v\right|_0^x + \int_0^x\frac{\partial^2 v}{\partial \eta^2}\delta v\text{ d}\eta - \left.w_{\eta}\delta w\right|_0^x + \int_0^x\frac{\partial^2 w}{\partial \eta^2}\delta w\text{ d}\eta\right)\text{ d}t. \]
+Again, we have no $\delta \dot h_v$ or $\delta \dot h_w$ issues, but analysis of the terms
+
+\[ \left.v_{\eta}\delta v\right|_0^x + \int_0^x\frac{\partial^2 v}{\partial \eta^2}\delta v\text{ d}\eta - \left.w_{\eta}\delta w\right|_0^x + \int_0^x\frac{\partial^2 w}{\partial \eta^2}\delta w\text{ d}\eta \]
+poses a problem.
+
+Furthermore, note that these terms are not inside the space integral. Is there something I did wrong in my derivation such that the variation should be all the way inside the space integral? That is the only way I see a possibility in having integration limits $x..L$.
+
+Regards,
+
+James

@@ -1,0 +1,33 @@
+Professor Carretero,
+
+I am stuck in the analysis of the system. I am trying to reconcile differences between my derivation and that of Chung and Yoo. I have attached their paper, as well as the "thesis_parts.pdf" that I have been working on.
+
+I realized that I was missing terms from the kinetic energy equation in both the $v$ and $w$ displacement directions. Last week, Professor Venkataraman helped me see that it was a result of improper treatment of $\delta u$ when substituting for the relationship of $ u = s-(h_v+h_w) $. Given that $h_v,h_w$ depend on $v,w$ (respectively), this adds terms to those corresponding displacement directions. 
+
+Most of the derivation is included in the summary email I sent to Professor Venkataraman, which is attached below. The page from the Chung and Yoo paper that is of interest is page 150, equations 12 and 13. In the paper, the equation numbering doesn't match up nicely, but if you squint and tilt your head it's possible to match numbers with equations.
+
+The missing terms are the integrals. Interestingly, if I perform some voodoo I can get close to having these terms, but I have a few major issues:
+
+1. How is it that Chung and Yoo arrive at integration limits from $x$ to $L$? We have two spatial integrals with which we concern ourselves - one from $0$ to $x$, and one from $0$ to $L$ (over $x$). In other words, we have the following form:
+
+\[ \int_0^L \int_0^x f(\eta) \text{ d}\eta \text{ d}x. \]
+
+Now, this feels like a normal calculus issue, so I feel silly being stuck here given that I can see that
+
+\[ \int_0^L g(x) \text{ d}x = \int_0^x g(\eta)\text{ d}\eta + \int_x^L g(\eta)\text{ d}\eta, \]
+
+but I cannot see how the first integral on the right hand side is zero. 
+
+2. What analysis tool is used to manipulate the following integral?
+
+\[ \int_0^x\frac{\partial^2 v}{\partial \eta^2}\delta v\text{ d}\eta \]
+
+3. How is it that there is a derivative outside of the following product?
+
+\[ \frac{\partial v}{\partial x}\int_L^x F(\xi)\text{ d}\xi \]
+
+Somewhere in all of this alphabet soup is the key to ironing this out. Unfortunately, as Professor Venkataraman and I pored over several papers on this topic, we began to realize that nobody actually performs this calculation and simply states the result.
+
+Regards,
+
+James
