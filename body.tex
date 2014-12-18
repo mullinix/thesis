@@ -12,7 +12,7 @@
 
 \chapter{EQUATIONS OF MOTION}
 \label{chap:eom}
-The equations of motion of the rotating cantilever beam system are developed through the principles of variational approximation as covered in Appendix \ref{app:variations}. The discussion begins by describing the energy equations of the system, then applies variational approximation to formulate the approximating form and applies the discretizing interpolation for a single element two-node system. Finally, the system is expanded to $N$-dimensional form, and the system matrices are formulated.
+The equations of motion of the rotating cantilever beam system are developed through the principles of variational approximation as covered in Appendix \ref{app:variations}. The discussion begins by describing the energy equations of the system, then applies variational approximation to formulate the approximating form and applies the discretizing interpolation for a single element two-node system. Finally, the system is expanded to $N$-dimensional form, and the system matrices are formulated. 
 
 \section{Energy Equations}
 
@@ -199,9 +199,13 @@ The corresponding direction of rotation is the same direction as $v$, so that th
 Plugging Equation \ref{eq:vel.vec} into Equation \ref{eq:kin.int.iso} yields
 \begin{align}
 T &= \frac{1}{2}\rho A\int_{0}^{L}\left\langle(\dot u-\Omega v)\textbf{i}+[\dot v+\Omega(a+x+u)]\textbf{j}+ \dot w\textbf{k}\right\rangle^2\text{ d}x, \\
-  &= \frac{1}{2}\rho A\int_{0}^{L} (\dot u-\Omega v)^2+[\dot v+\Omega\cdot(a+x+u)]^2+\dot w^2\text{ d}x.
+  &= \frac{1}{2}\rho A\int_{0}^{L} (\dot u-\Omega v)^2+[\dot v+\Omega(a+x+u)]^2+\dot w^2\text{ d}x.
   \label{eq:kin.final}
 \end{align}
+
+\begin{comment}
+\textbf{BEGIN BROKEN DOWN POTENTIAL}
+
 Substituting $u,\dot u$ from Eqns.~\ref{eq:stretch.full} and \ref{eq:stretch.full.dt} yields
 \begin{equation}
 T = \frac{1}{2}\rho A\int_{0}^{L} (\dot s-(\dot h_v+\dot h_w)-\Omega v)^2+[\dot v+\Omega(a+x+s-(h_v+h_w))]^2+\dot w^2\text{ d}x.
@@ -239,6 +243,8 @@ Keeping the compact notation of $h,\dot h$ and substituting the expansions into 
 T &= \frac{1}{2}\rho A\int_{0}^{L} \dot s^2-2\dot s(\dot h+\Omega v)+\dot v^2+2\dot v\Omega(a+x+s-h)\\
 &\qquad+2\Omega \dot h v +\Omega^2( v^2+(a+x+s)^2 -2(a+x+s)h)+\dot w^2\text{d}x.\nonumber
 \end{align}
+\textbf{END BROKEN DOWN POTENTIAL}
+\end{comment}
 
 \subsection{Potential Energy}
 
@@ -361,17 +367,59 @@ and write
 \begin{equation}
 \delta J = \int_{t_0}^{t_1}\int_{0}^{L}\delta\hat T - \delta\hat U\text{ d}x\text{ d}t.
 \end{equation}
-
-We now move to generalized coordinate frame $q_i$, where subscript $i$ represents the different coordinate directions. In the kinetic energy expression given by Eqn.~\ref{eq:kin.final}, there are five dynamic expressions to consider: $\dot u, \dot v, \dot w, u, v$. In the generalized coordinates, this corresponds to $\dot q_i$, for $i=\{1,2,3\}$, and $q_i$, for $i=\{1,2\}$. When the chain rule is applied to the variation operator, we find
+The chain rule for the variational operator requires that each independent variable of the function under variation is considered. For the kinetic energy, we have that
 \begin{equation}
-\delta \hat T(\dot q_i,q_i) = \frac{\partial \hat T}{\partial \dot q_i}\delta \dot q_i+\frac{\partial \hat T}{\partial q_i}\delta q_i.
-\label{eq:kinetic.variation.initial}
+\hat T = \hat T(u,\dot u,v,\dot v,w,\dot w),
 \end{equation}
+which yields 
+\begin{equation}
+\delta \hat T = \sum_{p_i}\frac{\partial \hat T}{\partial p_i}\delta p_i+\frac{\partial \hat T}{\partial \dot{p_i}}\delta \dot{p_i},\qquad p_i\in\{u,v,w\}.
+\end{equation}
+Note that there isn't explicitly a function $w$ in $\hat T$, but including this term for ease of notation is harmless since $\frac{\partial\hat T}{\partial w}=0$. For the potential energy function, we have that
+\begin{equation}
+\hat U = \hat U(s_x,v_{xx},w_{xx}),
+\end{equation}
+which yields 
+\begin{equation}
+\delta \hat U = \sum_{q_j}\frac{\partial \hat U}{\partial q_j}\delta q_j,\qquad q_j\in\{s_x,v_{xx},w_{xx}\}.
+\end{equation}
+In order to properly formulate the Lagrangian of the system, we must transform these coordinates so that terms are given in $\delta s,\delta v,\delta w$. Integration by parts shall be employed in various ways in order to derive the Lagrangian in this form.
+
+We first introduce a tool to transform products by way of integration by parts. The assumptions are strict and specific, but are well suited for problems in this domain, since they always apply to cantilever beams.
+
+\begin{lemma}
+Let $f$ be an integrable function in the domain $[0,L]$ and define $F = \int f(x)\text{ d}x$ on $[0,L]$. If $F(0) = f(L) = 0$, then given the integrable function $g$,
+\begin{equation}
+I = \int_0^L\left(\int_0^xg(\xi)\text{ d}\xi\right)f(x)\text{ d}x = \int_0^L\left(\int_L^xf(\xi)\text{ d}\xi\right)g(x)\text{ d}x.
+\end{equation}
+\label{lem:switch.integrals}
+\end{lemma}
+\begin{proof}
+We perform integration by parts as follows. Let
+\[\alpha = \int_0^xg(\xi)\text{ d}\xi.\]
+Then
+\[\text{d}\alpha = g(x)\text{ d}x\]
+by the Fundamental Theorem of Calculus. Let
+\[\text{d}\beta = f(x)\text{ d}x.\]
+Then
+\[\beta = F(x).\]
+Applying the integration by parts formula, we have
+\begin{equation*}
+\begin{array}{rcll}
+I &=&  \left.\int_0^xg(\xi)\text{ d}\xi F(x)\right|_0^L - \int_0^LF(x)g(x)\text{ d}x & \\
+  &=&  \int_0^Lg(x)\text{ d}xF(L) - \int_0^LF(x)g(x)\text{ d}x &\text{(since $F(0)=0$)} \\
+  &=&  \int_0^LF(L)g(x)\text{ d}x - \int_0^LF(x)g(x)\text{ d}x &\text{(since $F(L)$ is constant)} \\
+  &=&  \int_0^L[F(L)-F(x)]g(x)\text{ d}x &\text{(by linearity)} \\
+  &=&  \int_0^L\left(\int_L^xf(\xi)\text{ d}\xi\right)g(x)\text{ d}x &\text{(by definition of $F$)} \\
+\end{array}
+\end{equation*}
+\end{proof}
+
 Since time, $t$ and space, $x$ are independent of each other, the iterated integrals may be switched, and we may write the variation on $\hat T$ as follows.
 \begin{equation}
 \int_{t_0}^{t_1}\int_0^L\delta\hat T\text{ d}x\text{ d}t = \int_0^L\int_{t_0}^{t_1}\delta\hat T\text{ d}t\text{ d}x.
 \end{equation}
-In Eqn.~\ref{eq:kinetic.variation.initial}, the variation on the $\dot q_i$ components yields the variation $\delta \dot q_i$. However, in order for variations to be applied so that the test function vanishes, all variation test functions must be in the same form. To accomplish this, the $\dot q_i$ term is integrated by using integration by parts. This is accomplished by utilizing the time integral; the spatial integral shall be excluded for brevity.
+The term for $q_i=u$ has special properties and we shall consider those properties later; we first analyze $q_i\in\{v,w\}$. The $\dot q_i$ term is integrated by using integration by parts. This is accomplished by utilizing the time integral; the spatial integral shall be excluded for brevity.
 First, write out the full variation on the kinetic energy:
 \begin{equation}
 \int_{t_0}^{t_1}\delta\hat T(\dot q_i,q_i)\text{ d}t = \int_{t_0}^{t_1}\frac{\partial\hat T}{\partial \dot q_i}\delta \dot q_i\text{ d}t+\int_{t_0}^{t_1}\frac{\partial\hat T}{\partial q_i}\delta q_i\text{ d}t.
@@ -414,65 +462,8 @@ We now reintroduce the spatial integral and switch the order of integration so t
 \begin{equation}
 \int_{t_0}^{t_1}\int_0^L\delta\hat T(\dot q_i,q_i)\text{ d}x\text{ d}t = \int_{t_0}^{t_1}\int_0^x\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial\hat T}{\partial \dot q_i}\right]+\frac{\partial\hat T}{\partial q_i}\right\rbrace\delta q_i\text{ d}x\text{ d}t.
 \end{equation}
-Considering that the displacement $u$ is a function of $s,h_v,h_w$, we must analyze the special case of $\delta u$. The Chain Rule for Variations yields that given that
-\begin{equation}
-u = u(s,h_v,h_w) = s-(h_v+h_w),
-\end{equation}
-we write the variation of $u$ as
-\begin{equation}
-\delta u = \frac{\partial u}{\partial s}\delta s+\frac{\partial u}{\partial h_v}\delta h_v+\frac{\partial u}{\partial h_w}\delta h_w = \delta s - \delta h_v - \delta h_w.
-\label{eq:variation.u}
-\end{equation}
-The variations $\delta h_v$ and $\delta h_w$ are not in the proper frame; that is, we need variations on $s,v,w$ only. Since $h_v,h_w$ are functions of $v,w$ respectively, we can calculate the variations as follows.
-\begin{equation}
-\delta h_v = \delta \frac{1}{2} \int_0^x\left(\frac{\partial v}{\partial \eta}\right)^2\text{ d}\eta.
-\end{equation}
-Let 
-\begin{equation}
-\tau = \left(\frac{\partial v}{\partial \eta}\right)^2.
-\end{equation}
-Then
-\begin{equation}
-\delta h_v = \delta \frac{1}{2} \int_0^x \tau \text{ d}\eta,
-\end{equation}
-and the Chain Rule for Variations yields
-\begin{equation}
-\delta h_v = \frac{1}{2}\int_0^x \frac{\partial \tau}{\partial v_{\eta}}\delta v_{\eta}\text{ d}\eta,
-\end{equation}
-where $v_{\eta}$ is the partial derivative of $v$ with respect to $\eta$. We now perform integration by parts. Let
-\begin{equation}
-\alpha = \frac{\partial \tau}{\partial v_\eta}.
-\end{equation}
-Then
-\begin{equation}
-\text d\alpha = \frac{\text d}{\text d\eta}\left(\frac{\partial \tau}{\partial v_\eta}\right)\text{ d}\eta.
-\end{equation}
-Let
-\begin{equation}
-\text d\beta = \delta v_\eta\text{ d}\eta.
-\end{equation}
-Then
-\begin{equation}
-\beta = \int \frac{\text d}{\text d\eta}\delta v\text{ d}\eta = \delta v.
-\end{equation}
-Applying the integration by parts formula yields
-\begin{equation}
-\frac{1}{2}\int_0^x \frac{\partial \tau}{\partial v_{\eta}}\delta v_{\eta}\text{ d}\eta = \left.\frac{\partial \tau}{\partial v_\eta}\delta v\right|_0^x - \frac{1}{2}\int_0^x\frac{\text d}{\text d\eta}\left(\frac{\partial \tau}{\partial v_\eta}\right)\delta v\text{ d}\eta.
-\end{equation}
-The first term on the right side enforces boundary conditions; the conditions will require this term to be zero. The second term is computed to be
-\begin{equation}
-\frac{1}{2}\int_0^x\frac{\text d}{\text d\eta}\left(\frac{\partial \tau}{\partial v_\eta}\right)\delta v\text{ d}\eta = \int_0^x v_{\eta\eta}\delta v\text{ d}\eta,
-\end{equation}
-and excluding the boundary condition term, we have
-\begin{equation}
-\delta h_v = -\int_0^x \frac{\partial^2 v}{\partial \eta^2}\delta v\text{ d}\eta.
-\end{equation}
-The process is identical for $\delta h_w$, thus plugging into Eqn.~\ref{eq:variation.u} we have
-\begin{equation}
-\delta u = \delta s + \int_0^x \frac{\partial^2 v}{\partial \eta^2}\delta v\text{ d}\eta + \int_0^x \frac{\partial^2 w}{\partial \eta^2}\delta w\text{ d}\eta.
-\label{eq:variation.u.final}
-\end{equation}
-In our analysis we may now substitute this result for $\delta u$ and continue the process for strain energy.
+
+We now continue the process for strain energy.
 
 The strain energy $U$ yields differing variation fields which must be converted to be in the $q_i$ form.
 
@@ -589,12 +580,15 @@ Combining the kinetic and strain energy variations, we have
 \begin{equation}
 \int_{t_0}^{t_1}\delta L\text{ d}t = \int_{t_0}^{t_1}\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot q_i}\right]+\frac{\partial T}{\partial q_i} - \frac{\text d^2}{\text dx^2}\left[\frac{\partial U}{\partial q_{xx_i}}\right]+\frac{\text d}{\text dx}\left[\frac{\partial  U}{\partial q_{x_i}}\right]\right\rbrace\delta q_i\text{ d}t+\text{B.C.'s}.
 \end{equation}
+
+\begin{comment}
+
+
 We now consider the special case of $\delta u$. In this case, we have
 \begin{equation}
 \int_{t_0}^{t_1}\delta L\text{ d}t = \int_{t_0}^{t_1}\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot u}\right]+\frac{\partial T}{\partial u} - \frac{\text d^2}{\text dx^2}\left[\frac{\partial U}{\partial u_{xx}}\right]+\frac{\text d}{\text dx}\left[\frac{\partial  U}{\partial u_x}\right]\right\rbrace\delta u\text{ d}t+\text{B.C.'s}.
 \end{equation}
 
-\begin{comment}
 Considering the special circumstances involving $\delta u$, we shall now express this result for the $u$ direction by substituting in $\delta u$ from Eqn.~\ref{eq:variation.u.final}, and expressing the variation in terms of $s$.
 
 We have
@@ -604,6 +598,7 @@ We have
 & &\qquad \cdot\left[\delta s + \int_0^x\frac{\partial^2 v}{\partial \eta^2}\delta v\text{ d}\eta + \int_0^x\frac{\partial^2 w}{\partial \eta^2}\delta w\text{ d}\eta\right]\text{ d}t+ \text{B.C.'s}. \nonumber
 \end{eqnarray}
 \end{comment}
+
 This formulation, provided the B.C.'s are properly satisfied, is to be minimized. Thus, we set
 \begin{equation}
 \int_{t_0}^{t_1}\delta L\text{ d}t = 0,
@@ -616,6 +611,162 @@ so that, given the arbitrary nature of the test function $q_i$, it must be true 
 These are known as the \emph{Euler-Lagrange Equations}. This expression describes the motion of the system.
 
 \subsection{System Analysis}
+Considering that the displacement $u$ is a function of $s,h_v,h_w$, we must analyze the special case of $\delta u$. The Chain Rule for Variations yields that given that
+\begin{equation}
+u = u(s,h_v,h_w) = s-(h_v+h_w),
+\end{equation}
+we write the variation of $u$ as
+\begin{equation}
+\delta u = \frac{\partial u}{\partial s}\delta s+\frac{\partial u}{\partial h_v}\delta h_v+\frac{\partial u}{\partial h_w}\delta h_w = \delta s - \delta h_v - \delta h_w.
+\label{eq:variation.u}
+\end{equation}
+Similarly, given that
+\begin{equation}
+\dot{u} = \dot{u}(\dot s,\dot h_v, \dot h_w) = \dot s - (\dot h_v+\dot h_w),
+\end{equation}
+we write the variation of $\dot u$ as
+\begin{equation}
+\delta \dot u = \frac{\partial \dot u}{\partial \dot s}\delta \dot s+\frac{\partial \dot u}{\partial \dot h_v}\delta \dot h_v+\frac{\partial \dot u}{\partial \dot h_w}\delta \dot h_w = \delta \dot s - \delta \dot h_v - \delta \dot h_w.
+\end{equation}
+The variations $\delta h_v$, $\delta h_w$, $\delta \dot h_v$ and $\delta \dot h_w$ are not in the proper frame; that is, we need variations on $s,v,w$ only. Since $h_v,h_w$ are functions of $v,w$ respectively, we can calculate the variations as follows.
+\begin{equation}
+\delta h_v = \delta \frac{1}{2} \int_0^x\left(\frac{\partial v}{\partial \eta}\right)^2\text{ d}\eta.
+\end{equation}
+Let 
+\begin{equation}
+\tau = \left(\frac{\partial v}{\partial \eta}\right)^2.
+\end{equation}
+Then
+\begin{equation}
+\delta h_v = \delta \frac{1}{2} \int_0^x \tau \text{ d}\eta,
+\end{equation}
+and the Chain Rule for Variations yields
+\begin{equation}
+\delta h_v = \frac{1}{2}\int_0^x \frac{\partial \tau}{\partial v_{\eta}}\delta v_{\eta}\text{ d}\eta,
+\end{equation}
+where $v_{\eta}$ is the partial derivative of $v$ with respect to $\eta$. We now perform integration by parts. Let
+\begin{equation}
+\alpha = \frac{\partial \tau}{\partial v_\eta}.
+\end{equation}
+Then
+\begin{equation}
+\text d\alpha = \frac{\text d}{\text d\eta}\left(\frac{\partial \tau}{\partial v_\eta}\right)\text{ d}\eta.
+\end{equation}
+Let
+\begin{equation}
+\text d\beta = \delta v_\eta\text{ d}\eta.
+\end{equation}
+Then
+\begin{equation}
+\beta = \int \frac{\text d}{\text d\eta}\delta v\text{ d}\eta = \delta v.
+\end{equation}
+Applying the integration by parts formula yields
+\begin{equation}
+\frac{1}{2}\int_0^x \frac{\partial \tau}{\partial v_{\eta}}\delta v_{\eta}\text{ d}\eta = \left.\frac{\partial \tau}{\partial v_\eta}\delta v\right|_0^x - \frac{1}{2}\int_0^x\frac{\text d}{\text d\eta}\left(\frac{\partial \tau}{\partial v_\eta}\right)\delta v\text{ d}\eta.
+\end{equation}
+The first term on the right side enforces boundary conditions; the conditions will require this term to be zero. The second term is computed to be
+\begin{equation}
+\frac{1}{2}\int_0^x\frac{\text d}{\text d\eta}\left(\frac{\partial \tau}{\partial v_\eta}\right)\delta v\text{ d}\eta = \int_0^x v_{\eta\eta}\delta v\text{ d}\eta,
+\end{equation}
+and excluding the boundary condition term, we have
+\begin{equation}
+\delta h_v = -\int_0^x \frac{\partial^2 v}{\partial \eta^2}\delta v\text{ d}\eta.
+\end{equation}
+The process is identical for $\delta h_w$, thus plugging into Eqn.~\ref{eq:variation.u} we have
+\begin{equation}
+\delta u = \delta s + \int_0^x \frac{\partial^2 v}{\partial \eta^2}\delta v\text{ d}\eta + \int_0^x \frac{\partial^2 w}{\partial \eta^2}\delta w\text{ d}\eta.
+\label{eq:variation.u.final}
+\end{equation}
+
+For the terms $\delta \dot h_v$ and $\delta \dot h_w$, we consider the full terms as follows. First, we shall consider $\delta\dot h_v$.
+
+\begin{eqnarray}
+-\delta\dot h_v &=& -\delta \frac{\partial h_v}{\partial t} \\
+ &=& -\frac{\partial}{\partial t}\delta h_v\\
+ &=& -\frac{\partial}{\partial t}\left[-\int_0^xv_{\eta\eta}\delta v\text{ d}\eta\right] \\
+ &=& \int_0^x\frac{\partial}{\partial t}\left[\frac{\partial^2v}{\partial\eta^2}\delta v\right]\text{ d}\eta\\
+ &=& \int_0^x\frac{\partial^3 v}{\partial t\partial\eta^2}\delta v+\frac{\partial^2 v}{\partial \eta^2}\delta\dot v\text{ d}\eta
+\end{eqnarray}
+However, this is multiplied by the partial of $T$ on $\dot u$, which yields
+\begin{equation}
+\int_{t_0}^{t_1}\int_0^L\left(\int_0^x\frac{\partial}{\partial t}\left[\frac{\partial^2v}{\partial\eta^2}\delta v\right]\text{ d}\eta\right)\frac{\partial \hat T}{\partial \dot u}\text{ d}x\text{ d}t.
+\end{equation}
+We apply Lemma~\ref{lem:switch.integrals} and find
+\begin{align}
+ \int_{t_0}^{t_1} \int_0^L & \left(\int_L^x\frac{\partial\hat T}{\partial \dot u}\text{ d}\eta\right)\frac{\partial}{\partial t}\left[\frac{\partial^2v}{\partial x^2}\delta v\right]\text{ d}x\text{ d}t \label{eq:lemma_switch_vdot}\\
+&= \int_{t_0}^{t_1}\int_0^L\left(\int_L^x\frac{\partial\hat T}{\partial \dot u}\text{ d}\eta\right)\left[\frac{\partial^3v}{\partial t\partial x^2}\delta v+\frac{\partial^2 v}{\partial x^2}\delta\dot v\right]\text{ d}x\text{ d}t. \nonumber
+\end{align}
+The term involving $\delta \dot v$ must be reconfigured so that the variation is in terms of $v$ instead of $\dot v$. To accomplish this, we perform integration by parts, as below.
+Consider the integral
+\begin{equation}
+\int_{t_0}^{t_1}\frac{\partial^2 v}{\partial x^2}\delta \dot v\text{ d}t.
+\end{equation}
+Let
+\begin{equation}
+\alpha = \frac{\partial^2 v}{\partial x^2}.
+\end{equation}
+Then
+\begin{equation}
+\text d\alpha = \frac{\partial}{\partial t}\frac{\partial^2 v}{\partial x^2}\text dt = \frac{\partial^3 v}{\partial t\partial x^2}\text dt.
+\end{equation}
+Let
+\begin{equation}
+\text d\beta = \delta\dot v\text{ d}t.
+\end{equation}
+Then
+\begin{equation}
+\beta = \int \delta\frac{\partial v}{\partial t}\text dt = \int\frac{\partial}{\partial t} \delta v\text{ d}t = \delta v.
+\end{equation}
+Applying the integration by parts formula, we have
+\begin{equation}
+\int_{t_0}^{t_1}\frac{\partial^2 v}{\partial x^2}\delta \dot v\text{ d}t = \left.\frac{\partial^2v}{\partial x^2}\delta v\right|_{t_0}^{t_1} - \int_{t_0}^{t_1}\frac{\partial^3 v}{\partial t\partial x^2}\delta v\text{ d}t,
+\end{equation}
+and the first term on the right side vanishes by definition of $\delta$, so we have that 
+\begin{equation}
+\int_{t_0}^{t_1}\frac{\partial^2 v}{\partial x^2}\delta \dot v\text{ d}t =- \int_{t_0}^{t_1}\frac{\partial^3 v}{\partial t\partial x^2}\delta v\text{ d}t,
+\end{equation}
+and clearly
+\begin{equation}
+\frac{\partial^2 v}{\partial x^2}\delta \dot v=-\frac{\partial^3 v}{\partial t\partial x^2}\delta v.
+\end{equation}
+Substituting this result in Eqn.~\ref{eq:lemma_switch_vdot} yields
+\begin{equation}
+\int_{t_0}^{t_1}\int_0^L\left(\int_L^x\frac{\partial\hat T}{\partial \dot u}\text{ d}\eta\right)\left[\frac{\partial^3v}{\partial t\partial x^2}\delta v-\frac{\partial^3v}{\partial t\partial x^2}\delta v\right]\text{ d}x\text{ d}t = 0.
+\end{equation}
+The result is precisely the same for $\delta\dot h_w$, so that 
+\begin{equation}
+\delta\dot u = \delta\dot s.
+\end{equation}
+
+In our analysis we may now substitute these results for $\delta u,\delta\dot u$. We shall now evaluate the terms $\frac{\partial \hat T}{\partial u}$ and $\frac{\partial \hat T}{\partial \dot u}$.
+
+\begin{equation}
+\frac{\partial\hat T}{\partial u} = \frac{\partial \hat T}{\partial s}\frac{\partial s}{\partial u}+\frac{\partial \hat T}{\partial h_v}\frac{\partial h_v}{\partial u}+\frac{\partial \hat T}{\partial h_w}\frac{\partial h_w}{\partial u}.
+\end{equation}
+Since
+\begin{equation}
+u = s-(h_v+h_w),
+\end{equation}
+we have
+\begin{eqnarray}
+s &= u+(h_v+h_w),\\
+h_v &= s-(u+h_w),\\
+h_w &= s-(u+h_v),
+\end{eqnarray}
+so that
+\begin{eqnarray}
+\frac{\partial s}{\partial u} &= 1,\\
+\frac{\partial h_v}{\partial u} &= -1,\\
+\frac{\partial h_w}{\partial u} &= -1,
+\end{eqnarray}
+which yields
+\begin{equation}
+\frac{\partial\hat T}{\partial u} = \frac{\partial \hat T}{\partial s}-\left(\frac{\partial \hat T}{\partial h_v}+\frac{\partial \hat T}{\partial h_w}\right).
+\end{equation}
+Similarly,
+\begin{equation}
+\frac{\partial\hat T}{\partial \dot u} = \frac{\partial \hat T}{\partial \dot s}-\left(\frac{\partial \hat T}{\partial \dot h_v}+\frac{\partial \hat T}{\partial \dot h_w}\right).
+\end{equation}
 We begin the analysis with the first term of Eqn.~\ref{eq:euler.lagrange}.
 \begin{eqnarray}
 \left.-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot q_i}\right]\right|_{q_i=s} 
