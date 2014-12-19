@@ -14,7 +14,7 @@
 \contentsline {section}{\numberline {1.2}Applying Variational Approximation}{9}
 \contentsline {subsection}{\numberline {1.2.1}Developing the Euler-Lagrange Equations}{9}
 \contentsline {subsection}{\numberline {1.2.2}System Analysis}{15}
-\contentsline {subsection}{\numberline {1.2.3}Discretizing the System}{22}
+\contentsline {subsection}{\numberline {1.2.3}Discretizing the System}{23}
 \contentsline {chapter}{\numberline {2}M639 WRITEUP}{41}
 \contentsline {section}{\numberline {2.1}Application: Finite Element Analysis}{41}
 \contentsline {schapter}{BIBLIOGRAPHY}{42}

@@ -874,39 +874,49 @@ Now we write down the $s$ coordinate equations, after plugging in for $u = s-(h_
 \end{eqnarray}
 Applying the variation, canceling integrals and simplifying yields the following.
 \begin{equation}
-\rho A \left[\ddot s-\frac{\partial}{\partial t}(\dot h_v+\dot h_w)-\dot \Omega v-\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2\right] = EAs_{xx}.
+\rho A \left[\ddot s-\frac{\partial}{\partial t}(\dot h_v+\dot h_w)-\dot \Omega v+2\Omega\dot v-\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2\right] = EAs_{xx}.
 \end{equation}
 Next, we write the $v$ coordinate equations after substituting for $u$.
 \begin{eqnarray}
 & & \int_{t_0}^{t_1}\left[-\rho A \int_0^L [\ddot v + \dot \Omega (a+x+s-(h_v+h_w))+\Omega(\dot s - (\dot h_v+\dot h_w))]\text{ d}x\right.\nonumber \\ 
-& & \qquad\left. +\rho A\int_0^L  [-\Omega(\dot s-(\dot h_v+\dot h_w))+\Omega^2v] \text{ d}x -EI_{zz}\int_0^L v_{xxxx}\text{ d}x\right]\delta v\text{ d}t\\
+& & \qquad\left. +\rho A\int_0^L  [-\Omega(\dot s-(\dot h_v+\dot h_w))+\Omega^2v] \text{ d}x + EI_{zz}\int_0^L v_{xxxx}\text{ d}x\right]\delta v\text{ d}t\\
 & & \qquad +\int_{t_0}^{t_1}\rho A\int_0^L [\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2+\dot v\Omega]\left[\int_0^xv_{\eta\eta}\delta v\text{ d}\eta\right]\text{ d}x\text{ d}t\nonumber
 \end{eqnarray}
 We cannot apply the variation unless the variation is under the same domain of integration. To solve this, we apply Lemma~\ref{lem:switch.integrals}, which yields
 \begin{eqnarray}
 & & \int_{t_0}^{t_1}\left[-\rho A \int_0^L [\ddot v + \dot \Omega (a+x+s-(h_v+h_w))+\Omega(\dot s - (\dot h_v+\dot h_w))]\text{ d}x\right.\nonumber \\ 
-& & \qquad +\rho A\int_0^L  [-\Omega(\dot s-(\dot h_v+\dot h_w))+\Omega^2v] \text{ d}x -EI_{zz}\int_0^L v_{xxxx}\text{ d}x\\
+& & \qquad +\rho A\int_0^L  [-\Omega(\dot s-(\dot h_v+\dot h_w))+\Omega^2v] \text{ d}x + EI_{zz}\int_0^L v_{xxxx}\text{ d}x\\
 & & \qquad +\left.\rho A\int_0^L \left[\int_L^x\lbrace s-(h_v+h_w)+a+\eta\rbrace\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{xx}\text{ d}x\right]\delta v\text{ d}t\nonumber
 \end{eqnarray}
 Applying the variation, canceling integrals and simplifying yields the following.
 \begin{eqnarray}
 & & -\rho A [\ddot v + \dot \Omega (a+x+s-(h_v+h_w))+2\Omega(\dot s - (\dot h_v+\dot h_w))-\Omega^2v] \\ 
-& & \qquad +\rho A \left[\int_L^x\lbrace s-(h_v+h_w)+a+\eta\rbrace\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{xx} = EI_{zz}v_{xxxx}\nonumber
+& & \qquad +\rho A \left[\int_L^x\lbrace s-(h_v+h_w)+a+\eta\rbrace\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{xx} = -EI_{zz}v_{xxxx}\nonumber
 \end{eqnarray}
 Lastly, we write the $w$ coordinate equations.
 \begin{eqnarray}
-& & \int_{t_0}^{t_1}\left[-\rho A\int_0^L \ddot w\text{ d}x-EI_{yy}\int_0^L w_{xxxx}\text{ d}x\right]\delta w\text{ d}t \\
+& & \int_{t_0}^{t_1}\left[-\rho A\int_0^L \ddot w\text{ d}x+EI_{yy}\int_0^L w_{xxxx}\text{ d}x\right]\delta w\text{ d}t \\
 & & \qquad +\int_{t_0}^{t_1}\rho A\int_0^L  [\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2+\dot v\Omega]\left[\int_0^xw_{\eta\eta}\delta w\text{ d}\eta\right]\text{ d}x\text{ d}t\nonumber 
 \end{eqnarray}
 Again, we must apply Lemma~\ref{lem:switch.integrals} to move the variation.
 \begin{eqnarray}
-& & \int_{t_0}^{t_1}\left[-\rho A\int_0^L \ddot w\text{ d}x-EI_{yy}\int_0^L w_{xxxx}\text{ d}x\right]\delta w\text{ d}t \\
+& & \int_{t_0}^{t_1}\left[-\rho A\int_0^L \ddot w\text{ d}x+EI_{yy}\int_0^L w_{xxxx}\text{ d}x\right]\delta w\text{ d}t \\
 & & \qquad +\int_{t_0}^{t_1}\rho A\int_0^L \int_L^x[\lbrace s-(h_v+h_w)+a+\eta \rbrace\Omega^2+\dot v\Omega]\text{ d}\eta w_{xx}\delta w\text{ d}x\text{ d}t\nonumber 
 \end{eqnarray}
 Applying the variation, canceling integrals and simplifying yields the following.
-\begin{eqnarray}
-& & -\rho A \ddot w+\rho A \int_L^x[\lbrace s-(h_v+h_w)+a+\eta \rbrace\Omega^2+\dot v\Omega]\text{ d}\eta w_{xx} = EI_{yy} w_{xxxx}
-\end{eqnarray}
+\begin{equation}
+-\rho A \ddot w+\rho A \int_L^x[\lbrace s-(h_v+h_w)+a+\eta \rbrace\Omega^2+\dot v\Omega]\text{ d}\eta w_{xx} = -EI_{yy} w_{xxxx}
+\end{equation}
+Note that the product of $s,h_v,h_w,$ and $\dot v$ with either $v_{xx}$ or $w_{xx}$ yields nonlinear terms. Furthermore, recall that $h_v,h_w$ and their derivatives are nonlinear. We shall exclude these terms. This simplification yields the following system of linear differential equations. This is an approximation to the equations of motion of a rotating cantilever beam.
+\begin{equation}
+\rho A \left[\ddot s-\dot \Omega v+2\Omega\dot v-\lbrace s+a+x\rbrace\Omega^2\right] = EAs_{xx}.
+\end{equation}
+\begin{equation}
+-\rho A [\ddot v + \dot \Omega (a+x+s)+2\Omega\dot s-\Omega^2v]+\rho A \int_L^x\Omega^2(a+\eta)\text{ d}\eta v_{xx} = -EI_{zz}v_{xxxx} 
+\end{equation}
+\begin{equation}
+-\rho A \ddot w+\rho A \int_L^x\Omega^2(a+\eta)\text{ d}\eta w_{xx} = -EI_{yy} w_{xxxx}
+\end{equation}
 
 \subsection{Discretizing the System}
 \label{subsec:discretizing}
