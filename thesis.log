@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2013.11.8)  18 DEC 2014 11:41
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2013.11.8)  18 DEC 2014 16:08
 entering extended mode
 \write18 enabled.
  %&-line parsing enabled.
@@ -365,34 +365,34 @@ File: images/stretch_coords.pdf Graphic file (type pdf)
  Subsection 1.2.1.
 [9] [10] [11] [12] [13] [14]
  Subsection 1.2.2.
-[15] [16] [17] [18] [19] [20]
+[15] [16] [17] [18] [19] [20] [21]
  Subsection 1.2.3.
 system(epstopdf images/2-node-rod.eps)...executed.
 
-<images/2-node-rod.pdf, id=123, 499.8675pt x 203.76125pt>
+<images/2-node-rod.pdf, id=127, 499.8675pt x 203.76125pt>
 File: images/2-node-rod.pdf Graphic file (type pdf)
 
-<use images/2-node-rod.pdf> [21]
+<use images/2-node-rod.pdf> [22]
 system(epstopdf images/stretch_2node.eps)...executed.
 
 
-<images/stretch_2node.pdf, id=128, 643.40375pt x 402.50375pt>
+<images/stretch_2node.pdf, id=131, 643.40375pt x 402.50375pt>
 File: images/stretch_2node.pdf Graphic file (type pdf)
 
-<use images/stretch_2node.pdf> [22 <./images/2-node-rod.pdf> <./images/stretch_
-2node.pdf>] [23] <images/beam_dof.png, id=144, 642.4pt x 401.5pt>
+<use images/stretch_2node.pdf> [23 <./images/2-node-rod.pdf> <./images/stretch_
+2node.pdf>] [24] <images/beam_dof.png, id=147, 642.4pt x 401.5pt>
 File: images/beam_dof.png Graphic file (type png)
 
-<use images/beam_dof.png> [24 <./images/beam_dof.png (PNG copy)>] [25] [26]
-[27] [28] [29] [30] [31] [32] [33] [34] [35] [36]
-Overfull \hbox (31.80417pt too wide) detected at line 1627
+<use images/beam_dof.png> [25 <./images/beam_dof.png (PNG copy)>] [26] [27]
+[28] [29] [30] [31] [32] [33] [34] [35] [36] [37]
+Overfull \hbox (31.80417pt too wide) detected at line 1655
 [] \OT1/cmr/m/n/12 = [] []
  []
 
-[37] [38] [39]
+[38] [39] [40]
 CHAPTER 2.
  Section 2.1.
-) (./thesis.bbl [40
+) (./thesis.bbl [41
 
 ]
 Overfull \hbox (51.23476pt too wide) in paragraph at lines 21--25
@@ -406,22 +406,22 @@ Overfull \hbox (51.23476pt too wide) in paragraph at lines 27--31
 IAST.Lect05.d/IAST.Lect05.pdf, 
  []
 
-[41
+[42
 
 ]) (./append.tex
 APPENDIX A.
-[42
+[43
 
 ]
  Section A.1.
-[43] [44]
+[44] [45]
  Section A.2.
-[45]
+[46]
  Section A.3.
  Section A.4.
-[46] [47] [48]
+[47] [48] [49]
 APPENDIX B.
-[49
+[50
 
 ]
  Section B.1.
@@ -429,22 +429,22 @@ APPENDIX B.
 
 pdfTeX warning: pdflatex (file ./images/normal_strain.pdf): PDF inclusion: foun
 d PDF version <1.5>, but at most version <1.4> allowed
-<images/normal_strain.pdf, id=227, 369.38pt x 259.97125pt>
+<images/normal_strain.pdf, id=230, 369.38pt x 259.97125pt>
 File: images/normal_strain.pdf Graphic file (type pdf)
 
-<use images/normal_strain.pdf> [50 <./images/normal_strain.pdf
+<use images/normal_strain.pdf> [51 <./images/normal_strain.pdf
 
 pdfTeX warning: pdflatex (file ./images/normal_strain.pdf): PDF inclusion: Page
  Group detected which pdfTeX can't handle. Ignoring it.
 >]
  Section B.2.
-<images/ucboulderstrain4.png, id=235, 1130.2225pt x 633.36626pt>
+<images/ucboulderstrain4.png, id=239, 1130.2225pt x 633.36626pt>
 File: images/ucboulderstrain4.png Graphic file (type png)
 
-<use images/ucboulderstrain4.png> [51] [52 <./images/ucboulderstrain4.png (PNG 
+<use images/ucboulderstrain4.png> [52] [53 <./images/ucboulderstrain4.png (PNG 
 copy)>]
  Section B.3.
-[53]) [54] (./thesis.aux) ) 
+[54]) [55] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
  3129 strings out of 256216
  42560 string characters out of 1917072
@@ -465,9 +465,9 @@ onts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/bluesky/ams/eurm1
 nts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (64 pages, 1252652 bytes).
+Output written on thesis.pdf (65 pages, 1256428 bytes).
 PDF statistics:
- 303 PDF objects out of 1000 (max. 8388607)
+ 306 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

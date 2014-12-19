@@ -767,19 +767,20 @@ Similarly,
 \begin{equation}
 \frac{\partial\hat T}{\partial \dot u} = \frac{\partial \hat T}{\partial \dot s}-\left(\frac{\partial \hat T}{\partial \dot h_v}+\frac{\partial \hat T}{\partial \dot h_w}\right).
 \end{equation}
+Given the linearity of both $\frac{\partial \hat T}{\partial u}$ and $\frac{\partial \hat T}{\partial \dot u}$, we may calculate these and substitute for $u=s-(h_v+h_w)$ upon conclusion of the calculation.
+
 We begin the analysis with the first term of Eqn.~\ref{eq:euler.lagrange}.
 \begin{eqnarray}
-\left.-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot q_i}\right]\right|_{q_i=s} 
-&=& -\left(\frac{\rho A}{2}\right)\frac{\text d}{\text dt}\int_0^L[2\dot s-2(\dot h+\Omega v)]\text{ d}x,\\
-&=& -\rho A\int_0^L [\ddot s-\dot \Omega v-\Omega \dot v-\ddot h]\text{ d}x,
+\left.-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot q_i}\right]\right|_{q_i=u} 
+&=& -\left(\frac{\rho A}{2}\right)\frac{\text d}{\text dt}\int_0^L[2\dot u-2\Omega v]\text{ d}x,\\
+&=& -\rho A\int_0^L [\ddot u-\dot \Omega v-\Omega \dot v]\text{ d}x,
 \end{eqnarray}
-where $\ddot h$ is defined as
-\[\ddot h = \ddot h_v+\ddot h_w.\]
+
 Continuing, we have
 \begin{eqnarray}
 \left.-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot q_i}\right]\right|_{q_i=v}
-&=& -\left(\frac{\rho A}{2}\right)\frac{\text d}{\text dt}\int_0^L[2\dot v+2\Omega (a+x+s-h)]\text{ d}x,\\
-&=& -\int_0^L \rho A [\ddot v + \dot \Omega (a+x+s-h)+\Omega(\dot s-\dot h)]\text{ d}x.
+&=& -\left(\frac{\rho A}{2}\right)\frac{\text d}{\text dt}\int_0^L[2\dot v+2\Omega (a+x+u)]\text{ d}x,\\
+&=& -\int_0^L \rho A [\ddot v + \dot \Omega (a+x+u)+\Omega\dot u]\text{ d}x.
 \end{eqnarray}
 In $w$,
 \begin{eqnarray}
@@ -787,17 +788,17 @@ In $w$,
 &=& -\left(\frac{\rho A}{2}\right)\frac{\text d}{\text dt}\int_0^L\left[2\dot w \right]\text{ d}x,\\
 &=& -\int_0^L \rho A [\ddot w]\text{ d}x.
 \end{eqnarray}
-Next we shall analyze the second term. In $s$,
+Next we shall analyze the second term. In $u$,
 \begin{eqnarray}
-\left.\frac{\partial T}{\partial q_i}\right|_{q_i=s} 
-&=& \frac{\rho A}{2}\int_0^L 2\dot v\Omega+2\Omega^2(s+a+x)-2\Omega^2h\text{ d}x,\\
-&=& \rho A\int_0^L  [\dot v\Omega+\Omega^2(a+x+s-h)]\text{ d}x.
+\left.\frac{\partial T}{\partial q_i}\right|_{q_i=u} 
+&=& \frac{\rho A}{2}\int_0^L 2\dot v\Omega+2\Omega^2(u+a+x)\text{ d}x,\\
+&=& \rho A\int_0^L  [\dot v\Omega+\Omega^2(u+a+x)]\text{ d}x.
 \end{eqnarray}
 In $v$,
 \begin{eqnarray}
 \left.\frac{\partial T}{\partial q_i}\right|_{q_i=v} 
 &=& \frac{\rho A}{2}\int_0^L [-2\Omega\dot s-2\Omega\dot h+2\Omega^2v ]\text{ d}x,\\
-&=& \rho A\int_0^L  [\Omega^2v-\Omega(\dot u+\dot h)] \text{ d}x.
+&=& \rho A\int_0^L  [\Omega^2v-\Omega\dot u] \text{ d}x.
 \end{eqnarray}
 Finally, in $w$,
 \begin{eqnarray}
@@ -856,28 +857,55 @@ To resolve this, we simply substitute the definitions of $u,\dot{u}$ into the ki
 
 It is important to note that the equations are broken up into their respective coordinates purposefully. One reason is to illuminate the zero evaluations. The other is that the Euler-Lagrange equations must be evaluated for each coordinate, $s,v,w$. We will summarize these results by grouping the non-zero terms into their respective coordinate references.
 
-Firstly, we write down the $s$ coordinate equations.
+We first consider the Lagrangian for the various coordinates. We use the linearity to write the derivatives of the potential function $T$ in terms of $u$. Furthermore, we show the Lagrangian in terms of the three coordinates $s,v,w$ as separate equations. The expanded Lagrangian under variation is written as
 \begin{eqnarray}
-& & -\int_0^L \rho A \left[\ddot s-\frac{\partial}{\partial t}(\dot h_v+\dot h_w)-\dot \Omega v-\Omega \dot v\right]\text{ d}x +\nonumber \\
-& & \qquad \int_0^L \rho A [\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2+\dot v\Omega]\text{ d}x +\\
-& & \qquad \qquad \int_0^L EA\left[ s_{xx} \right]+EA_x\left[ s_{x} \right]\text{ d}x = 0.\nonumber
+\left.\delta\int_{t_0}^{t_1}L\text{ d}t\right|_s = \int_{t_0}^{t_1}\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot u}\right]+\frac{\partial T}{\partial u} - \frac{\text d^2}{\text dx^2}\left[\frac{\partial U}{\partial s_{xx}}\right]+\frac{\text d}{\text dx}\left[\frac{\partial  U}{\partial s_{x}}\right]\right\rbrace\delta s\text{ d}t\\
+\left.\delta\int_{t_0}^{t_1}L\text{ d}t\right|_v =\int_{t_0}^{t_1}\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot v}\right]+\frac{\partial T}{\partial v} - \frac{\text d^2}{\text dx^2}\left[\frac{\partial U}{\partial v_{xx}}\right]+\frac{\text d}{\text dx}\left[\frac{\partial  U}{\partial v_{x}}\right]\right\rbrace\delta v\text{ d}t\\
++\int_{t_0}^{t_1}\frac{\partial T}{\partial u}\left[\int_0^xv_{\eta\eta}\delta v\text{ d}\eta\right]\text{ d}t\nonumber\\
+\left.\delta\int_{t_0}^{t_1}L\text{ d}t\right|_w =\int_{t_0}^{t_1}\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot w}\right]+\frac{\partial T}{\partial w} - \frac{\text d^2}{\text dx^2}\left[\frac{\partial U}{\partial w_{xx}}\right]+\frac{\text d}{\text dx}\left[\frac{\partial  U}{\partial w_{x}}\right]\right\rbrace\delta w\text{ d}t\\
++\int_{t_0}^{t_1}\frac{\partial T}{\partial u}\left[\int_0^xw_{\eta\eta}\delta w\text{ d}\eta\right]\text{ d}t\nonumber
 \end{eqnarray}
-Canceling integrals and simplifying yields the following.
+
+Now we write down the $s$ coordinate equations, after plugging in for $u = s-(h_v+h_w)$.
+\begin{eqnarray}
+& & \int_{t_0}^{t_1}\left[-\rho A\int_0^L  \left[\ddot s-\frac{\partial}{\partial t}(\dot h_v+\dot h_w)-\dot \Omega v-\Omega \dot v\right]\text{ d}x\right. \nonumber \\
+& & \qquad +\rho A\int_0^L  [\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2+\dot v\Omega]\text{ d}x \\
+& & \qquad \qquad \left.+EA\int_0^L s_{xx}\text{ d}x \right]\delta s\text{ d}t\nonumber
+\end{eqnarray}
+Applying the variation, canceling integrals and simplifying yields the following.
 \begin{equation}
-\rho A \left[\ddot s-\frac{\partial}{\partial t}(\dot h_v+\dot h_w)-\dot \Omega v-\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2\right] = EA[s_{xx}]+EA_x[s_{x}].
+\rho A \left[\ddot s-\frac{\partial}{\partial t}(\dot h_v+\dot h_w)-\dot \Omega v-\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2\right] = EAs_{xx}.
 \end{equation}
-
-Next, we write the $v$ coordinate equations.
+Next, we write the $v$ coordinate equations after substituting for $u$.
 \begin{eqnarray}
-& & -\int_0^L \rho A [\ddot v + \dot \Omega (a+x+s-(h_v+h_w))+\Omega(\dot s - (\dot h_v+\dot h_w))]\text{ d}x +\nonumber \\ 
-& & \qquad \int_0^L \rho A [-\Omega(\dot s-(\dot h_v+\dot h_w))+\Omega^2v] \text{ d}x -\\
-& & \qquad E\int_0^L [I_{zz}]_{xx}[v_{xx}]+2[I_{zz}]_{x}[v_{xxx}]+[I_{zz}][v_{xxxx}]\text{ d}x = 0.\nonumber
+& & \int_{t_0}^{t_1}\left[-\rho A \int_0^L [\ddot v + \dot \Omega (a+x+s-(h_v+h_w))+\Omega(\dot s - (\dot h_v+\dot h_w))]\text{ d}x\right.\nonumber \\ 
+& & \qquad\left. +\rho A\int_0^L  [-\Omega(\dot s-(\dot h_v+\dot h_w))+\Omega^2v] \text{ d}x -EI_{zz}\int_0^L v_{xxxx}\text{ d}x\right]\delta v\text{ d}t\\
+& & \qquad +\int_{t_0}^{t_1}\rho A\int_0^L [\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2+\dot v\Omega]\left[\int_0^xv_{\eta\eta}\delta v\text{ d}\eta\right]\text{ d}x\text{ d}t\nonumber
 \end{eqnarray}
-
+We cannot apply the variation unless the variation is under the same domain of integration. To solve this, we apply Lemma~\ref{lem:switch.integrals}, which yields
+\begin{eqnarray}
+& & \int_{t_0}^{t_1}\left[-\rho A \int_0^L [\ddot v + \dot \Omega (a+x+s-(h_v+h_w))+\Omega(\dot s - (\dot h_v+\dot h_w))]\text{ d}x\right.\nonumber \\ 
+& & \qquad +\rho A\int_0^L  [-\Omega(\dot s-(\dot h_v+\dot h_w))+\Omega^2v] \text{ d}x -EI_{zz}\int_0^L v_{xxxx}\text{ d}x\\
+& & \qquad +\left.\rho A\int_0^L \left[\int_L^x\lbrace s-(h_v+h_w)+a+\eta\rbrace\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{xx}\text{ d}x\right]\delta v\text{ d}t\nonumber
+\end{eqnarray}
+Applying the variation, canceling integrals and simplifying yields the following.
+\begin{eqnarray}
+& & -\rho A [\ddot v + \dot \Omega (a+x+s-(h_v+h_w))+2\Omega(\dot s - (\dot h_v+\dot h_w))-\Omega^2v] \\ 
+& & \qquad +\rho A \left[\int_L^x\lbrace s-(h_v+h_w)+a+\eta\rbrace\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{xx} = EI_{zz}v_{xxxx}\nonumber
+\end{eqnarray}
 Lastly, we write the $w$ coordinate equations.
 \begin{eqnarray}
-& & -\int_0^L \rho A [\ddot w]\text{ d}x + \\
-& & \qquad -E\int_0^L [I_{yy}]_{xx}[w_{xx}]+2[I_{yy}]_x[w_{xxx}] + [I_{yy}][w_{xxxx}]\text{ d}x = 0. \nonumber
+& & \int_{t_0}^{t_1}\left[-\rho A\int_0^L \ddot w\text{ d}x-EI_{yy}\int_0^L w_{xxxx}\text{ d}x\right]\delta w\text{ d}t \\
+& & \qquad +\int_{t_0}^{t_1}\rho A\int_0^L  [\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2+\dot v\Omega]\left[\int_0^xw_{\eta\eta}\delta w\text{ d}\eta\right]\text{ d}x\text{ d}t\nonumber 
+\end{eqnarray}
+Again, we must apply Lemma~\ref{lem:switch.integrals} to move the variation.
+\begin{eqnarray}
+& & \int_{t_0}^{t_1}\left[-\rho A\int_0^L \ddot w\text{ d}x-EI_{yy}\int_0^L w_{xxxx}\text{ d}x\right]\delta w\text{ d}t \\
+& & \qquad +\int_{t_0}^{t_1}\rho A\int_0^L \int_L^x[\lbrace s-(h_v+h_w)+a+\eta \rbrace\Omega^2+\dot v\Omega]\text{ d}\eta w_{xx}\delta w\text{ d}x\text{ d}t\nonumber 
+\end{eqnarray}
+Applying the variation, canceling integrals and simplifying yields the following.
+\begin{eqnarray}
+& & -\rho A \ddot w+\rho A \int_L^x[\lbrace s-(h_v+h_w)+a+\eta \rbrace\Omega^2+\dot v\Omega]\text{ d}\eta w_{xx} = EI_{yy} w_{xxxx}
 \end{eqnarray}
 
 \subsection{Discretizing the System}
