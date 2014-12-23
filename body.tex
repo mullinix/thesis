@@ -1685,31 +1685,65 @@ The computed matrices are given below.
  0 &  0 &    0 & 6I_{yy}l & 2I_{yy}l^2 & 0 &   0 &    0 & -6I_{yy}l & 4I_{yy}l^2\\
 \end{pmatrix}
 \]
+\begin{comment}
+	double L = len;
+	double l = xe1-xe;
+	double aa = L*L-xe*xe;
+	double bb = 2*a*(L-xe);
+	double cc = l*(a+xe);
+	// (2,2) = (4,4) = (7,7) = (9,9) = -(2,7) = -(7,2) = -(4,9) = -(9,4)
+	double a22 = -72*pow(l,2)+252*(aa+bb-cc);
+	// (2,3) = (3,2) = (4,5) = (5,4) = -(3,7) = -(7,3) = -(5,9) = -(9,5)
+	double b23 = -15*pow(l,3)+21*l*(aa+bb-2*cc);
+	// (2,8) = (8,2) = (4,10) = (10,4) = -(7,8) = -(8,7) = -(9,10) = -(10,9)
+	double c28 = 6*pow(l,3)+21*l*(aa+bb);
+	// (3,3) = (5,5)
+	double d33 = -4*pow(l,4)+14*l*l*(2*aa+2*bb-cc);
+	// (3,8) = (8,3) = (5,10) = (10,5)
+	double e38 = 3*pow(l,4)+7*l*l*(-aa-bb+cc);
+	// (8,8) = (10,10)             
+	double f88 = -18*pow(l,4)+14*l*l*(2*aa+2*bb-3*cc);
+	
+	
+	sigma << 0,   0,    0,    0,    0,   0,    0,    0,    0,    0,
+			 0,  a22,  b23,   0,    0,   0, -a22,  c28,    0,    0,
+			 0,  b23,  d33,   0,    0,   0, -b23,  e38,    0,    0,
+			 0,   0,    0,  a22,  b23,   0,    0,    0, -a22,  c28,
+			 0,   0,    0,  b23,  d33,   0,    0,    0, -b23,  e38,
+			 0,   0,    0,    0,    0,   0,    0,    0,    0,    0,
+			 0, -a22, -b23,   0,    0,   0,  a22, -c28,    0,    0,
+			 0,  c28,  e38,   0,    0,   0, -c28,  f88,    0,    0,
+			 0,   0,    0, -a22, -b23,   0,    0,    0,  a22, -c28,
+			 0,   0,    0,  c28,  e38,   0,    0,    0, -c28,  f88;
+
+\end{comment}
 Let 
 \begin{eqnarray*}
-\alpha_1 &=& 420(3L^2/5 + 6aL/5)/l - 72l - 252a, \\
-\alpha_2 &=& 21L^2 + 42aL - 15l^2 - 42al, \\
-\alpha_3 &=& 2l(14L^2 + 28aL - 2l^2 - 7al),\\
-\beta_1 &=& 252a + 72l - 420(3L^2/5 + 6aL/5)/l,\\
-\beta_2 &=& 21L^2 + 42aL + 6l^2,\\
-\beta_3 &=& -l(7L^2 + 14aL - 3l^2 - 7al),\\
-\beta_4 &=& 2l(14L^2 + 28aL - 9l^2 - 21al),
+\alpha_1 &=& L^2-x_e^2,\\
+\alpha_2 &=& 2a(L-x_e)\\
+\alpha_3 &=& l(a+x_e),\\
+\beta_1 &=& -72l^2+252(\alpha_1+\alpha_2-\alpha_3),\\
+\beta_2 &=& -15l^3+21l(\alpha_1+\alpha_2-2\alpha_3),\\
+\beta_3 &=& 6l^3+21l(\alpha_1+\alpha_2),\\
+\beta_4 &=& -4l^4+14l^2(2\alpha_1+2\alpha_2-\alpha_3),\\
+\beta_5 &=& 3l^4+7l^2(-\alpha_1-\alpha_2+\alpha_3),\\
+\beta_6 &=& -18l^4+14l^2(2\alpha_1+2\alpha_2-3\alpha_3),
 \end{eqnarray*}
-where $L$ is (global) beam length, $a$ is distance from the center of the axis of rotation to the beginning of the beam, and $l$ is the length of the element.
+where $L$ is (global) beam length, $a$ is distance from the center of the axis of rotation to the beginning of the beam, $x_e$ is the position of the $e$-th node, and $l$ is the length of the element.
 The matrix $\mathbf{[\sigma]}$ can be expressed as
 \[
 \mathbf{[\sigma]} = 
-\frac{\rho A}{420}\begin{pmatrix}
+\frac{\rho A}{420l}\begin{pmatrix}
  0 & 0 &  0 & 0 &  0 & 0 & 0 & 0 & 0 &  0\\
- 0 & \alpha_1 & \alpha_2 & 0 &  0 & 0 &  \beta_1  & \beta_2 & 0 & 0\\
- 0 & \alpha_2 & \alpha_3 & 0 &  0 & 0 & -\alpha_2 & \beta_3 & 0 & 0\\
- 0 & 0 & 0 & \alpha_1 & \alpha_2 & 0 & 0 & 0 &  \beta_1  & \beta_2 \\
- 0 & 0 & 0 & \alpha_2 & \alpha_3 & 0 & 0 & 0 & -\alpha_2 & \beta_3\\
+ 0 & \beta_1 & \beta_2 & 0 &  0 & 0 &  -\beta_1  & \beta_3 & 0 & 0\\
+ 0 & \beta_2 & \beta_4 & 0 &  0 & 0 & -\beta_2 & \beta_5 & 0 & 0\\
+ 0 & 0 & 0 & \beta_1 & \beta_2 & 0 & 0 & 0 &  -\beta_1  & \beta_3 \\
+ 0 & 0 & 0 & \beta_2 & \beta_4 & 0 & 0 & 0 & -\beta_2 & \beta_5 \\
  0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
- 0 & \beta_1 & -\alpha_2 & 0 & 0 & 0 & \alpha_1 & -\beta_2 & 0 & 0\\
- 0 & \beta_2 & \beta_3 & 0 & 0 & 0 & -\beta_2 & \beta_4 & 0 & 0\\
- 0 & 0 & 0 & \beta_1 & -\alpha_2 & 0 & 0 & 0 & \alpha_1 & -\beta_2\\
- 0 & 0 & 0 & \beta_2 &  \beta_3  & 0 & 0 & 0 & -\beta_2 &  \beta_4\\
+ 0 & -\beta_1 & -\beta_2 & 0 & 0 & 0 & \beta_1 & -\beta_3 & 0 & 0\\
+ 0 & \beta_3 & \beta_5 & 0 & 0 & 0 & -\beta_3 & \beta_6 & 0 & 0\\
+ 0 & 0 & 0 & -\beta_1 & -\beta_2 & 0 & 0 & 0 & \beta_1 & -\beta_3 \\
+ 0 & 0 & 0 & \beta_3 & \beta_5  & 0 & 0 & 0 & -\beta_3 &  \beta_6
 \end{pmatrix}.
 \]
 Naturally, all of the matrices are symmetric, except the matrix $\mathbf{[g]}$, which is skew-symmetric. In other words, 
