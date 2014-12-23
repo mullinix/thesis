@@ -1379,12 +1379,28 @@ v = \vec N_v^\top \vec d.
 \begin{equation}
 w = \vec N_w^\top \vec d.
 \end{equation}
-We may now use Eqn.~\ref{eq:s_displacement_integral_nonsense} sensibly. Next, we analyze the bending coordinate $v$.
+We may now use Eqn.~\ref{eq:s_displacement_integral_nonsense} sensibly. Next, we analyze the bending coordinate $v$. Before we can integrate over the element, we must recall the conditions of the integral 
+\begin{equation}
+\int_x^L(a+\eta)\text{ d}\eta.
+\end{equation}
+This integral treats $x$ on the full coordinate system, not just in the element. To consider the element, recall that
+\begin{equation}
+\int_a^bf(x)\text{ d}x = \int_0^{b-a}f(x+a)\text{ d}x.
+\end{equation}
+In our case,
+\begin{equation}
+f(x) = \int_x^L a+\eta\text{ d}\eta,
+\end{equation}
+so that under the revised coordinates, we transform the elemental integration from the limits $x_e\rightarrow x_{e+1}$ to $0\rightarrow l$ for $l = x_{e+1}-x_e$. For $f$, we have
+\begin{equation}
+f(x+x_e) = \int_{x+x_e}^L a+\eta \text{ d}\eta = a(L-(x+x_e))+\frac{1}{2}(L^2-(x+x_e)^2).
+\end{equation}
+It is not apparent, but the displacement approximation polynomials were already described in the space $0\rightarrow l$ instead of $x_e\rightarrow x_{e+1}$, so we don't need to adjust $s,v,w$. We only require a modification to the function $f$ as described above. Thus, the $v$ direction is expressed as
 \begin{eqnarray}
-\int_0^l\rho A(\ddot v + 2\Omega\dot s-\Omega^2v+\dot\Omega s)v+EI_{zz}v_{xxxx}v-\rho A\Omega^2\left[a(L-x)\vphantom{\frac{1}{2}}\right.\\
-\left.+\frac{1}{2}(L^2-x^2)\right]\frac{\partial^2 v}{\partial x^2} v\text{ d}x = \int_0^l[p_v - \rho A\dot\Omega(a+x)]v\text{ d}x. \nonumber
+\int_0^l\rho A(\ddot v + 2\Omega\dot s-\Omega^2v+\dot\Omega s)v+EI_{zz}v_{xxxx}v-\rho A\Omega^2\left[a(L-(x+x_e))\vphantom{\frac{0}{0}}\right.\\
+\left.+\frac{1}{2}(L^2-(x+x_e)^2)\right]\frac{\partial^2 v}{\partial x^2} v\text{ d}x = \int_0^l[p_v - \rho A\dot\Omega(a+x)]v\text{ d}x. \nonumber
 \end{eqnarray}
-This equation has two terms to be simplified, the fourth order spatial derivative. Integration by parts twice on the fourth order term yields
+This equation has two terms to be simplified, the fourth order spatial derivative and the third term which must be simplified. Integration by parts twice on the fourth order term yields
 \begin{equation}
 \int_0^lEI_{zz}\frac{\partial^4 v}{\partial x^4}v\text{ d}x = \left.EI_{zz}v\frac{\partial^3 v}{\partial x^3}\right|_0^l-\left.EI_{zz}\frac{\partial v}{\partial x}\frac{\partial^2 v}{\partial x^2}\right|_0^l + \int_0^lEI_{zz}v_{xx}^2\text{ d}x,
 \label{eq:v.disc.int.by.parts.1}
@@ -1393,19 +1409,61 @@ and the first two terms on the right cancel due to boundary conditions, yielding
 \begin{equation}
 \int_0^lEI_{zz}\frac{\partial^4 v}{\partial x^4}v\text{ d}x =  \int_0^lEI_{zz}v_{xx}^2\text{ d}x.
 \end{equation}
+The third term is manipulated as follows. Consider
+\begin{equation}
+\int_0^l-\rho A\Omega^2\frac{\partial}{\partial x}\left\lbrace \left[a(L-(x+x_e))+\frac{1}{2}(L^2-(x+x_e)^2)\right]\frac{\partial v}{\partial x}\right\rbrace v\text{ d}x.
+\end{equation}
+Let
+\begin{equation}
+\alpha = -\rho A\Omega^2v,
+\end{equation}
+then
+\begin{equation}
+\text d\alpha = \frac{\text d}{\text dx}(-\rho A\Omega^2v)\text{ d}x = -\rho A\Omega^2\frac{\partial v}{\partial x}.
+\end{equation}
+Let
+\begin{equation}
+\text d\beta = \frac{\partial}{\partial x}\left\lbrace \left[a(L-(x+x_e))+\frac{1}{2}(L^2-(x+x_e)^2)\right]\frac{\partial v}{\partial x}\right\rbrace\text{ d}x,
+\end{equation}
+then
+\begin{equation}
+\beta = \left[a(L-(x+x_e))+\frac{1}{2}(L^2-(x+x_e)^2)\right]\frac{\partial v}{\partial x}.
+\end{equation}
+The integration by parts formula yields
+\begin{eqnarray}
+\label{eq:v.disc.int.by.parts.2}
+& &\int_0^l-\rho A\Omega^2\frac{\partial}{\partial x}\left\lbrace \left[a(L-(x+x_e))+\frac{1}{2}(L^2-(x+x_e)^2)\right]\frac{\partial v}{\partial x}\right\rbrace v\text{ d}x\nonumber\\
+&=&-\left.v\left[a(L-(x+x_e))+\frac{1}{2}(L^2-(x+x_e)^2)\right]\frac{\partial v}{\partial x}\right|_0^l\\
+&+&\int_0^l \rho A\Omega^2\left[a(L-(x+x_e))+\frac{1}{2}(L^2-(x+x_e)^2)\right]v_x^2\text{ d}x, \nonumber
+\end{eqnarray}
+where the first term on the right side vanishes due to boundary conditions, yielding
+\begin{eqnarray}
+& &-\int_0^l\rho A\Omega^2\frac{\partial}{\partial x}\left\lbrace \left[a(L-(x+x_e))+\frac{1}{2}(L^2-(x+x_e)^2)\right]\frac{\partial v}{\partial x}\right\rbrace v\text{ d}x\\
+&=& \int_0^l \rho A\Omega^2\left[a(L-(x+x_e))+\frac{1}{2}(L^2-(x+x_e)^2)\right]v_x^2\text{ d}x. \nonumber
+\end{eqnarray}
+The full $v$ bending integral equation is written as
+\begin{eqnarray}
+\label{eq:v_bending_integral_eqn}
+& &\int_0^l\rho A(\ddot v + 2\Omega\dot s-\Omega^2v+\dot\Omega s)v+EI_{zz}v_{xx}^2\\
+&+&\rho A\Omega^2\left[a(L-(x+x_e))+\frac{1}{2}(L^2-(x+x_e)^2)\right]v_x^2\text{ d}x = \int_0^l[p_v - \rho A\dot\Omega(a+x)]v\text{ d}x. \nonumber
+\end{eqnarray}
+The mixed terms are already handled by the combined displacement vector $\vec d$ as well as the interpolation vectors $\vec N_s,\vec N_v$
+
+\begin{comment}
 The full $v$ bending integral equation is written as
 \begin{eqnarray}
 \label{eq:v_bending_integral_eqn}
 \int_0^l\rho A(\ddot v + 2\Omega\dot s-\Omega^2v+\dot\Omega s)v+EI_{zz}v_{xx}^2+\\
-\rho A\Omega^2\left[a(L-x)+\frac{1}{2}(L^2-x^2)\right]v_x^2\text{ d}x = \int_0^l[p_v - \rho A\dot\Omega(a+x)]v\text{ d}x. \nonumber
+\rho A\Omega^2\left[a(L-(x+x_e))+\frac{1}{2}(L^2-(x+x_e)^2)\right]v_x^2\text{ d}x = \int_0^l[p_v - \rho A\dot\Omega(a+x)]v\text{ d}x. \nonumber
 \end{eqnarray}
 The mixed terms are already handled by the combined displacement vector $\vec d$ as well as the interpolation vectors $\vec N_s,\vec N_v$.
+\end{comment}
 
 The integral equation for the $w$ bending direction is handled similarly to the $v$ bending direction. There is a fourth order term and the third term that can be simplified. The process is exactly the same with $w$ written in place of $v$. The result is written as follows.
-\begin{equation}
-\int_0^l\rho A\ddot ww+EI_{zz}w_{xx}^2+\rho A\Omega^2\left[a(L-x)+\frac{1}{2}(L^2-x^2)\right]w_x^2\text{ d}x = \int_0^lp_ww\text{ d}x. 
-\label{eq:w.bending.integral.eqn}
-\end{equation}
+\begin{eqnarray}
+& &\int_0^l\rho A\ddot ww+EI_{zz}w_{xx}^2+\rho A\Omega^2\left[a(L-(x+x_e))\vphantom{\frac{0}{0}}\right. \label{eq:w.bending.integral.eqn}\\
+&+& \left.\frac{1}{2}(L^2-(x+x_e)^2)\right]w_x^2\text{ d}x = \int_0^lp_ww\text{ d}x.\nonumber 
+\end{eqnarray}
 
 From the application of the discretization to the equations of motion, we now have the essential boundary conditions. We shall show that the boundary conditions are met by the approximating functions $s(x), v(x), w(x)$.
 
@@ -1428,8 +1486,6 @@ and from Eqn.~\ref{eq:v.disc.int.by.parts.2}
 \left.\xi\left[a(L-x)+\frac{1}{2}(L^2-x^2)\right]\frac{\partial \xi}{\partial x}\right|_0^L = 0.
 \end{equation}
 As in the case of $s$, the displacement at $x=0$ must be zero; additionally, the bending must be zero. Thus we have $\xi(0)=0,\xi_x(0)=0$. For the first condition, we must have that $\xi_{xxx}(L) = 0$, which represents the vanishing shear force for a free beam; indeed this agrees with the physical system. For the second condition, we must have that $\xi_{xx}(L) = 0$, which represents the vanishing of the bending moment for a free beam; this also agrees with our physical system. The third condition is zero at $x=L$, so there is no more work to do. 
-
-\textbf{{DISCUSSION: SHOW THAT S,V,W SATISFY THE ABOVE BC's}}
 
 The partial derivatives applied to the vector form of $s,v,w$ can be expressed in the following manner.
 \begin{eqnarray}
