@@ -460,7 +460,7 @@ Substitution of Eqn.~\ref{eq:kin.variation.byparts} into Eqn.~\ref{eq:kin.variat
 \end{equation}
 We now reintroduce the spatial integral and switch the order of integration so that $\hat T,\hat U$ are integrating in the same order, which yields the following expression.
 \begin{equation}
-\int_{t_0}^{t_1}\int_0^L\delta\hat T(\dot q_i,q_i)\text{ d}x\text{ d}t = \int_{t_0}^{t_1}\int_0^x\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial\hat T}{\partial \dot q_i}\right]+\frac{\partial\hat T}{\partial q_i}\right\rbrace\delta q_i\text{ d}x\text{ d}t.
+\int_{t_0}^{t_1}\int_0^L\delta\hat T(\dot q_i,q_i)\text{ d}x\text{ d}t = \int_{t_0}^{t_1}\int_0^L\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial\hat T}{\partial \dot q_i}\right]+\frac{\partial\hat T}{\partial q_i}\right\rbrace\delta q_i\text{ d}x\text{ d}t.
 \end{equation}
 
 We now continue the process for strain energy.
@@ -642,39 +642,13 @@ Then
 \end{equation}
 and the Chain Rule for Variations yields
 \begin{equation}
-\delta h_v = \frac{1}{2}\int_0^x \frac{\partial \tau}{\partial v_{\eta}}\delta v_{\eta}\text{ d}\eta,
+\delta h_v = \frac{1}{2}\int_0^x \frac{\partial \tau}{\partial v_{\eta}}\delta v_{\eta}\text{ d}\eta = \int_0^xv_{\eta}\delta v_{\eta}\text{ d}\eta,
 \end{equation}
-where $v_{\eta}$ is the partial derivative of $v$ with respect to $\eta$. We now perform integration by parts. Let
-\begin{equation}
-\alpha = \frac{\partial \tau}{\partial v_\eta}.
-\end{equation}
-Then
-\begin{equation}
-\text d\alpha = \frac{\text d}{\text d\eta}\left(\frac{\partial \tau}{\partial v_\eta}\right)\text{ d}\eta.
-\end{equation}
-Let
-\begin{equation}
-\text d\beta = \delta v_\eta\text{ d}\eta.
-\end{equation}
-Then
-\begin{equation}
-\beta = \int \frac{\text d}{\text d\eta}\delta v\text{ d}\eta = \delta v.
-\end{equation}
-Applying the integration by parts formula yields
-\begin{equation}
-\frac{1}{2}\int_0^x \frac{\partial \tau}{\partial v_{\eta}}\delta v_{\eta}\text{ d}\eta = \left.\frac{\partial \tau}{\partial v_\eta}\delta v\right|_0^x - \frac{1}{2}\int_0^x\frac{\text d}{\text d\eta}\left(\frac{\partial \tau}{\partial v_\eta}\right)\delta v\text{ d}\eta.
-\end{equation}
-The first term on the right side enforces boundary conditions; the conditions will require this term to be zero. The second term is computed to be
-\begin{equation}
-\frac{1}{2}\int_0^x\frac{\text d}{\text d\eta}\left(\frac{\partial \tau}{\partial v_\eta}\right)\delta v\text{ d}\eta = \int_0^x v_{\eta\eta}\delta v\text{ d}\eta,
-\end{equation}
-and excluding the boundary condition term, we have
-\begin{equation}
-\delta h_v = -\int_0^x \frac{\partial^2 v}{\partial \eta^2}\delta v\text{ d}\eta.
-\end{equation}
+where $v_{\eta}$ is the partial derivative of $v$ with respect to $\eta$. Note that the variation is not in terms of $v$, but in terms of $v_{\eta}$; we shall leave the variation in this form for simplicity. The reason shall be clear upon application to the system.
+
 The process is identical for $\delta h_w$, thus plugging into Eqn.~\ref{eq:variation.u} we have
 \begin{equation}
-\delta u = \delta s + \int_0^x \frac{\partial^2 v}{\partial \eta^2}\delta v\text{ d}\eta + \int_0^x \frac{\partial^2 w}{\partial \eta^2}\delta w\text{ d}\eta.
+\delta u = \delta s - \int_0^x \frac{\partial v}{\partial \eta}\delta v_{\eta}\text{ d}\eta - \int_0^x \frac{\partial w}{\partial \eta}\delta w_{\eta}\text{ d}\eta.
 \label{eq:variation.u.final}
 \end{equation}
 
@@ -767,7 +741,7 @@ Similarly,
 \begin{equation}
 \frac{\partial\hat T}{\partial \dot u} = \frac{\partial \hat T}{\partial \dot s}-\left(\frac{\partial \hat T}{\partial \dot h_v}+\frac{\partial \hat T}{\partial \dot h_w}\right).
 \end{equation}
-Given the linearity of both $\frac{\partial \hat T}{\partial u}$ and $\frac{\partial \hat T}{\partial \dot u}$, we may calculate these and substitute for $u=s-(h_v+h_w)$ upon conclusion of the calculation.
+Given the linearity of both $\frac{\partial \hat T}{\partial u}$ and $\frac{\partial \hat T}{\partial \dot u}$, we may calculate these in terms of $u,\dot u$ and substitute for $u=s-(h_v+h_w)$ upon conclusion of the calculation.
 
 We begin the analysis with the first term of Eqn.~\ref{eq:euler.lagrange}.
 \begin{eqnarray}
@@ -797,7 +771,7 @@ Next we shall analyze the second term. In $u$,
 In $v$,
 \begin{eqnarray}
 \left.\frac{\partial T}{\partial q_i}\right|_{q_i=v} 
-&=& \frac{\rho A}{2}\int_0^L [-2\Omega\dot s-2\Omega\dot h+2\Omega^2v ]\text{ d}x,\\
+&=& \frac{\rho A}{2}\int_0^L [-2\Omega\dot u+2\Omega^2v ]\text{ d}x,\\
 &=& \rho A\int_0^L  [\Omega^2v-\Omega\dot u] \text{ d}x.
 \end{eqnarray}
 Finally, in $w$,
@@ -847,24 +821,17 @@ In $v$,
 &=& 0.
 \end{eqnarray}
 
-\begin{comment}
-Observe that in the time derivatives, the material property $E$ and area $A$ are considered constant. However, we shall assume in later work that the material's cross-section varies along the beam's length. This will also result in a change of moment of inertia, $I_{zz}$ (say). Thus we must include the terms resultant of the product rule. Finally, note that the material property $E$ is always constant for the purposes of this work.
-
-A clear discrepancy has emerged --- in the kinetic energy evaluation, the coordinate $u$ is tested, whereas in the strain energy evaluation, the coordinate $s$ is tested. The relationship between $s$, $\dot s$, and $u$, $\dot u$ is given by Eqn.~\ref{eq:stretch.full} and Eqn.~\ref{eq:stretch.full.dt}, respectively.
-
-To resolve this, we simply substitute the definitions of $u,\dot{u}$ into the kinetic energy terms. Additionally, we will summarize these results by grouping the non-zero terms into their respective coordinate references.
-\end{comment}
-
 It is important to note that the equations are broken up into their respective coordinates purposefully. One reason is to illuminate the zero evaluations. The other is that the Euler-Lagrange equations must be evaluated for each coordinate, $s,v,w$. We will summarize these results by grouping the non-zero terms into their respective coordinate references.
 
 We first consider the Lagrangian for the various coordinates. We use the linearity to write the derivatives of the potential function $T$ in terms of $u$. Furthermore, we show the Lagrangian in terms of the three coordinates $s,v,w$ as separate equations. The expanded Lagrangian under variation is written as
 \begin{eqnarray}
-\left.\delta\int_{t_0}^{t_1}L\text{ d}t\right|_s = \int_{t_0}^{t_1}\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot u}\right]+\frac{\partial T}{\partial u} - \frac{\text d^2}{\text dx^2}\left[\frac{\partial U}{\partial s_{xx}}\right]+\frac{\text d}{\text dx}\left[\frac{\partial  U}{\partial s_{x}}\right]\right\rbrace\delta s\text{ d}t\\
+\left.\delta\int_{t_0}^{t_1}L\text{ d}t\right|_s = \int_{t_0}^{t_1}\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot u}\right]+\frac{\partial T}{\partial u} - \frac{\text d^2}{\text dx^2}\left[\frac{\partial U}{\partial s_{xx}}\right]+\frac{\text d}{\text dx}\left[\frac{\partial  U}{\partial s_{x}}\right]\right\rbrace\delta s\text{ d}t,\\
 \left.\delta\int_{t_0}^{t_1}L\text{ d}t\right|_v =\int_{t_0}^{t_1}\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot v}\right]+\frac{\partial T}{\partial v} - \frac{\text d^2}{\text dx^2}\left[\frac{\partial U}{\partial v_{xx}}\right]+\frac{\text d}{\text dx}\left[\frac{\partial  U}{\partial v_{x}}\right]\right\rbrace\delta v\text{ d}t\\
-+\int_{t_0}^{t_1}\frac{\partial T}{\partial u}\left[\int_0^xv_{\eta\eta}\delta v\text{ d}\eta\right]\text{ d}t\nonumber\\
+-\int_{t_0}^{t_1}\frac{\partial T}{\partial u}\left[\int_0^xv_{\eta}\delta v_{\eta}\text{ d}\eta\right]\text{ d}t,\nonumber\\
 \left.\delta\int_{t_0}^{t_1}L\text{ d}t\right|_w =\int_{t_0}^{t_1}\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot w}\right]+\frac{\partial T}{\partial w} - \frac{\text d^2}{\text dx^2}\left[\frac{\partial U}{\partial w_{xx}}\right]+\frac{\text d}{\text dx}\left[\frac{\partial  U}{\partial w_{x}}\right]\right\rbrace\delta w\text{ d}t\\
-+\int_{t_0}^{t_1}\frac{\partial T}{\partial u}\left[\int_0^xw_{\eta\eta}\delta w\text{ d}\eta\right]\text{ d}t\nonumber
+-\int_{t_0}^{t_1}\frac{\partial T}{\partial u}\left[\int_0^xw_{\eta}\delta w_{\eta}\text{ d}\eta\right]\text{ d}t,\nonumber
 \end{eqnarray}
+where we have appended the terms for $\delta h_v,\delta h_w$ into the $v$ and $w$ variation directions.
 
 Now we write down the $s$ coordinate equations, after plugging in for $u = s-(h_v+h_w)$.
 \begin{eqnarray}
@@ -880,42 +847,73 @@ Next, we write the $v$ coordinate equations after substituting for $u$.
 \begin{eqnarray}
 & & \int_{t_0}^{t_1}\left[-\rho A \int_0^L [\ddot v + \dot \Omega (a+x+s-(h_v+h_w))+\Omega(\dot s - (\dot h_v+\dot h_w))]\text{ d}x\right.\nonumber \\ 
 & & \qquad\left. +\rho A\int_0^L  [-\Omega(\dot s-(\dot h_v+\dot h_w))+\Omega^2v] \text{ d}x + EI_{zz}\int_0^L v_{xxxx}\text{ d}x\right]\delta v\text{ d}t\\
-& & \qquad +\int_{t_0}^{t_1}\rho A\int_0^L [\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2+\dot v\Omega]\left[\int_0^xv_{\eta\eta}\delta v\text{ d}\eta\right]\text{ d}x\text{ d}t\nonumber
+& & \qquad -\int_{t_0}^{t_1}\rho A\int_0^L [\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2+\dot v\Omega]\left[\int_0^xv_{\eta}\delta v_{\eta}\text{ d}\eta\right]\text{ d}x\text{ d}t\nonumber
 \end{eqnarray}
-We cannot apply the variation unless the variation is under the same domain of integration. To solve this, we apply Lemma~\ref{lem:switch.integrals}, which yields
+We cannot apply the variation unless the variation is in the proper domain. We transform the variation to be in terms of $v$ using integration by parts. To solve this, we first apply Lemma~\ref{lem:switch.integrals}, which yields
 \begin{eqnarray}
 & & \int_{t_0}^{t_1}\left[-\rho A \int_0^L [\ddot v + \dot \Omega (a+x+s-(h_v+h_w))+\Omega(\dot s - (\dot h_v+\dot h_w))]\text{ d}x\right.\nonumber \\ 
 & & \qquad +\rho A\int_0^L  [-\Omega(\dot s-(\dot h_v+\dot h_w))+\Omega^2v] \text{ d}x + EI_{zz}\int_0^L v_{xxxx}\text{ d}x\\
-& & \qquad +\left.\rho A\int_0^L \left[\int_L^x\lbrace s-(h_v+h_w)+a+\eta\rbrace\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{xx}\text{ d}x\right]\delta v\text{ d}t\nonumber
+& & \qquad -\left.\rho A\int_0^L \left[\int_L^x\lbrace s-(h_v+h_w)+a+\eta\rbrace\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{x}\delta v_x\text{ d}x\right]\text{ d}t.\nonumber
 \end{eqnarray}
+We now apply integration by parts on the last term. Let 
+\begin{equation}
+\alpha = \left[\int_L^x\lbrace s-(h_v+h_w)+a+\eta\rbrace\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{x},
+\end{equation}
+then
+\begin{equation}
+\text{ d}\alpha = \frac{\partial }{\partial x}\left\lbrace\left[\int_L^x( s-(h_v+h_w)+a+\eta)\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{x}\right\rbrace.
+\end{equation}
+Let 
+\begin{equation}
+\text{ d}\beta = \delta v_x\text{ d}x,
+\end{equation}
+then
+\begin{equation}
+\beta = \delta v.
+\end{equation}
+Application of the integration by parts formula yields
+\begin{eqnarray}
+& &\int_0^L \left[\int_L^x(s-(h_v+h_w)+a+\eta)\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{x}\delta v_x\text{ d}x \\
+&=& \left.\vphantom{\frac{0}{0}}\alpha\delta v\right|_0^L-\int_0^L\frac{\partial }{\partial x}\left\lbrace\left[\int_L^x( s-(h_v+h_w)+a+\eta)\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{x}\right\rbrace\delta v\text{ d}x,\nonumber
+\end{eqnarray}
+where the term $\alpha\delta v$ vanishes on the boundary by definition of $\delta$.
 Applying the variation, canceling integrals and simplifying yields the following.
 \begin{eqnarray}
 & & -\rho A [\ddot v + \dot \Omega (a+x+s-(h_v+h_w))+2\Omega(\dot s - (\dot h_v+\dot h_w))-\Omega^2v] \\ 
-& & \qquad +\rho A \left[\int_L^x\lbrace s-(h_v+h_w)+a+\eta\rbrace\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{xx} = -EI_{zz}v_{xxxx}\nonumber
+& & \qquad +\rho A \frac{\partial }{\partial x}\left\lbrace\left[\int_L^x( s-(h_v+h_w)+a+\eta)\Omega^2+\dot v\Omega\text{ d}\eta\right] v_{x}\right\rbrace = -EI_{zz}v_{xxxx}\nonumber
 \end{eqnarray}
 Lastly, we write the $w$ coordinate equations.
 \begin{eqnarray}
 & & \int_{t_0}^{t_1}\left[-\rho A\int_0^L \ddot w\text{ d}x+EI_{yy}\int_0^L w_{xxxx}\text{ d}x\right]\delta w\text{ d}t \\
-& & \qquad +\int_{t_0}^{t_1}\rho A\int_0^L  [\lbrace s-(h_v+h_w)+a+x\rbrace\Omega^2+\dot v\Omega]\left[\int_0^xw_{\eta\eta}\delta w\text{ d}\eta\right]\text{ d}x\text{ d}t\nonumber 
+& & \qquad +\int_{t_0}^{t_1}\rho A\int_0^L  [( s-(h_v+h_w)+a+x)\Omega^2+\dot v\Omega]\left[\int_0^xw_{\eta}\delta w_{\eta}\text{ d}\eta\right]\text{ d}x\text{ d}t\nonumber 
 \end{eqnarray}
 Again, we must apply Lemma~\ref{lem:switch.integrals} to move the variation.
 \begin{eqnarray}
 & & \int_{t_0}^{t_1}\left[-\rho A\int_0^L \ddot w\text{ d}x+EI_{yy}\int_0^L w_{xxxx}\text{ d}x\right]\delta w\text{ d}t \\
-& & \qquad +\int_{t_0}^{t_1}\rho A\int_0^L \int_L^x[\lbrace s-(h_v+h_w)+a+\eta \rbrace\Omega^2+\dot v\Omega]\text{ d}\eta w_{xx}\delta w\text{ d}x\text{ d}t\nonumber 
+& & \qquad +\int_{t_0}^{t_1}\rho A\int_0^L \int_L^x[(s-(h_v+h_w)+a+\eta)\Omega^2+\dot v\Omega]\text{ d}\eta w_{x}\delta w_x\text{ d}x\text{ d}t\nonumber 
 \end{eqnarray}
+We perform integration by parts in the same way as in the case of $v$, which yields
+\begin{eqnarray}
+& &\int_0^L \left[\int_L^x(s-(h_v+h_w)+a+\eta)\Omega^2+\dot v\Omega\text{ d}\eta\right] w_{x}\delta w_x\text{ d}x \\
+&=& \left.\vphantom{\frac{0}{0}}\alpha\delta w\right|_0^L-\int_0^L\frac{\partial }{\partial x}\left\lbrace\left[\int_L^x( s-(h_v+h_w)+a+\eta)\Omega^2+\dot v\Omega\text{ d}\eta\right] w_{x}\right\rbrace\delta w\text{ d}x,\nonumber
+\end{eqnarray}
+where the term $\alpha\delta w$ vanishes on the boundary by definition of $\delta$.
 Applying the variation, canceling integrals and simplifying yields the following.
 \begin{equation}
--\rho A \ddot w+\rho A \int_L^x[\lbrace s-(h_v+h_w)+a+\eta \rbrace\Omega^2+\dot v\Omega]\text{ d}\eta w_{xx} = -EI_{yy} w_{xxxx}
+-\rho A \ddot w+\rho A \frac{\partial }{\partial x}\left\lbrace\left[\int_L^x( s-(h_v+h_w)+a+\eta)\Omega^2+\dot v\Omega\text{ d}\eta\right] w_{x}\right\rbrace = -EI_{yy} w_{xxxx}
 \end{equation}
-Note that the product of $s,h_v,h_w,$ and $\dot v$ with either $v_{xx}$ or $w_{xx}$ yields nonlinear terms. Furthermore, recall that $h_v,h_w$ and their derivatives are nonlinear. We shall exclude these terms. This simplification yields the following system of linear differential equations. This is an approximation to the equations of motion of a rotating cantilever beam.
+Note that the product of $s,h_v,h_w,$ and $\dot v$ with either $v_{x}$ or $w_{x}$ yields nonlinear terms. Furthermore, recall that $h_v,h_w$ and their derivatives are nonlinear. We shall exclude these terms. Additionally, we shall \emph{ad hoc} add the forcing terms $p_v,p_w$. This simplification yields the following system of linear differential equations. This is an approximation to the equations of motion of a rotating cantilever beam.
 \begin{equation}
-\rho A \left[\ddot s-\dot \Omega v+2\Omega\dot v-\lbrace s+a+x\rbrace\Omega^2\right] = EAs_{xx}.
-\end{equation}
-\begin{equation}
--\rho A [\ddot v + \dot \Omega (a+x+s)+2\Omega\dot s-\Omega^2v]+\rho A \int_L^x\Omega^2(a+\eta)\text{ d}\eta v_{xx} = -EI_{zz}v_{xxxx} 
+\rho A \left[\ddot s-\dot \Omega v+2\Omega\dot v-(s+a+x)\Omega^2\right] = EAs_{xx}.
+\label{eq:EL_s_final}
 \end{equation}
 \begin{equation}
--\rho A \ddot w+\rho A \int_L^x\Omega^2(a+\eta)\text{ d}\eta w_{xx} = -EI_{yy} w_{xxxx}
+-\rho A [\ddot v + \dot \Omega (s+a+x)+2\Omega\dot s-\Omega^2v]+\rho A\frac{\partial}{\partial x}\left\lbrace \int_L^x\Omega^2(a+\eta)\text{ d}\eta v_{x}\right\rbrace = p_v-EI_{zz}v_{xxxx} 
+\label{eq:EL_v_final}
+\end{equation}
+\begin{equation}
+-\rho A \ddot w+\rho A \frac{\partial}{\partial x}\left\lbrace\int_L^x\Omega^2(a+\eta)\text{ d}\eta w_{x}\right\rbrace = p_w-EI_{yy} w_{xxxx}
+\label{eq:EL_w_final}
 \end{equation}
 
 \subsection{Discretizing the System}
@@ -1273,13 +1271,12 @@ v(x) = \sum_{j=1}^4 H_j(x)v_j = \vec{H}^\top \vec{v}, \\
 w(x) = \sum_{j=1}^4 H_j(x)w_j = \vec{H}^\top \vec{w}.
 \end{eqnarray}
 
-We wish to apply these interpolating approximations to the Euler-Lagrange equations found as Eqn.~\textbf{[Euler-Lagrange Solution Equation Refs Here]}. Unfortunately, we have a fourth order spatial derivative in both $v$ and $w$, but $v$ and $w$ are approximated by third degree polynomials. To remedy this, we are inclined to use integration by parts to reduce the order of the derivatives. Integration by parts done when products of functions are inside an integral. Following this logic, we shall multiply the equations by their respective displacement direction interpolation functions as follows.
-
+We wish to apply these interpolating approximations to the Euler-Lagrange equations found as Eqns.~\ref{eq:EL_s_final},~\ref{eq:EL_v_final},~\ref{eq:EL_w_final}. Unfortunately, we have a fourth order spatial derivative in both $v$ and $w$, but $v$ and $w$ are approximated by third degree polynomials. To remedy this, we are inclined to use integration by parts to reduce the order of the derivatives. Integration by parts done when products of functions are inside an integral. Following this logic, we shall multiply the equations by their respective displacement direction interpolation functions as follows.
 \begin{eqnarray}
 [\rho A(\ddot s - 2\Omega\dot v-\Omega^2s-\dot\Omega v)-EAs_{xx}]\cdot s = \rho A\Omega^2(a+x)\cdot s, \\
-\left(\rho A(\ddot v + 2\Omega\dot s-\Omega^2v+\dot\Omega s)+EI_{zz}v_{xxxx}-\rho A\Omega^2\frac{\partial}{\partial x}\left\lbrace \left[a(L-x)\vphantom{\frac{1}{2}}\right.\right.\right.\\
+\left(\rho A(\ddot v + 2\Omega\dot s-\Omega^2v+\dot\Omega s)+EI_{zz}v_{xxxx}-\rho A\Omega^2\frac{\partial}{\partial x}\left\lbrace\left[a(L-x)\vphantom{\frac{0}{0}}\right.\right.\right.\\
 \left.\left.\left.+\frac{1}{2}(L^2-x^2)\right]\frac{\partial v}{\partial x}\right\rbrace\right)\cdot v = [p_v - \rho A\dot\Omega(a+x)]\cdot v, \nonumber \\
-\left(\rho A\ddot w+EI_{yy}w_{xxxx}-\rho A\Omega^2\frac{\partial}{\partial x}\left\lbrace \left[a(L-x)\vphantom{\frac{1}{2}}\right.\right.\right.\\
+\left(\rho A\ddot w+EI_{yy}w_{xxxx}-\rho A\Omega^2\frac{\partial}{\partial x}\left\lbrace\left[a(L-x)\vphantom{\frac{0}{0}}\right.\right.\right.\\
 \left.\left.\left.+\frac{1}{2}(L^2-x^2)\right]\frac{\partial w}{\partial x}\right\rbrace\right)\cdot w = p_w\cdot w. \nonumber
 \end{eqnarray}
 We now integrate each equation over the element. First consider the stretch coordinate $s$.
@@ -1384,10 +1381,10 @@ w = \vec N_w^\top \vec d.
 \end{equation}
 We may now use Eqn.~\ref{eq:s_displacement_integral_nonsense} sensibly. Next, we analyze the bending coordinate $v$.
 \begin{eqnarray}
-\int_0^l\rho A(\ddot v + 2\Omega\dot s-\Omega^2v+\dot\Omega s)v+EI_{zz}v_{xxxx}v-\rho A\Omega^2\frac{\partial}{\partial x}\left\lbrace \left[a(L-x)\vphantom{\frac{1}{2}}\right.\right.\\
-\left.\left.+\frac{1}{2}(L^2-x^2)\right]\frac{\partial v}{\partial x}\right\rbrace v\text{ d}x = \int_0^l[p_v - \rho A\dot\Omega(a+x)]v\text{ d}x. \nonumber
+\int_0^l\rho A(\ddot v + 2\Omega\dot s-\Omega^2v+\dot\Omega s)v+EI_{zz}v_{xxxx}v-\rho A\Omega^2\left[a(L-x)\vphantom{\frac{1}{2}}\right.\\
+\left.+\frac{1}{2}(L^2-x^2)\right]\frac{\partial^2 v}{\partial x^2} v\text{ d}x = \int_0^l[p_v - \rho A\dot\Omega(a+x)]v\text{ d}x. \nonumber
 \end{eqnarray}
-This equation has two terms to be simplified, the fourth order spatial derivative and the term in curly braces. Integration by parts twice on the fourth order term yields
+This equation has two terms to be simplified, the fourth order spatial derivative. Integration by parts twice on the fourth order term yields
 \begin{equation}
 \int_0^lEI_{zz}\frac{\partial^4 v}{\partial x^4}v\text{ d}x = \left.EI_{zz}v\frac{\partial^3 v}{\partial x^3}\right|_0^l-\left.EI_{zz}\frac{\partial v}{\partial x}\frac{\partial^2 v}{\partial x^2}\right|_0^l + \int_0^lEI_{zz}v_{xx}^2\text{ d}x,
 \label{eq:v.disc.int.by.parts.1}
@@ -1396,37 +1393,6 @@ and the first two terms on the right cancel due to boundary conditions, yielding
 \begin{equation}
 \int_0^lEI_{zz}\frac{\partial^4 v}{\partial x^4}v\text{ d}x =  \int_0^lEI_{zz}v_{xx}^2\text{ d}x.
 \end{equation}
-The third term is manipulated as follows. Consider
-\begin{equation}
-\int_0^l-\rho A\Omega^2\frac{\partial}{\partial x}\left\lbrace \left[a(L-x)+\frac{1}{2}(L^2-x^2)\right]\frac{\partial v}{\partial x}\right\rbrace v\text{ d}x.
-\end{equation}
-Let
-\begin{equation}
-\alpha = -\rho A\Omega^2v,
-\end{equation}
-then
-\begin{equation}
-\text d\alpha = \frac{\text d}{\text dx}(-\rho A\Omega^2)\text{ d}x.
-\end{equation}
-Let
-\begin{equation}
-\text d\beta = \frac{\partial}{\partial x}\left\lbrace \left[a(L-x)+\frac{1}{2}(L^2-x^2)\right]\frac{\partial v}{\partial x}\right\rbrace\text{ d}x,
-\end{equation}
-then
-\begin{equation}
-\beta = \left[a(L-x)+\frac{1}{2}(L^2-x^2)\right]\frac{\partial v}{\partial x}.
-\end{equation}
-The integration by parts formula yields
-\begin{eqnarray}
-\label{eq:v.disc.int.by.parts.2}
-\int_0^l-\rho A\Omega^2\frac{\partial}{\partial x}\left\lbrace \left[a(L-x)+\frac{1}{2}(L^2-x^2)\right]\frac{\partial v}{\partial x}\right\rbrace v\text{ d}x =\\
--\left.v\left[a(L-x)+\frac{1}{2}(L^2-x^2)\right]\frac{\partial v}{\partial x}\right|_0^l+\int_0^l \rho A\Omega^2\left[a(L-x)+\frac{1}{2}(L^2-x^2)\right]v_x^2\text{ d}x, \nonumber
-\end{eqnarray}
-where the first term on the right side vanishes due to boundary conditions, yielding
-\begin{eqnarray}
--\int_0^l\rho A\Omega^2\frac{\partial}{\partial x}\left\lbrace \left[a(L-x)+\frac{1}{2}(L^2-x^2)\right]\frac{\partial v}{\partial x}\right\rbrace v\text{ d}x =\\
- \int_0^l \rho A\Omega^2\left[a(L-x)+\frac{1}{2}(L^2-x^2)\right]v_x^2\text{ d}x. \nonumber
-\end{eqnarray}
 The full $v$ bending integral equation is written as
 \begin{eqnarray}
 \label{eq:v_bending_integral_eqn}
