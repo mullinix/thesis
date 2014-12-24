@@ -15,11 +15,9 @@
 \contentsline {subsection}{\numberline {1.2.1}Developing the Euler-Lagrange Equations}{9}
 \contentsline {subsection}{\numberline {1.2.2}System Analysis}{15}
 \contentsline {subsection}{\numberline {1.2.3}Discretizing the System}{23}
-\contentsline {chapter}{\numberline {2}M639 WRITEUP}{43}
-\contentsline {section}{\numberline {2.1}Application: Finite Element Analysis}{43}
-\contentsline {schapter}{BIBLIOGRAPHY}{44}
+\contentsline {schapter}{BIBLIOGRAPHY}{43}
 \pagebreak [3]
-\contentsline {chaphd}{APPENDICES}{45}
+\contentsline {chaphd}{APPENDICES}{44}
 \nopagebreak 
-\contentsline {chapter}{\numberline {A}VARIATIONAL APPROXIMATION AND CALCULUS OF VARIATIONS}{45}
-\contentsline {chapter}{\numberline {B}STRAIN EQUATIONS}{52}
+\contentsline {chapter}{\numberline {A}VARIATIONAL APPROXIMATION AND CALCULUS OF VARIATIONS}{44}
+\contentsline {chapter}{\numberline {B}STRAIN EQUATIONS}{51}

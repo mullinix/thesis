@@ -1685,38 +1685,6 @@ The computed matrices are given below.
  0 &  0 &    0 & 6I_{yy}l & 2I_{yy}l^2 & 0 &   0 &    0 & -6I_{yy}l & 4I_{yy}l^2\\
 \end{pmatrix}
 \]
-\begin{comment}
-	double L = len;
-	double l = xe1-xe;
-	double aa = L*L-xe*xe;
-	double bb = 2*a*(L-xe);
-	double cc = l*(a+xe);
-	// (2,2) = (4,4) = (7,7) = (9,9) = -(2,7) = -(7,2) = -(4,9) = -(9,4)
-	double a22 = -72*pow(l,2)+252*(aa+bb-cc);
-	// (2,3) = (3,2) = (4,5) = (5,4) = -(3,7) = -(7,3) = -(5,9) = -(9,5)
-	double b23 = -15*pow(l,3)+21*l*(aa+bb-2*cc);
-	// (2,8) = (8,2) = (4,10) = (10,4) = -(7,8) = -(8,7) = -(9,10) = -(10,9)
-	double c28 = 6*pow(l,3)+21*l*(aa+bb);
-	// (3,3) = (5,5)
-	double d33 = -4*pow(l,4)+14*l*l*(2*aa+2*bb-cc);
-	// (3,8) = (8,3) = (5,10) = (10,5)
-	double e38 = 3*pow(l,4)+7*l*l*(-aa-bb+cc);
-	// (8,8) = (10,10)             
-	double f88 = -18*pow(l,4)+14*l*l*(2*aa+2*bb-3*cc);
-	
-	
-	sigma << 0,   0,    0,    0,    0,   0,    0,    0,    0,    0,
-			 0,  a22,  b23,   0,    0,   0, -a22,  c28,    0,    0,
-			 0,  b23,  d33,   0,    0,   0, -b23,  e38,    0,    0,
-			 0,   0,    0,  a22,  b23,   0,    0,    0, -a22,  c28,
-			 0,   0,    0,  b23,  d33,   0,    0,    0, -b23,  e38,
-			 0,   0,    0,    0,    0,   0,    0,    0,    0,    0,
-			 0, -a22, -b23,   0,    0,   0,  a22, -c28,    0,    0,
-			 0,  c28,  e38,   0,    0,   0, -c28,  f88,    0,    0,
-			 0,   0,    0, -a22, -b23,   0,    0,    0,  a22, -c28,
-			 0,   0,    0,  c28,  e38,   0,    0,    0, -c28,  f88;
-
-\end{comment}
 Let 
 \begin{eqnarray*}
 \alpha_1 &=& L^2-x_e^2,\\
@@ -1782,24 +1750,3 @@ Let $()^*$ denote the conjugate operator. We have
 \end{proof}
 
 As a result of the configuration of $\mathbf{[g]}$, the contribution of the $\dot{\vec d}$ term does not add nor remove energy from the system --- and important distinction, as that would imply that the physical system would always decay to zero or grow unbounded, and we know the physical system does not do that.
-
-\chapter{M639 WRITEUP}
-\label{M639}
-
-\section{Application: Finite Element Analysis}
-In this section, we will develop the finite element formulation of a classical problem: the 1-D Cantilever Beam.
-
-Under the new notation, the element equations of motion can be expressed as
-\[
-[\textbf{M}]\left\{\ddot{\vec y}_i\right\}+[\textbf{K}]\left\{\vec y_i\right\} = 0,
-\]
-and noticing that this is a second order ODE without damping or forcing, we assume the ansatz
-\[
-\left\{\vec y_i\right\} = \left\{\vec \xi_i\right\}\sin(\omega_i t).
-\]
-The amplitudes $\vec \xi_i$ are independent of time, and $\omega_i$ is the vibration frequency.
-Plugging the ansatz into the ODE, we find
-\[
-(\textbf K-\omega_i^2\textbf M)\vec \xi_i = 0,
-\]
-which is the \emph{generalized eigenvalue problem}, with eigenvalues $\lambda_i = -\omega_i^2$, and eigenvectors $\vec \xi_i$. The $\vec\xi_i$ are commonly referred to as \emph{eigenshapes}, and represent the steady state displacements of the beam.\newline
