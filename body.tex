@@ -1685,38 +1685,6 @@ The computed matrices are given below.
  0 &  0 &    0 & 6I_{yy}l & 2I_{yy}l^2 & 0 &   0 &    0 & -6I_{yy}l & 4I_{yy}l^2\\
 \end{pmatrix}
 \]
-\begin{comment}
-	double L = len;
-	double l = xe1-xe;
-	double aa = L*L-xe*xe;
-	double bb = 2*a*(L-xe);
-	double cc = l*(a+xe);
-	// (2,2) = (4,4) = (7,7) = (9,9) = -(2,7) = -(7,2) = -(4,9) = -(9,4)
-	double a22 = -72*pow(l,2)+252*(aa+bb-cc);
-	// (2,3) = (3,2) = (4,5) = (5,4) = -(3,7) = -(7,3) = -(5,9) = -(9,5)
-	double b23 = -15*pow(l,3)+21*l*(aa+bb-2*cc);
-	// (2,8) = (8,2) = (4,10) = (10,4) = -(7,8) = -(8,7) = -(9,10) = -(10,9)
-	double c28 = 6*pow(l,3)+21*l*(aa+bb);
-	// (3,3) = (5,5)
-	double d33 = -4*pow(l,4)+14*l*l*(2*aa+2*bb-cc);
-	// (3,8) = (8,3) = (5,10) = (10,5)
-	double e38 = 3*pow(l,4)+7*l*l*(-aa-bb+cc);
-	// (8,8) = (10,10)             
-	double f88 = -18*pow(l,4)+14*l*l*(2*aa+2*bb-3*cc);
-	
-	
-	sigma << 0,   0,    0,    0,    0,   0,    0,    0,    0,    0,
-			 0,  a22,  b23,   0,    0,   0, -a22,  c28,    0,    0,
-			 0,  b23,  d33,   0,    0,   0, -b23,  e38,    0,    0,
-			 0,   0,    0,  a22,  b23,   0,    0,    0, -a22,  c28,
-			 0,   0,    0,  b23,  d33,   0,    0,    0, -b23,  e38,
-			 0,   0,    0,    0,    0,   0,    0,    0,    0,    0,
-			 0, -a22, -b23,   0,    0,   0,  a22, -c28,    0,    0,
-			 0,  c28,  e38,   0,    0,   0, -c28,  f88,    0,    0,
-			 0,   0,    0, -a22, -b23,   0,    0,    0,  a22, -c28,
-			 0,   0,    0,  c28,  e38,   0,    0,    0, -c28,  f88;
-
-\end{comment}
 Let 
 \begin{eqnarray*}
 \alpha_1 &=& L^2-x_e^2,\\
@@ -1782,6 +1750,26 @@ Let $()^*$ denote the conjugate operator. We have
 \end{proof}
 
 As a result of the configuration of $\mathbf{[g]}$, the contribution of the $\dot{\vec d}$ term does not add nor remove energy from the system --- and important distinction, as that would imply that the physical system would always decay to zero or grow unbounded, and we know the physical system does not do that.
+
+Next, we must assemble the system. Consider Eqn.~\ref{eq:eom.elt.mx}. The matrices $\mathbf{m},\mathbf{g},\mathbf{k},\mathbf{\sigma},\mathbf{p}$ are in terms of the element. Each element is, essentially, the connection of two nodes. Each node has the five degrees of freedom: $s$ stretch, $v$ displacement, $v$ bending, $w$ displacement and $w$ bending. If we label the elements and nodes in an orderly fashion from the base of the beam to the tip, we find that element one is the connection of nodes one and two, element two is the connection of nodes two and three, and so on up to the last or $n$-th element, which is the connection of the $n$-th and $(n+1)$-th nodes. If the elements are all equal length, then the properties of each element are identical and we may create the element matrices once for our assembly. If not, the assembly loop will require us to build the element matrices at each iteration. In either case, we shall have a block diagonal matrix, which is densly populated near the diagonal, and zeros (or at least very sparse) elsewhere. This could be useful if the system is to be modeled with thousands of elements; routines are available in may environments (\emph{e.g.} MatLab, Python/NumPy, \emph{etc.}) which allow for optimized computation of sparse matrices so that much less memory is used.
+
+Whatever the method of labeling and indexing, assembly is most generally accomplished by creating an index of degrees of freedom in the global frame. The $i$-th element will have ten degrees of freedom. The local degrees of freedom, indexed as $i=1,2,\dots,10$, correspond to the matrix entries in $\mathbf{m},\mathbf{g},\mathbf{k},\mathbf{\sigma},\mathbf{p}$. The indexing vector $\vec g_{\text{dofs}}$ stores the global degrees of freedom. These degrees of freedom, in turn, correspond to the matrix indices of $\mathbf{M},\mathbf{G},\mathbf{K},\mathbf{S},\mathbf{P}$, the global mass, gyroscopic, stiffness and Coriolis stiffening matrices. Construction of the indexing vector is done as
+\begin{equation}
+\vec g_{\text{dofs}}^i(j) = 5(i-1)+j,
+\end{equation}
+for the $i$-th element, where the $j$-th local index is in $\lbrace1,2,\dots,10\rbrace$. The $(j,k)$-th local matrix entry for the $i$-th element modifies the global matrix as follows.
+\begin{equation}
+\mathbf{K}(\vec{g}_{\text{dof}}^i(j),\vec{g}_{\text{dof}}^i(k)) = \mathbf{K}(\vec{g}_{\text{dof}}^i(j),\vec{g}_{\text{dof}}^i(k))+\mathbf{k}(j,k),
+\end{equation}
+for $j,k$ $\in\lbrace1,2,\dots,10\rbrace$. The process is the same for $\textbf{g}\rightarrow\textbf{G},\mathbf{p}\rightarrow\mathbf{P},\mathbf{m}\rightarrow\mathbf{M},\mathbf{\sigma}\rightarrow\mathbf{S}$. We then formulate the global system.
+\begin{equation}
+\mathbf{[M]}\ddot{\vec d} +2\Omega\mathbf{[G]}\dot{\vec d} + (\mathbf{[K]}+\Omega^2(\mathbf{[S]}-\mathbf{[P]})+\dot\Omega\mathbf{[G]} )\vec d = \vec{\mathbf{F}}
+\end{equation}
+
+\chapter{RESULTS}
+\label{ch:results}
+The test of the system is carried out by examining the natural modes of the discretization and comparing against published material. To do so, it is important to consider the system at equilibrium. 
+
 
 \chapter{M639 WRITEUP}
 \label{M639}

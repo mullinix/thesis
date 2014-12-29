@@ -1,37 +1,31 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2013.11.8)  23 DEC 2014 12:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.6)  26 DEC 2014 17:24
 entering extended mode
-\write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
-LaTeX2e <2005/12/01>
-Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
-erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
- french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
-us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
-tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
-turkish, ukenglish, ukrainian, loaded.
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 4 languages loaded.
 (./sdsu-thesis.cls
 Document Class: sdsu-thesis 2012/02/13 v2012-02-13-17:31:23-PST SDSU-Thesis Cla
 ss for Mathematics Department
-(/usr/share/texmf/tex/latex/tools/calc.sty
-Package: calc 2005/08/06 v4.2 Infix arithmetic (KKT,FJ)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count79
 \calc@Bcount=\count80
 \calc@Adimen=\dimen102
 \calc@Bdimen=\dimen103
 \calc@Askip=\skip41
 \calc@Bskip=\skip42
-LaTeX Info: Redefining \setlength on input line 75.
-LaTeX Info: Redefining \addtolength on input line 76.
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count81
 \calc@Cskip=\skip43
 )
-(/usr/share/texmf/tex/latex/base/report.cls
-Document Class: report 2005/09/16 v1.4f Standard LaTeX document class
-(/usr/share/texmf/tex/latex/base/size12.clo
-File: size12.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count82
 \c@chapter=\count83
@@ -49,29 +43,36 @@ File: size12.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 \c@titlelines=\count91
 \c@subsubsubsection=\count92
 )
-(/usr/share/texmf/tex/latex/graphics/epsfig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texmf/tex/latex/graphics/graphics.sty
-Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texmf/tex/latex/config/graphics.cfg
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 90.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texmf/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
 \Gread@gobject=\count93
 ))
 \Gin@req@height=\dimen105
@@ -80,63 +81,112 @@ File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
 \epsfxsize=\dimen107
 \epsfysize=\dimen108
 )
-(/usr/share/texmf/tex/latex/tools/verbatim.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks15
 \verbatim@line=\toks16
 \verbatim@in@stream=\read1
 )
-(/usr/share/texmf/tex/latex/oberdiek/epstopdf.sty
-Package: epstopdf 2006/08/26 v1.3 Conversion with epstopdf on the fly (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/share/texmf/tex/latex/was/upgreek.sty
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/was/upgreek.sty
 Package: upgreek 2003/02/12 v2.0 (WaS)
 Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
 \symugrf@m=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 (Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
 )
-(/usr/share/texmf/tex/latex/mh/mathtools.sty
-Package: mathtools 2004/10/10 v1.01a mathematical typesetting tools (MH)
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
+Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
 
-(/usr/share/texmf/tex/latex/mh/mhsetup.sty
-Package: mhsetup 2004/10/10 v1.0b programming setup (MH)
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
-(/usr/share/texmf/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2000/07/18 v2.13 AMS math features
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texmf/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texmf/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
 \ex@=\dimen109
 ))
-(/usr/share/texmf/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen110
 )
-(/usr/share/texmf/tex/latex/amsmath/amsopn.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count94
-LaTeX Info: Redefining \frac on input line 211.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count95
 \leftroot@=\count96
-LaTeX Info: Redefining \overline on input line 307.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count97
 \DOTSCASE@=\count98
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen111
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count99
 \c@MaxMatrixCols=\count100
 \dotsspace@=\muskip10
@@ -157,80 +207,102 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \multlinegap=\skip47
 \multlinetaggap=\skip48
 \mathdisplay@stack=\toks21
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count106
 \l_MT_multwidth_dim=\dimen118
+\origjot=\skip49
+\l_MT_shortvdotswithinadjustabove_dim=\dimen119
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen120
+\l_MT_above_intertext_sep=\dimen121
+\l_MT_below_intertext_sep=\dimen122
+\l_MT_above_shortintertext_sep=\dimen123
+\l_MT_below_shortintertext_sep=\dimen124
 )
-(/usr/share/texmf/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2001/10/25 v2.2f
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/share/texmf/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2002/01/22 v2.2d
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/share/texmf/tex/latex/amscls/amsthm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks22
 \thm@bodyfont=\toks23
 \thm@headfont=\toks24
 \thm@notefont=\toks25
 \thm@headpunct=\toks26
-\thm@preskip=\skip49
-\thm@postskip=\skip50
-\thm@headsep=\skip51
+\thm@preskip=\skip50
+\thm@postskip=\skip51
+\thm@headsep=\skip52
 \dth@everypar=\toks27
 )
-(/usr/share/texmf/tex/latex/caption/caption.sty
-Package: caption 2007/01/07 v3.0k Customising captions (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/share/texmf/tex/latex/caption/caption3.sty
-Package: caption3 2007/01/07 v3.0k caption3 kernel (AR)
-\captionmargin=\dimen119
-\captionmarginx=\dimen120
-\captionwidth=\dimen121
-\captionindent=\dimen122
-\captionparindent=\dimen123
-\captionhangindent=\dimen124
-))
-(/usr/share/texmf/tex/latex/tools/longtable.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen125
+\captionmargin@=\dimen126
+\captionwidth=\dimen127
+\caption@tempdima=\dimen128
+\caption@indent=\dimen129
+\caption@parindent=\dimen130
+\caption@hangindent=\dimen131
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
+p {\ssp \raggedright \bfseries #1. #2\par } \vskip \belowcaptionskip .
+\c@ContinuedFloat=\count107
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip52
-\LTright=\skip53
-\LTpre=\skip54
-\LTpost=\skip55
-\LTchunksize=\count107
-\LTcapwidth=\dimen125
+\LTleft=\skip53
+\LTright=\skip54
+\LTpre=\skip55
+\LTpost=\skip56
+\LTchunksize=\count108
+\LTcapwidth=\dimen132
 \LT@head=\box28
 \LT@firsthead=\box29
 \LT@foot=\box30
 \LT@lastfoot=\box31
-\LT@cols=\count108
-\LT@rows=\count109
-\c@LT@tables=\count110
-\c@LT@chunks=\count111
+\LT@cols=\count109
+\LT@rows=\count110
+\c@LT@tables=\count111
+\c@LT@chunks=\count112
 \LT@p@ftn=\toks28
 )
-(/usr/share/texmf/tex/latex/ltxmisc/ulem.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box32
 \UL@hyphenbox=\box33
-\UL@skip=\skip56
+\UL@skip=\skip57
 \UL@hook=\toks29
-\UL@pe=\count112
-\UL@pixel=\dimen126
+\UL@height=\dimen133
+\UL@pe=\count113
+\UL@pixel=\dimen134
 \ULC@box=\box34
-Package: ulem 2000/05/26
-\ULdepth=\dimen127
+Package: ulem 2012/05/18
+\ULdepth=\dimen135
 )
-\c@corollary=\count113
-\c@definition=\count114
-\c@lemma=\count115
-\c@proposition=\count116
-\c@theorem=\count117
+\c@corollary=\count114
+\c@definition=\count115
+\c@lemma=\count116
+\c@proposition=\count117
+\c@theorem=\count118
  (./thesis.aux)
 \openout1 = `thesis.aux'.
 
@@ -249,34 +321,42 @@ LaTeX Font Info:    ... okay on input line 216.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 216.
 
 
-(/usr/share/texmf/tex/latex/psnfss/ot1ptm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 Note: longtable package detected, redefining the caption printing
-(/usr/share/texmf/tex/latex/ragged2e/ragged2e.sty
-Package: ragged2e 2003/03/25 v2.04 ragged2e Package (MS)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count119
+\scratchdimen=\dimen136
+\scratchbox=\box35
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen137
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks31
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: Incompatible package detected (regarding \@caption).
+(caption)             \@caption = \long macro:#1[#2]#3->\par \addcontentsline {
+\csname ext@#1\endcsname }{#1}{\csname fnum@#1\endcsname .\space \ignorespaces 
+#2}\begingroup \@parboxrestore \if@minipage \@setminipage \fi \normalsize \@mak
+ecaption {\csname fnum@#1\endcsname }{\ignorespaces #3}\par \endgroup .
 
-(/usr/share/texmf/tex/latex/everysel/everysel.sty
-Package: everysel 1999/06/08 v1.03 EverySelectfont Package (MS)
-LaTeX Info: Redefining \selectfont on input line 125.
+
+Package caption Warning: \caption will not be redefined since it's already
+(caption)                redefined by a document class or package which is
+(caption)                unknown to the caption package.
+See the caption package documentation for explanation.
+
+Package caption Info: longtable package is loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 )
-\CenteringLeftskip=\skip57
-\RaggedLeftLeftskip=\skip58
-\RaggedRightLeftskip=\skip59
-\CenteringRightskip=\skip60
-\RaggedLeftRightskip=\skip61
-\RaggedRightRightskip=\skip62
-\CenteringParfillskip=\skip63
-\RaggedLeftParfillskip=\skip64
-\RaggedRightParfillskip=\skip65
-\JustifyingParfillskip=\skip66
-\CenteringParindent=\skip67
-\RaggedLeftParindent=\skip68
-\RaggedRightParindent=\skip69
-\JustifyingParindent=\skip70
-)
-Package caption Info: longtable package v3.15 (or newer) detected on input line
- 216.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 220.
  [1
@@ -288,33 +368,34 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
  [2]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 229.
 
- (/usr/share/texmf/tex/latex/psnfss/omsptm.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 229.
+ [3] [4
 
-[3] [4
-
-] [5] (./abstract.tex
+] [5]
+(./abstract.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 6.
- (/usr/share/texmf/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 6.
 
-(/usr/share/texmf/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )) [6
 
 ] (./thesis.toc)
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [7
 
-]
-(./thesis.lot)
+[7
+
+] (./thesis.lot)
 \tf@lot=\write4
 \openout4 = `thesis.lot'.
 
@@ -335,27 +416,36 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <14.4> not available
  Section 1.1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 17.
-
-
-pdfTeX warning: pdflatex (file ./images/chung_yoo_cantilever_beam.pdf): PDF inc
-lusion: found PDF version <1.5>, but at most version <1.4> allowed
-<images/chung_yoo_cantilever_beam.pdf, id=36, 1111.15125pt x 544.0325pt>
+<images/chung_yoo_cantilever_beam.pdf, id=37, 1111.15125pt x 544.0325pt>
 File: images/chung_yoo_cantilever_beam.pdf Graphic file (type pdf)
 
-<use images/chung_yoo_cantilever_beam.pdf> [1
+<use images/chung_yoo_cantilever_beam.pdf>
+Package pdftex.def Info: images/chung_yoo_cantilever_beam.pdf used on input lin
+e 26.
+(pdftex.def)             Requested size: 293.59412pt x 143.74455pt.
+ [1
 
- <./images/chung_yoo_cantilever_beam.pdf
-
-pdfTeX warning: pdflatex (file ./images/chung_yoo_cantilever_beam.pdf): PDF inc
-lusion: Page Group detected which pdfTeX can't handle. Ignoring it.
->]
+ <./images/chung_yoo_cantilever_beam.pdf>]
  Subsection 1.1.1.
-system(epstopdf images/stretch_coords.eps)...executed.
+Package epstopdf Info: Source file: <images/stretch_coords.eps>
+(epstopdf)                    date: 2014-07-01 10:37:20
+(epstopdf)                    size: 112515 bytes
+(epstopdf)             Output file: <images/stretch_coords-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2014-07-01 10:37:32
+(epstopdf)                    size: 34685 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/stretch_coords-eps-
+converted-to.pdf images/stretch_coords.eps>
+(epstopdf)             \includegraphics on input line 38.
+Package epstopdf Info: Output file is already uptodate.
+<images/stretch_coords-eps-converted-to.pdf, id=50, 744.7825pt x 677.53125pt>
+File: images/stretch_coords-eps-converted-to.pdf Graphic file (type pdf)
 
-<images/stretch_coords.pdf, id=49, 744.7825pt x 677.53125pt>
-File: images/stretch_coords.pdf Graphic file (type pdf)
-
-<use images/stretch_coords.pdf> [2 <./images/stretch_coords.pdf>] [3] [4]
+<use images/stretch_coords-eps-converted-to.pdf>
+Package pdftex.def Info: images/stretch_coords-eps-converted-to.pdf used on inp
+ut line 38.
+(pdftex.def)             Requested size: 293.59412pt x 267.08948pt.
+ [2 <./images/stretch_coords-eps-converted-to.pdf>] [3] [4]
  Subsection 1.1.2.
 [5]
  Subsection 1.1.3.
@@ -367,32 +457,64 @@ File: images/stretch_coords.pdf Graphic file (type pdf)
  Subsection 1.2.2.
 [15] [16] [17] [18] [19] [20] [21] [22]
  Subsection 1.2.3.
-system(epstopdf images/2-node-rod.eps)...executed.
+Package epstopdf Info: Source file: <images/2-node-rod.eps>
+(epstopdf)                    date: 2014-08-06 11:31:20
+(epstopdf)                    size: 26729 bytes
+(epstopdf)             Output file: <images/2-node-rod-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-08-14 11:29:49
+(epstopdf)                    size: 7616 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/2-node-rod-eps-conv
+erted-to.pdf images/2-node-rod.eps>
+(epstopdf)             \includegraphics on input line 930.
+Package epstopdf Info: Output file is already uptodate.
+<images/2-node-rod-eps-converted-to.pdf, id=130, 499.8675pt x 203.76125pt>
+File: images/2-node-rod-eps-converted-to.pdf Graphic file (type pdf)
 
-<images/2-node-rod.pdf, id=130, 499.8675pt x 203.76125pt>
-File: images/2-node-rod.pdf Graphic file (type pdf)
+<use images/2-node-rod-eps-converted-to.pdf>
+Package pdftex.def Info: images/2-node-rod-eps-converted-to.pdf used on input l
+ine 930.
+(pdftex.def)             Requested size: 158.09337pt x 64.44318pt.
+Package epstopdf Info: Source file: <images/stretch_2node.eps>
+(epstopdf)                    date: 2014-08-13 09:33:29
+(epstopdf)                    size: 48833 bytes
+(epstopdf)             Output file: <images/stretch_2node-eps-converted-to.pdf>
 
-<use images/2-node-rod.pdf>
-system(epstopdf images/stretch_2node.eps)...executed.
+(epstopdf)                    date: 2014-08-14 11:29:49
+(epstopdf)                    size: 14829 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/stretch_2node-eps-c
+onverted-to.pdf images/stretch_2node.eps>
+(epstopdf)             \includegraphics on input line 940.
+Package epstopdf Info: Output file is already uptodate.
 
+<images/stretch_2node-eps-converted-to.pdf, id=131, 643.40375pt x 402.50375pt>
+File: images/stretch_2node-eps-converted-to.pdf Graphic file (type pdf)
 
-<images/stretch_2node.pdf, id=131, 643.40375pt x 402.50375pt>
-File: images/stretch_2node.pdf Graphic file (type pdf)
-
-<use images/stretch_2node.pdf> [23 <./images/2-node-rod.pdf>] [24 <./images/str
-etch_2node.pdf>] <images/beam_dof.png, id=146, 642.4pt x 401.5pt>
+<use images/stretch_2node-eps-converted-to.pdf>
+Package pdftex.def Info: images/stretch_2node-eps-converted-to.pdf used on inpu
+t line 940.
+(pdftex.def)             Requested size: 158.09337pt x 98.89986pt.
+ [23 <./images/2-node-rod-eps-converted-to.pdf>] [24 <./images/stretch_2node-ep
+s-converted-to.pdf>]
+<images/beam_dof.png, id=144, 642.4pt x 401.5pt>
 File: images/beam_dof.png Graphic file (type png)
+ <use images/beam_dof.png>
+Package pdftex.def Info: images/beam_dof.png used on input line 1070.
+(pdftex.def)             Requested size: 158.09337pt x 98.8064pt.
 
-<use images/beam_dof.png> [25] [26 <./images/beam_dof.png (PNG copy)>] [27]
-[28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39]
+[25] [26 <./images/beam_dof.png>] [27] [28] [29] [30] [31] [32] [33] [34]
+[35] [36] [37] [38] [39]
 Overfull \hbox (31.80417pt too wide) detected at line 1687
 [] \OT1/cmr/m/n/12 = [] []
  []
 
 [40] [41] [42]
 CHAPTER 2.
- Section 2.1.
-) (./thesis.bbl [43
+[43
+
+]
+CHAPTER 3.
+ Section 3.1.
+) (./thesis.bbl [44
 
 ]
 Overfull \hbox (51.23476pt too wide) in paragraph at lines 21--25
@@ -406,68 +528,70 @@ Overfull \hbox (51.23476pt too wide) in paragraph at lines 27--31
 IAST.Lect05.d/IAST.Lect05.pdf, 
  []
 
-[44
+[45
 
 ]) (./append.tex
 APPENDIX A.
-[45
+[46
 
 ]
  Section A.1.
-[46] [47]
+[47] [48]
  Section A.2.
-[48]
+[49]
  Section A.3.
  Section A.4.
-[49] [50] [51]
+[50] [51] [52]
 APPENDIX B.
-[52
+[53
 
 ]
  Section B.1.
-
-
-pdfTeX warning: pdflatex (file ./images/normal_strain.pdf): PDF inclusion: foun
-d PDF version <1.5>, but at most version <1.4> allowed
-<images/normal_strain.pdf, id=237, 369.38pt x 259.97125pt>
+<images/normal_strain.pdf, id=239, 369.38pt x 259.97125pt>
 File: images/normal_strain.pdf Graphic file (type pdf)
 
-<use images/normal_strain.pdf> [53 <./images/normal_strain.pdf
-
-pdfTeX warning: pdflatex (file ./images/normal_strain.pdf): PDF inclusion: Page
- Group detected which pdfTeX can't handle. Ignoring it.
->]
+<use images/normal_strain.pdf>
+Package pdftex.def Info: images/normal_strain.pdf used on input line 238.
+(pdftex.def)             Requested size: 293.59412pt x 206.63252pt.
+ [54 <./images/normal_strain.pdf>]
  Section B.2.
-<images/ucboulderstrain4.png, id=245, 1130.2225pt x 633.36626pt>
+<images/ucboulderstrain4.png, id=247, 1130.2225pt x 633.36626pt>
 File: images/ucboulderstrain4.png Graphic file (type png)
 
-<use images/ucboulderstrain4.png> [54] [55 <./images/ucboulderstrain4.png (PNG 
-copy)>]
+<use images/ucboulderstrain4.png>
+Package pdftex.def Info: images/ucboulderstrain4.png used on input line 295.
+(pdftex.def)             Requested size: 293.59412pt x 164.52637pt.
+ [55] [56 <./images/ucboulderstrain4.png>]
  Section B.3.
-[56]) [57] (./thesis.aux) ) 
+[57]) [58] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 3132 strings out of 256216
- 42605 string characters out of 1917072
- 108849 words of memory out of 1500000
- 6323 multiletter control sequences out of 10000+200000
- 29365 words of font info for 69 fonts, out of 1200000 for 2000
- 645 hyphenation exceptions out of 8191
- 35i,13n,38p,1146b,260s stack positions out of 5000i,500n,6000p,200000b,15000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/
-share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/blu
-esky/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/sh
-are/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fonts/type1/bluesk
-y/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/t
-exmf/fonts/type1/bluesky/cm/cmr6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/c
-mr8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/f
-onts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/bluesky/ams/eurm1
-0.pfb></usr/share/texmf/fonts/type1/bluesky/ams/msbm10.pfb></usr/share/texmf/fo
-nts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.p
-fb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/t
-ype1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (67 pages, 1261858 bytes).
+ 4771 strings out of 494985
+ 71036 string characters out of 6180357
+ 148298 words of memory out of 5000000
+ 7861 multiletter control sequences out of 15000+600000
+ 29356 words of font info for 69 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 42i,13n,38p,1363b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/
+8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/eu
+ler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (68 pages, 534909 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 131072)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
