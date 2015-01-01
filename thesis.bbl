@@ -20,14 +20,14 @@
 \bibitem{boulderstrain4}
 {\sc C.~Felippa}, {\em Strains}.
 \newblock Univeristy of Colorado, Boulder. Aerospace Engineering Dept.,
-  http://www.colorado.edu/engineering/CAS/courses.d/Structures.d/IAST.Lect04.d%
-/IAST.Lect04.pdf, accessed June 2014, 2013.
+  http://www.colorado.edu/engineering/CAS/courses.d/Structures.d/IAST.Lect04.d/IAST.Lect04.pdf,
+  accessed June 2014, 2013.
 
 \bibitem{boulderstrain5}
 {\sc C.~Felippa}, {\em Stress-strain material laws}.
 \newblock Univeristy of Colorado, Boulder. Aerospace Engineering Dept.,
-  http://www.colorado.edu/engineering/CAS/courses.d/Structures.d/IAST.Lect05.d%
-/IAST.Lect05.pdf, accessed June 2014, 2013.
+  http://www.colorado.edu/engineering/CAS/courses.d/Structures.d/IAST.Lect05.d/IAST.Lect05.pdf,
+  accessed June 2014, 2013.
 
 \bibitem{cornelius1970variational}
 {\sc C.~Lanczos}, {\em The variational principles of mechanics}, vol.~4,
@@ -45,6 +45,10 @@
 \bibitem{reddy1984energy}
 {\sc J.~Reddy}, {\em Energy and Variational Methods}, John Wiley, New York,
   1984.
+
+\bibitem{Tisseur01thequadratic}
+{\sc F.~Tisseur and K.~Meerbergen}, {\em The quadratic eigenvalue problem},
+  SIAM Rev, 43 (2001), pp.~235--286.
 
 \bibitem{weinstock1974calculus}
 {\sc R.~Weinstock}, {\em Calculus of variations}, Courier Dover Publications,

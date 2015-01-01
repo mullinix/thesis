@@ -1768,8 +1768,67 @@ for $j,k$ $\in\lbrace1,2,\dots,10\rbrace$. The process is the same for $\textbf{
 
 \chapter{RESULTS}
 \label{ch:results}
-The test of the system is carried out by examining the natural modes of the discretization and comparing against published material. To do so, it is important to consider the system at equilibrium. 
-
+The test of the system is carried out by examining the natural modes of the discretization and comparing against published material. To do so, it is important to consider the system at equilibrium; in this case, we take angular acceleration to be zero so that $\dot\Omega=0$. We relabel the matrices as follows, consistent with the order of the derivative.
+\begin{eqnarray}
+\mathbf{X0} &=& \mathbf{[K]}+\Omega^2(\mathbf{[S]}-\mathbf{[P]}),\\
+\mathbf{X1} &=& 2\Omega\mathbf{[G]},\\
+\mathbf{X2} &=& \mathbf{[M]},
+\end{eqnarray}
+so that at equilibrium we have
+\begin{equation}
+\mathbf{[X2]}\ddot{\vec d}+\mathbf{[X1]}\dot{\vec d}+\mathbf{[X0]}\vec d=0.
+\label{eq:equilib_system}
+\end{equation}
+To find the natural frequencies, we assume the ansatz
+\begin{equation}
+\vec d = \vec\xi e^{i\omega t},
+\end{equation}
+and plugging into Eqn.~\ref{eq:equilib_system} yields 
+\begin{equation}
+-\mathbf{[X2]}\omega^2\vec\xi e^{i\omega t}+\mathbf{[X1]}i\omega\vec\xi e^{i\omega t}+\mathbf{[X0]}\vec\xi e^{i\omega t}=0.
+\end{equation}
+Cancelling $e^{i\omega t}$ and factoring yields 
+\begin{equation}
+\left(-\mathbf{[X2]}\omega^2+\mathbf{[X1]}i\omega+\mathbf{[X0]}\right)\vec\xi=0.
+\end{equation}
+This equation is known as a \emph{quadratic} eigenvalue problem. Whereas the generalized eigenvalue problem has the form
+\begin{equation}
+\left(-\mathbf{[X2]}\omega^2+\mathbf{[X0]}\right)\vec\xi=0,
+\end{equation}
+written more typically as
+\begin{equation}
+\mathbf{[M]}\lambda=\mathbf{[K]},
+\end{equation}
+and highly optimized algorithms exist for this formulation. The algorithms for the quadratic eigenvalue problem recast themselves into the generalized eigenvalue problem using various methods. According to Ref.~\cite{Tisseur01thequadratic} the ``standard'' method for factorizing the system into its linear components, known as the \emph{first companion form}, is accomplished as follows. Let
+\begin{equation}
+u=\omega\xi,
+\end{equation}
+so that
+\begin{equation}
+-\mathbf{[X2]}u\omega+\mathbf{[X1]}iu+\mathbf{[X0]}\xi=0.
+\end{equation}
+The generalized eigenvalue problem may now be written as
+\begin{equation}
+\begin{pmatrix}
+\mathbf{0} & \mathbf{I}\\
+\mathbf{X0} & i\mathbf{X1}
+\end{pmatrix}
+\begin{pmatrix}
+\xi \\
+u
+\end{pmatrix}
+-\omega
+\begin{pmatrix}
+\mathbf{I} & \mathbf{0}\\
+\mathbf{0} & \mathbf{X2}
+\end{pmatrix}
+\begin{pmatrix}
+\xi \\
+u
+\end{pmatrix}
+=0,
+\end{equation}
+where $\mathbf{0}$ is a zero filled matrix, and $\mathbf{I}$ is the identity matrix.
 
 \chapter{M639 WRITEUP}
 \label{M639}
