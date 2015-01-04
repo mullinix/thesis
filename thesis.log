@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.31)  31 DEC 2014 15:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.6)  3 JAN 2015 09:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -511,10 +511,10 @@ Overfull \hbox (31.80417pt too wide) detected at line 1687
 CHAPTER 2.
 [43
 
-] [44]
+] [44] [45]
 CHAPTER 3.
  Section 3.1.
-) (./thesis.bbl [45
+) (./thesis.bbl [46
 
 ]
 Overfull \hbox (51.23476pt too wide) in paragraph at lines 21--25
@@ -528,45 +528,45 @@ Overfull \hbox (51.23476pt too wide) in paragraph at lines 27--31
 IAST.Lect05.d/IAST.Lect05.pdf, 
  []
 
-[46
+[47
 
 ]) (./append.tex
 APPENDIX A.
-[47
+[48
 
 ]
  Section A.1.
-[48] [49]
+[49] [50]
  Section A.2.
-[50]
+[51]
  Section A.3.
  Section A.4.
-[51] [52] [53]
+[52] [53] [54]
 APPENDIX B.
-[54
+[55
 
 ]
  Section B.1.
-<images/normal_strain.pdf, id=242, 369.38pt x 259.97125pt>
+<images/normal_strain.pdf, id=245, 369.38pt x 259.97125pt>
 File: images/normal_strain.pdf Graphic file (type pdf)
 
 <use images/normal_strain.pdf>
 Package pdftex.def Info: images/normal_strain.pdf used on input line 238.
 (pdftex.def)             Requested size: 293.59412pt x 206.63252pt.
- [55 <./images/normal_strain.pdf>]
+ [56 <./images/normal_strain.pdf>]
  Section B.2.
-<images/ucboulderstrain4.png, id=250, 1130.2225pt x 633.36626pt>
+<images/ucboulderstrain4.png, id=253, 1130.2225pt x 633.36626pt>
 File: images/ucboulderstrain4.png Graphic file (type png)
 
 <use images/ucboulderstrain4.png>
 Package pdftex.def Info: images/ucboulderstrain4.png used on input line 295.
 (pdftex.def)             Requested size: 293.59412pt x 164.52637pt.
- [56] [57 <./images/ucboulderstrain4.png>]
+ [57] [58 <./images/ucboulderstrain4.png>]
  Section B.3.
-[58]) [59] (./thesis.aux) ) 
+[59]) [60] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
  4773 strings out of 494985
- 71078 string characters out of 6180355
+ 71078 string characters out of 6180357
  148298 words of memory out of 5000000
  7863 multiletter control sequences out of 15000+600000
  29356 words of font info for 69 fonts, out of 8000000 for 9000
@@ -588,10 +588,10 @@ ls/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (69 pages, 538559 bytes).
+Output written on thesis.pdf (70 pages, 543281 bytes).
 PDF statistics:
- 320 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
+ 323 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

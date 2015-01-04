@@ -1828,7 +1828,86 @@ u
 \end{pmatrix}
 =0,
 \end{equation}
-where $\mathbf{0}$ is a zero filled matrix, and $\mathbf{I}$ is the identity matrix.
+where $\mathbf{0}$ is a zero filled matrix, and $\mathbf{I}$ is the identity matrix. In general, the first companion form is described by
+\begin{equation}
+\mathbf{L1:}
+\begin{pmatrix}
+\mathbf{0} & \mathbf{N}\\
+\mathbf{-X0} & \mathbf{-X1}
+\end{pmatrix}-\omega
+\begin{pmatrix}
+\mathbf{N} & \mathbf{0} \\
+\mathbf{0} & \mathbf{X2},
+\end{pmatrix}
+\end{equation}
+where $\mathbf{N}$ is any nonsingular matrix. Thus, it is often convenient to choose $\mathbf{N}=\mathbf{I}$, or some multiple of the identity. As one might expect, there are several companion forms. Of particular interest are the third and fourth companion forms, which are well suited for gyroscopic problems. These linearizations are described below.
+\begin{equation}
+\mathbf{L3:}
+\begin{pmatrix}
+\mathbf{X0} & \mathbf{0}\\
+\mathbf{X1} & \mathbf{X0}
+\end{pmatrix} -\omega
+\begin{pmatrix}
+\mathbf{0} & \mathbf{X0} \\
+\mathbf{-X2} & \mathbf{0}
+\end{pmatrix},
+\end{equation}
+\begin{equation}
+\mathbf{L4:}
+\begin{pmatrix}
+\mathbf{0} & \mathbf{-X0}\\
+\mathbf{X2} & \mathbf{0}
+\end{pmatrix} -\omega
+\begin{pmatrix}
+\mathbf{X2} & \mathbf{X1} \\
+\mathbf{0} & \mathbf{X2}
+\end{pmatrix}.
+\end{equation}
+The third companion form is preferred when $\mathbf{X2}$ is singular or near singular, and the fourth companion form is preferred when $\mathbf{X0}$ is singular or near singular.
+
+The three linearization techniques described above were tested for accuracy and the most accurate method was used throughout the testing. The accuracy was tested by considering eigenvalue spectrum of the result. The eigenvalues returned should either be purely imaginary, or real. If the eigenvalues are not either purely imaginary or real, the solution to the eigenvalue problem yields inaccurate results. Thus, the quality of the result can be calculated. The method employed in this calculation is given below.
+
+\begin{lemma}
+Given $\alpha,\beta$ $\in\mathbb{R}$,
+\begin{equation}
+|\alpha| + |\beta| \geq \sqrt{\alpha^2+\beta^2},
+\end{equation}
+and equality holds only if $\alpha=0$ or $\beta=0$.
+\end{lemma}
+\begin{proof}
+\begin{eqnarray}
+\left(|\alpha|+|\beta|\right)^2 &=& \alpha^2+2|\alpha||\beta|+\beta^2,\\
+|\alpha|+|\beta| &=& \sqrt{\alpha^2+2|\alpha||\beta|+\beta^2},\\
+|\alpha|+|\beta| &=& \sqrt{\alpha^2+\beta^2}+\sqrt{2|\alpha||\beta|},\\
+|\alpha|+|\beta| &\geq & \sqrt{\alpha^2+\beta^2}. 
+\end{eqnarray}
+\end{proof}
+Since any complex number $z$ may be expressed by real values $\alpha,\beta$ as $z=\alpha+i\beta$, we may use the lemma to determine whether the complex eigenvalue spectrum is purely imaginary or real. Consider
+\begin{equation}
+|z|^2 = z\bar z = (\alpha+i\beta)(\alpha-i\beta) = \alpha^2+\beta^2,
+\end{equation}
+and thus
+\begin{equation}
+|z| = \sqrt{\alpha^2+\beta^2} \leq |\alpha|+|\beta|.
+\end{equation}
+Requiring equality yields that
+\begin{equation}
+\frac{|\alpha|+|\beta|}{\sqrt{\alpha^2+\beta^2}} = 1,
+\end{equation}
+so that $z$ is either purely imaginary or real if
+\begin{equation}
+\frac{|\alpha|+|\beta|}{\sqrt{\alpha^2+\beta^2}} - 1 = 0.
+\end{equation}
+Since a true solution must be purely imaginary or real, we set the $j$-th eigenvalue to be
+\begin{equation}
+\omega_j = \alpha_j+i\beta_j,
+\end{equation}
+and evaluate the quality of the eigenvalue solution spectrum with
+\begin{equation}
+\text{err} = \sum_{j=1}^N \left(\frac{|\alpha_j|+|\beta_j|}{\sqrt{\alpha_j^2+\beta_j^2}} - 1\right).
+\end{equation}
+Of the three linearization methods described above, the $\mathbf{L3}$ factorization provided the smallest error. This is the method used throughout the analysis.
+
 
 \chapter{M639 WRITEUP}
 \label{M639}

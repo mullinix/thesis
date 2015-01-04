@@ -16,11 +16,11 @@
 \contentsline {subsection}{\numberline {1.2.2}System Analysis}{15}
 \contentsline {subsection}{\numberline {1.2.3}Discretizing the System}{23}
 \contentsline {chapter}{\numberline {2}RESULTS}{43}
-\contentsline {chapter}{\numberline {3}M639 WRITEUP}{45}
-\contentsline {section}{\numberline {3.1}Application: Finite Element Analysis}{45}
-\contentsline {schapter}{BIBLIOGRAPHY}{46}
+\contentsline {chapter}{\numberline {3}M639 WRITEUP}{46}
+\contentsline {section}{\numberline {3.1}Application: Finite Element Analysis}{46}
+\contentsline {schapter}{BIBLIOGRAPHY}{47}
 \pagebreak [3]
-\contentsline {chaphd}{APPENDICES}{47}
+\contentsline {chaphd}{APPENDICES}{48}
 \nopagebreak 
-\contentsline {chapter}{\numberline {A}VARIATIONAL APPROXIMATION AND CALCULUS OF VARIATIONS}{47}
-\contentsline {chapter}{\numberline {B}STRAIN EQUATIONS}{54}
+\contentsline {chapter}{\numberline {A}VARIATIONAL APPROXIMATION AND CALCULUS OF VARIATIONS}{48}
+\contentsline {chapter}{\numberline {B}STRAIN EQUATIONS}{55}
