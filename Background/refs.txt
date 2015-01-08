@@ -1,0 +1,169 @@
+﻿CALL #	TA1 .J6
+Title: A Time Integration Algorithm for Structural Dynamics with Improved Numerical Dissipation - the Generalized-alpha Method
+Format: Journal Article
+Author: J  CHUNG ; GM  HULBERT 
+Original Citation: Journal of Applied Mechanics-transactions of the Asme, volume 60 issue 2 (31 May 1993), pages 371-375
+Journal Title: Journal of Applied Mechanics-transactions of the Asme
+Volume: 60
+Issue: 2
+Start Page: 371
+End Page: 375
+Place: NEW YORK
+Publisher: Asme-amer Soc Mechanical Eng
+Year: 1993
+Abstract: A new family of time integration algorithms is presented for solving structural dynamics problems. The new method, denoted as the generalized-alpha method, possesses numerical dissipation that can be controlled by the user. In particular, it is shown that the generalized-alpha method achieves high-frequency dissipation while minimizing unwanted low-frequency dissipation. Comparisons are given of the generalized-alpha method with other numerically dissipative time integration methods, these results highlight the improved performance of the new algorithm. The new algorithm can be easily implemented into programs that already include the Newmark and Hilber-Hughes-Taylor-alpha time integration methods.
+Subjects: Mechanics
+Language: English
+Link: https://library.calstate.edu/sandiego/folder/record?id=166280
+
+ CALL #	QC221 .J6
+Title: A General Substructure Synthesis Method for the Dynamic Simulation of Complex Structures
+Format: Journal Article
+Author: A.L  Hale ; L  Meirovitch 
+Original Citation: Journal of Sound and Vibration, volume 69 issue 2 (30 November 1979), pages 309-326
+Journal Title: Journal of Sound and Vibration
+Volume: 69
+Issue: 2
+Start Page: 309
+End Page: 326
+Publisher: Elsevier Ltd
+Year: 1980
+Language: English
+Link: https://library.calstate.edu/sandiego/folder/record?id=166279
+
+
+CALL #	D 210
+Title: Literature Review: DYNAMIC ANALYSIS of LARGE STRUCTURES by MODAL SYNTHESIS TECHNIQUES Hurty, W. C. ; Collins, J.D.; and Hart, G. C. Computers and Struc . 1 (4), 535-563 (Dec. 1971) 13 Refs Refer to Abstract No. 72-560
+Format: Journal Article
+Author: R. H  MacNeal 
+Original Citation: The Shock and Vibration Digest, volume 4 issue 10 (1 October 1972), pages 88-90
+Journal Title: The Shock and Vibration Digest
+Volume: 4
+Issue: 10
+Start Page: 88
+End Page: 90
+Year: 1972
+Language: English
+Link: https://library.calstate.edu/sandiego/folder/record?id=166278
+
+
+CALL #	TL787.A62 A2
+Title: Direct Path Method for Flexible Multibody Spacecraft Dynamics
+Format: Journal Article
+Author: J.Y.L  Ho 
+Original Citation: Journal of Spacecraft and Rockets, volume 14 issue 2 (Feb-1977), pages 102-110
+Journal Title: Journal of Spacecraft and Rockets
+Volume: 14
+Issue: 2
+Start Page: 102
+End Page: 110
+Year: 1977
+Language: English
+Link: https://library.calstate.edu/sandiego/folder/record?id=166277
+
+CALL #	D 210
+Title: Turbomachine Blade Vibration
+Format: Journal Article
+Author: J.S  Rao 
+Original Citation: The Shock and Vibration Digest, volume 15 issue 5 (1 May 1983), pages 3-9
+Journal Title: The Shock and Vibration Digest
+Volume: 15
+Issue: 5
+Start Page: 3
+End Page: 9
+Year: 1983
+Language: English
+Link: https://library.calstate.edu/sandiego/folder/record?id=166276
+
+
+CALL #	TL501 .J63
+Title: Nonlinear Vibration and Stability of Rotating, Pretwisted, Preconed Blades Including Coriolis Effects
+Format: Journal Article
+Author: K. B  SUBRAHMANYAM ; K. R. V  KAZA ; G. V  BROWN ; C  LAWRENCE 
+Original Citation: Journal of Aircraft, volume 24 issue 5 (May-1987), pages 342-352
+Journal Title: Journal of Aircraft
+Volume: 24
+Issue: 5
+Start Page: 342
+End Page: 352
+Year: 1987
+Language: English
+Link: https://library.calstate.edu/sandiego/folder/record?id=166275
+
+CALL #	TJ1 .I59
+Title: Free Vibration Characteristics of Rotating Timoshenko Beams
+Format: Journal Article
+Author: T  Yokoyama 
+Original Citation: International Journal of Mechanical Sciences, volume 30 issue 10 (30 November 1987), pages 743-755
+Journal Title: International Journal of Mechanical Sciences
+Volume: 30
+Issue: 10
+Start Page: 743
+End Page: 755
+Place: OXFORD
+Publisher: Elsevier Ltd
+Year: 1988
+Subjects: Engineering, mechanical; Mechanics
+Language: English
+Link: https://library.calstate.edu/sandiego/folder/record?id=166274
+
+CALL #	QC221 .J6
+Title: Bending Vibrations of a Rotating Non-uniform Beam with an Elastically Restrained Root
+Format: Journal Article
+Author: S.Y  Lee ; Y.H  Kuo 
+Original Citation: Journal of Sound and Vibration, volume 154 issue 3 (30 November 1991), pages 441-451
+Journal Title: Journal of Sound and Vibration
+Volume: 154
+Issue: 3
+Start Page: 441
+End Page: 451
+Publisher: Elsevier Ltd
+Year: 1992
+Language: English
+Link: https://library.calstate.edu/sandiego/folder/record?id=166273
+
+CALL #	QC221 .J6
+Title: Vibration of a Rotating Beam with Tip Mass
+Format: Journal Article
+Author: S.V  Hoa 
+Original Citation: Journal of Sound and Vibration, volume 67 issue 3 (30 November 1978), pages 369-381
+Journal Title: Journal of Sound and Vibration
+Volume: 67
+Issue: 3
+Start Page: 369
+End Page: 381
+Publisher: Elsevier Ltd
+Year: 1979
+Language: English
+Link: https://library.calstate.edu/sandiego/folder/record?id=166272
+
+
+CALL #	QC221 .J6
+Title: Vibration of a Rotating Uniform Beam, Part I: Orientation in the Axis of Rotation
+Format: Journal Article
+Author: H.F  Bauer 
+Original Citation: Journal of Sound and Vibration, volume 72 issue 2 (30 November 1979), pages 177-189
+Journal Title: Journal of Sound and Vibration
+Volume: 72
+Issue: 2
+Start Page: 177
+End Page: 189
+Publisher: Elsevier Ltd
+Year: 1980
+Language: English
+Link: https://library.calstate.edu/sandiego/folder/record?id=166271
+
+CALL#: TA1 .J6
+ASME journal of applied mechanics
+53  4     1986
+Title: On the Dynamics of Flexible Beams Under Large Overall Motions The Plane Case: Part I and II
+Author: Simo
+Location: 1st floor periodicals
+
+Call #:  TJ1 .A7
+Journal of applied mechanics
+25       1958
+Title: Bending frequency of a rotating cantilever beam
+Author:
+Transactions of the American Society of Mechanical Engineers
+LOCATION: 5th floor periodicals
