@@ -1,14 +1,10 @@
+\chapter{INTRODUCTION}
+\label{chap:intro}
 
-% Note that if you want something in single space you can go back and
-% forth between single space and normal space by the use of \ssp and
-% \nsp.  If you want doublespacing you can use \dsp.  \nsp is normally
-% 1.5 spacing unless you use the doublespace option (or savepaper
-% option)
-%
-%(FORMAT) Usually you don't want to mess with the spacing for your
-%(FORMAT) final version.  If you think/know that the thesis template
-%(FORMAT) and/or thesis style file is incorrect/incomplete & PLEASE
-%(FORMAT) contact the maintainer.  THANK YOU!!!
+\section{Background}
+The study of rotating cantilever beams has been around since the early days of aviation. For example, the fundamental study in this area was published in 1921 by Southwell and Gough, Ref.~\textbf{[CITE]}. The dynamics of 
+
+\section{Organization}
 
 \chapter{EQUATIONS OF MOTION}
 \label{chap:eom}
@@ -202,49 +198,6 @@ T &= \frac{1}{2}\rho A\int_{0}^{L}\left\langle(\dot u-\Omega v)\textbf{i}+[\dot 
   &= \frac{1}{2}\rho A\int_{0}^{L} (\dot u-\Omega v)^2+[\dot v+\Omega(a+x+u)]^2+\dot w^2\text{ d}x.
   \label{eq:kin.final}
 \end{align}
-
-\begin{comment}
-\textbf{BEGIN BROKEN DOWN POTENTIAL}
-
-Substituting $u,\dot u$ from Eqns.~\ref{eq:stretch.full} and \ref{eq:stretch.full.dt} yields
-\begin{equation}
-T = \frac{1}{2}\rho A\int_{0}^{L} (\dot s-(\dot h_v+\dot h_w)-\Omega v)^2+[\dot v+\Omega(a+x+s-(h_v+h_w))]^2+\dot w^2\text{ d}x.
-\end{equation}
-
-The expanded form of Eqn.~\ref{eq:stretch.full.dt} can be broken down term-wise. For ease of notation, let
-\begin{align}
-h &= h_v+h_w,\label{eq:h.subs}\\
-\dot h &= \dot h_v+\dot h_w.\label{eq:hdot.subs}
-\end{align}
-The first term expands as
-\begin{align}
-(\dot s-\dot h-\Omega v)^2 &= \dot s^2+\dot h^2+\Omega^2 v^2-2\dot s\dot h\\
-&-2\dot s\Omega v+2\Omega \dot h v,\nonumber
-\end{align}
-and the second term expands as
-\begin{align}
-[\dot v+\Omega(a+x+s-h)]^2 &= \dot v^2 +\Omega^2(a+x+s-h)^2 \\
-& +2\dot v\Omega(a+x+s-h).\nonumber
-\end{align}
-Further expansion yields
-\begin{align}
-[\dot v+\Omega(a+x+s-h)]^2 &= \dot v^2 +\Omega^2((a+x+s)^2+h^2) \nonumber\\
-& -2\Omega^2(a+x+s)h\\
-& +2\dot v\Omega(a+x+s-h).\nonumber
-\end{align}
-Note that there are higher order powers of $h,\dot h$; since $h, \dot h$ are small by assumption, we neglect these terms, and write the expansions as
-\begin{align}
-(\dot s-\dot h-\Omega v)^2 &= \dot s^2+\Omega^2 v^2-2\dot s\dot h-2\dot s\Omega v+2\Omega \dot h v,\\
-[\dot v+\Omega(a+x+s-h)]^2 &= \dot v^2 +\Omega^2(a+x+s)^2 -2\Omega^2(a+x+s)h\\
-& +2\dot v\Omega(a+x+s-h)\nonumber
-\end{align}
-Keeping the compact notation of $h,\dot h$ and substituting the expansions into Eqn.~\ref{eq:stretch.full.dt} yields the kinetic energy equation
-\begin{align}
-T &= \frac{1}{2}\rho A\int_{0}^{L} \dot s^2-2\dot s(\dot h+\Omega v)+\dot v^2+2\dot v\Omega(a+x+s-h)\\
-&\qquad+2\Omega \dot h v +\Omega^2( v^2+(a+x+s)^2 -2(a+x+s)h)+\dot w^2\text{d}x.\nonumber
-\end{align}
-\textbf{END BROKEN DOWN POTENTIAL}
-\end{comment}
 
 \subsection{Potential Energy}
 
@@ -581,24 +534,6 @@ Combining the kinetic and strain energy variations, we have
 \int_{t_0}^{t_1}\delta L\text{ d}t = \int_{t_0}^{t_1}\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot q_i}\right]+\frac{\partial T}{\partial q_i} - \frac{\text d^2}{\text dx^2}\left[\frac{\partial U}{\partial q_{xx_i}}\right]+\frac{\text d}{\text dx}\left[\frac{\partial  U}{\partial q_{x_i}}\right]\right\rbrace\delta q_i\text{ d}t+\text{B.C.'s}.
 \end{equation}
 
-\begin{comment}
-
-
-We now consider the special case of $\delta u$. In this case, we have
-\begin{equation}
-\int_{t_0}^{t_1}\delta L\text{ d}t = \int_{t_0}^{t_1}\left\lbrace-\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot u}\right]+\frac{\partial T}{\partial u} - \frac{\text d^2}{\text dx^2}\left[\frac{\partial U}{\partial u_{xx}}\right]+\frac{\text d}{\text dx}\left[\frac{\partial  U}{\partial u_x}\right]\right\rbrace\delta u\text{ d}t+\text{B.C.'s}.
-\end{equation}
-
-Considering the special circumstances involving $\delta u$, we shall now express this result for the $u$ direction by substituting in $\delta u$ from Eqn.~\ref{eq:variation.u.final}, and expressing the variation in terms of $s$.
-
-We have
-\begin{eqnarray}
-\int_{t_0}^{t_1}\delta L\text{ d}t &=&
-\int_{t_0}^{t_1}\left\lbrace -\frac{\text d}{\text dt}\left[\frac{\partial T}{\partial \dot s}\right]+\frac{\partial T}{\partial s} - \frac{\text d^2}{\text dx^2}\left[\frac{\partial U}{\partial s_{xx}}\right]+\frac{\text d}{\text dx}\left[\frac{\partial  U}{\partial s_x}\right]\right\rbrace {\vrule width 0in depth .1in} \\
-& &\qquad \cdot\left[\delta s + \int_0^x\frac{\partial^2 v}{\partial \eta^2}\delta v\text{ d}\eta + \int_0^x\frac{\partial^2 w}{\partial \eta^2}\delta w\text{ d}\eta\right]\text{ d}t+ \text{B.C.'s}. \nonumber
-\end{eqnarray}
-\end{comment}
-
 This formulation, provided the B.C.'s are properly satisfied, is to be minimized. Thus, we set
 \begin{equation}
 \int_{t_0}^{t_1}\delta L\text{ d}t = 0,
@@ -919,8 +854,6 @@ Note that the product of $s,h_v,h_w,$ and $\dot v$ with either $v_{x}$ or $w_{x}
 \subsection{Discretizing the System}
 \label{subsec:discretizing}
 We now have the final equations of motion, with the caveat that `suitable' test functions $q_i$ must be selected. `Suitable' means that the functions are in $H^2$ in the interval $[0,L]$, and that all boundary and initial conditions are satisfied by the functions. There are standard test functions that are frequently used; choosing which class of test functions to use is dependent upon the physics of the problem. Furthermore, the test functions should match the behavior of the spatial displacements of the system. Polynomial shapes are reasonable approximations to how we expect the beam to displace from bending and stretching, so choosing polynomials for test functions is logical.
-
-%One such example are the Hermite polynomials (Ref.~\cite{kwon2000finite}). Hermite polynomials are defined in all of $\mathbb R$, are infinitely smooth, and can be constructed to satisfy any requisite boundary conditions.
 
 In order that we might find suitable interpolating polynomials for the discretized system, we begin by considering a rod consisting of one element and two nodes.
 
@@ -1449,16 +1382,6 @@ The full $v$ bending integral equation is written as
 \end{eqnarray}
 The mixed terms are already handled by the combined displacement vector $\vec d$ as well as the interpolation vectors $\vec N_s,\vec N_v$
 
-\begin{comment}
-The full $v$ bending integral equation is written as
-\begin{eqnarray}
-\label{eq:v_bending_integral_eqn}
-\int_0^l\rho A(\ddot v + 2\Omega\dot s-\Omega^2v+\dot\Omega s)v+EI_{zz}v_{xx}^2+\\
-\rho A\Omega^2\left[a(L-(x+x_e))+\frac{1}{2}(L^2-(x+x_e)^2)\right]v_x^2\text{ d}x = \int_0^l[p_v - \rho A\dot\Omega(a+x)]v\text{ d}x. \nonumber
-\end{eqnarray}
-The mixed terms are already handled by the combined displacement vector $\vec d$ as well as the interpolation vectors $\vec N_s,\vec N_v$.
-\end{comment}
-
 The integral equation for the $w$ bending direction is handled similarly to the $v$ bending direction. There is a fourth order term and the third term that can be simplified. The process is exactly the same with $w$ written in place of $v$. The result is written as follows.
 \begin{eqnarray}
 & &\int_0^l\rho A\ddot ww+EI_{zz}w_{xx}^2+\rho A\Omega^2\left[a(L-(x+x_e))\vphantom{\frac{0}{0}}\right. \label{eq:w.bending.integral.eqn}\\
@@ -1768,6 +1691,8 @@ for $j,k$ $\in\lbrace1,2,\dots,10\rbrace$. The process is the same for $\textbf{
 
 \chapter{RESULTS}
 \label{ch:results}
+
+\section{Validation}
 The test of the system is carried out by examining the natural modes of the discretization and comparing against published material. To do so, it is important to consider the system at equilibrium; in this case, we take angular acceleration to be zero so that $\dot\Omega=0$. We relabel the matrices as follows, consistent with the order of the derivative.
 \begin{eqnarray}
 \mathbf{X0} &=& \mathbf{[K]}+\Omega^2(\mathbf{[S]}-\mathbf{[P]}),\\
@@ -1908,24 +1833,107 @@ and evaluate the quality of the eigenvalue solution spectrum with
 \end{equation}
 Of the three linearization methods described above, the $\mathbf{L3}$ factorization provided the smallest error. This is the method used throughout the analysis.
 
+The system was adimensionalized for comparison with Ref.~\cite{chung2002dynamic} and Ref.~\cite{wright82vibration} using the following transformations.
+\begin{eqnarray}
+\tau &=& \frac{t}{T}, \\
+\xi &=& \frac{x}{L}, \\
+\delta &=& \frac{a}{L}, \\
+\gamma &=& T\Omega,\\
+\alpha &=& \sqrt{\frac{AL^2}{I_{zz}}}, \\
+\lambda &=& T^2\dot\Omega, \\
+T &=& \sqrt{\frac{\rho AL^4}{EI_{zz}}}.
+\end{eqnarray}
+It is clear that $\tau$ is a rescaling of time, $\xi$ is a rescaling of space, $\gamma$ is a rescaling of rotation speed of the beam, and $\delta$ is the ratio of distance from axis of rotation to the beam length. The other parameters are described as follows. $\alpha$ is a parameter that, when properly tuned, assures that the beam is sufficiently slender to approximate via the Euler-Bernoulli beam approximation. Ref.~\cite{chung2002dynamic} uses a parameter of $\alpha=70$, which is certainly slender enough. We shall also use this value. We then sweep the parameters $\gamma$ and $\delta$ from 0 to 50 and 0 to 5, respectively, and compare the results with Ref.~\cite{chung2002dynamic} and Ref.~\cite{wright82vibration}.
 
-\chapter{M639 WRITEUP}
-\label{M639}
+The adiminsionalization requires a modification of our matrices $\mathbf{X2},\mathbf{X1}$ as follows.
+\begin{eqnarray}
+\mathbf{X2} &=& \frac{\mathbf{X2}}{T^2} \\
+\mathbf{X1} &=& \frac{\mathbf{X1}}{T}
+\end{eqnarray}
+The results are given in Table~\ref{table:compare}. $N=100$ elements are used in the beam, with $I_{yy}=I_{zz}$, and $\alpha=70$ to ensure sufficient slenderness. The descriptor ``chordwise'' refers to the $v$-bending modes, ``flapwise'' refers to the $w$-bending modes, and ``axial'' refers to the $s$-stretch modes. The material properties are adimensionalized; any material properties may be used. Note that the beam is assumed to have a rectangular cross-section, but imposing that $I_{yy}=I_{zz}$ requires that the width and height (depth and breadth) are equal. Thus, the beam has a square cross-section. 
+\begin{table}[!hbt]
+\centering
+    \caption{Comparison of Natural Modes, $N=100$, $\alpha=70$\label{table:compare}}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+\textbf{Mode Type} & \textbf{Mode} & $\delta$ & $\gamma$ & \textbf{Present} & \textbf{Ref.~\cite{chung2002dynamic}} & \textbf{Ref.~\cite{wright82vibration}}\\ 
+\hline
+chordwise & 1 & 0 & 0 & 3.5160 & 3.5160 & 3.5160\\ 
+\hline
+chordwise & 2 & 0 & 0 & 22.0345 & 22.0345 & 22.0345\\ 
+\hline
+chordwise & 3 & 0 & 0 & 61.6972 & 61.6972 & 61.6972\\ 
+\hline
+chordwise & 4 & 0 & 0 & 109.9569 & 109.9569 & 109.9557\\ 
+\hline
+axial & 1 & 0 & 0 & 120.9019 & 120.9019 & 120.9019\\ 
+\hline
+axial & 2 & 0 & 0 & 329.8978 & 330.8796 & 329.8672\\ 
+\hline
+flapwise & 1 & 0 & 1 & 3.6816 & 3.6816 & 3.6816\\ 
+\hline
+flapwise & 2 & 0 & 1 & 22.1810 & 22.1810 & 22.1810\\ 
+\hline
+chordwise & 1 & 0 & 2 & 3.6196 & 3.6196 & 3.6196\\ 
+\hline
+flapwise & 1 & 0 & 2 & 4.1373 & 4.1373 & 4.1373\\ 
+\hline
+flapwise & 2 & 0 & 2 & 22.6149 & 22.6149 & 22.6149\\ 
+\hline
+flapwise & 1 & 0 & 3 & 4.7973 & 4.7973 & 4.7973\\ 
+\hline
+flapwise & 2 & 0 & 3 & 23.3203 & 23.3203 & 23.3203\\ 
+\hline
+flapwise & 1 & 0 & 4 & 5.5850 & 5.5850 & 5.5850\\ 
+\hline
+flapwise & 2 & 0 & 4 & 24.2734 & 24.2733 & 24.2733\\ 
+\hline
+flapwise & 1 & 0 & 5 & 6.4495 & 6.4495 & 6.4495\\ 
+\hline
+flapwise & 2 & 0 & 5 & 25.4461 & 25.4461 & 25.4461\\ 
+\hline
+flapwise & 1 & 0 & 6 & 7.3604 & 7.3604 & 7.3604\\ 
+\hline
+flapwise & 2 & 0 & 6 & 26.8091 & 26.8091 & 26.8092\\ 
+\hline
+flapwise & 1 & 0 & 7 & 8.2996 & 8.2996 & 8.2997\\ 
+\hline
+flapwise & 2 & 0 & 7 & 28.3341 & 28.3341 & 28.3342\\ 
+\hline
+flapwise & 1 & 0 & 8 & 9.2568 & 9.2568 & 9.2569\\ 
+\hline
+flapwise & 2 & 0 & 8 & 29.9954 & 29.9954 & 29.9956\\ 
+\hline
+flapwise & 1 & 0 & 9 & 10.2257 & 10.2257 & 10.2258\\ 
+\hline
+flapwise & 2 & 0 & 9 & 31.7705 & 31.7705 & 31.7709\\ 
+\hline
+chordwise & 1 & 0 & 10 & 4.9700 & 4.9700 & 4.9703\\ 
+\hline
+flapwise & 1 & 0 & 10 & 11.2023 & 11.2023 & 11.2025\\ 
+\hline
+flapwise & 2 & 0 & 10 & 33.6404 & 33.6404 & 33.6409\\ 
+\hline
+chordwise & 1 & 0 & 50 & 7.3337 & 7.3337 & 7.5540\\ 
+\hline
+chordwise & 1 & 1 & 2 & 4.3978 & 4.3978 & 4.3978\\ 
+\hline
+chordwise & 1 & 1 & 10 & 13.0482 & 13.0482 & 13.0494\\ 
+\hline
+chordwise & 1 & 1 & 50 & 41.2275 & 41.2275 & 41.3791\\ 
+\hline
+chordwise & 1 & 5 & 2 & 6.6430 & 6.6430 & 6.6430\\ 
+\hline
+chordwise & 1 & 5 & 10 & 27.2658 & 27.2660 & 27.2761\\ 
+\hline
+chordwise & 1 & 5 & 50 & 74.0094 & 74.0031 & 74.1949\\ 
+\hline
+\end{tabular} 
+\end{table}
 
-\section{Application: Finite Element Analysis}
-In this section, we will develop the finite element formulation of a classical problem: the 1-D Cantilever Beam.
+There is a clear correspondence between the model presented here and that of Ref.~\cite{chung2002dynamic}; furthermore, the model here agrees with the analytic solution provided by Ref.~\cite{wright82vibration}. Thus, we conclude that the model developed here is suitable for testing.
 
-Under the new notation, the element equations of motion can be expressed as
-\[
-[\textbf{M}]\left\{\ddot{\vec y}_i\right\}+[\textbf{K}]\left\{\vec y_i\right\} = 0,
-\]
-and noticing that this is a second order ODE without damping or forcing, we assume the ansatz
-\[
-\left\{\vec y_i\right\} = \left\{\vec \xi_i\right\}\sin(\omega_i t).
-\]
-The amplitudes $\vec \xi_i$ are independent of time, and $\omega_i$ is the vibration frequency.
-Plugging the ansatz into the ODE, we find
-\[
-(\textbf K-\omega_i^2\textbf M)\vec \xi_i = 0,
-\]
-which is the \emph{generalized eigenvalue problem}, with eigenvalues $\lambda_i = -\omega_i^2$, and eigenvectors $\vec \xi_i$. The $\vec\xi_i$ are commonly referred to as \emph{eigenshapes}, and represent the steady state displacements of the beam.\newline
+\section{Experimentation}
+We now develop a coupling model for the purpose of analyzing the interaction of coupled rotating cantilever beams. 
+
+\chapter{CONCLUSION}

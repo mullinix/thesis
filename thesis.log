@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.6)  3 JAN 2015 09:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.6)  6 JAN 2015 13:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -412,21 +412,27 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] (./body.tex
 CHAPTER 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 13.
+(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 1.
  Section 1.1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 17.
-<images/chung_yoo_cantilever_beam.pdf, id=37, 1111.15125pt x 544.0325pt>
+(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 4.
+ Section 1.2.
+[1
+
+]
+CHAPTER 2.
+ Section 2.1.
+<images/chung_yoo_cantilever_beam.pdf, id=42, 1111.15125pt x 544.0325pt>
 File: images/chung_yoo_cantilever_beam.pdf Graphic file (type pdf)
 
 <use images/chung_yoo_cantilever_beam.pdf>
 Package pdftex.def Info: images/chung_yoo_cantilever_beam.pdf used on input lin
-e 26.
+e 22.
 (pdftex.def)             Requested size: 293.59412pt x 143.74455pt.
- [1
+ [2
 
  <./images/chung_yoo_cantilever_beam.pdf>]
- Subsection 1.1.1.
+ Subsection 2.1.1.
 Package epstopdf Info: Source file: <images/stretch_coords.eps>
 (epstopdf)                    date: 2014-07-01 10:37:20
 (epstopdf)                    size: 112515 bytes
@@ -436,27 +442,27 @@ Package epstopdf Info: Source file: <images/stretch_coords.eps>
 (epstopdf)                    size: 34685 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/stretch_coords-eps-
 converted-to.pdf images/stretch_coords.eps>
-(epstopdf)             \includegraphics on input line 38.
+(epstopdf)             \includegraphics on input line 34.
 Package epstopdf Info: Output file is already uptodate.
-<images/stretch_coords-eps-converted-to.pdf, id=50, 744.7825pt x 677.53125pt>
+<images/stretch_coords-eps-converted-to.pdf, id=53, 744.7825pt x 677.53125pt>
 File: images/stretch_coords-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/stretch_coords-eps-converted-to.pdf>
 Package pdftex.def Info: images/stretch_coords-eps-converted-to.pdf used on inp
-ut line 38.
+ut line 34.
 (pdftex.def)             Requested size: 293.59412pt x 267.08948pt.
- [2 <./images/stretch_coords-eps-converted-to.pdf>] [3] [4]
- Subsection 1.1.2.
-[5]
- Subsection 1.1.3.
- Subsubsection 1.1.3.1.
-[6] [7] [8]
- Section 1.2.
- Subsection 1.2.1.
-[9] [10] [11] [12] [13] [14]
- Subsection 1.2.2.
-[15] [16] [17] [18] [19] [20] [21] [22]
- Subsection 1.2.3.
+ [3 <./images/stretch_coords-eps-converted-to.pdf>] [4] [5]
+ Subsection 2.1.2.
+[6]
+ Subsection 2.1.3.
+ Subsubsection 2.1.3.1.
+[7] [8] [9]
+ Section 2.2.
+ Subsection 2.2.1.
+[10] [11] [12] [13] [14] [15]
+ Subsection 2.2.2.
+[16] [17] [18] [19] [20] [21] [22] [23]
+ Subsection 2.2.3.
 Package epstopdf Info: Source file: <images/2-node-rod.eps>
 (epstopdf)                    date: 2014-08-06 11:31:20
 (epstopdf)                    size: 26729 bytes
@@ -465,14 +471,14 @@ Package epstopdf Info: Source file: <images/2-node-rod.eps>
 (epstopdf)                    size: 7616 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/2-node-rod-eps-conv
 erted-to.pdf images/2-node-rod.eps>
-(epstopdf)             \includegraphics on input line 930.
+(epstopdf)             \includegraphics on input line 863.
 Package epstopdf Info: Output file is already uptodate.
-<images/2-node-rod-eps-converted-to.pdf, id=130, 499.8675pt x 203.76125pt>
+<images/2-node-rod-eps-converted-to.pdf, id=133, 499.8675pt x 203.76125pt>
 File: images/2-node-rod-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/2-node-rod-eps-converted-to.pdf>
 Package pdftex.def Info: images/2-node-rod-eps-converted-to.pdf used on input l
-ine 930.
+ine 863.
 (pdftex.def)             Requested size: 158.09337pt x 64.44318pt.
 Package epstopdf Info: Source file: <images/stretch_2node.eps>
 (epstopdf)                    date: 2014-08-13 09:33:29
@@ -483,38 +489,40 @@ Package epstopdf Info: Source file: <images/stretch_2node.eps>
 (epstopdf)                    size: 14829 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/stretch_2node-eps-c
 onverted-to.pdf images/stretch_2node.eps>
-(epstopdf)             \includegraphics on input line 940.
+(epstopdf)             \includegraphics on input line 873.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/stretch_2node-eps-converted-to.pdf, id=131, 643.40375pt x 402.50375pt>
+<images/stretch_2node-eps-converted-to.pdf, id=134, 643.40375pt x 402.50375pt>
 File: images/stretch_2node-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/stretch_2node-eps-converted-to.pdf>
 Package pdftex.def Info: images/stretch_2node-eps-converted-to.pdf used on inpu
-t line 940.
+t line 873.
 (pdftex.def)             Requested size: 158.09337pt x 98.89986pt.
- [23 <./images/2-node-rod-eps-converted-to.pdf>] [24 <./images/stretch_2node-ep
+ [24 <./images/2-node-rod-eps-converted-to.pdf>] [25 <./images/stretch_2node-ep
 s-converted-to.pdf>]
-<images/beam_dof.png, id=144, 642.4pt x 401.5pt>
+<images/beam_dof.png, id=147, 642.4pt x 401.5pt>
 File: images/beam_dof.png Graphic file (type png)
  <use images/beam_dof.png>
-Package pdftex.def Info: images/beam_dof.png used on input line 1070.
+Package pdftex.def Info: images/beam_dof.png used on input line 1003.
 (pdftex.def)             Requested size: 158.09337pt x 98.8064pt.
 
-[25] [26 <./images/beam_dof.png>] [27] [28] [29] [30] [31] [32] [33] [34]
-[35] [36] [37] [38] [39]
-Overfull \hbox (31.80417pt too wide) detected at line 1687
+[26] [27 <./images/beam_dof.png>] [28] [29] [30] [31] [32] [33] [34] [35]
+[36] [37] [38] [39] [40]
+Overfull \hbox (31.80417pt too wide) detected at line 1610
 [] \OT1/cmr/m/n/12 = [] []
  []
 
-[40] [41] [42]
-CHAPTER 2.
-[43
-
-] [44] [45]
+[41] [42] [43]
 CHAPTER 3.
  Section 3.1.
-) (./thesis.bbl [46
+[44
+
+] [45] [46]
+ Section 3.2.
+[47] [48]
+CHAPTER 4.
+) (./thesis.bbl [49
 
 ]
 Overfull \hbox (51.23476pt too wide) in paragraph at lines 21--25
@@ -528,50 +536,50 @@ Overfull \hbox (51.23476pt too wide) in paragraph at lines 27--31
 IAST.Lect05.d/IAST.Lect05.pdf, 
  []
 
-[47
+[50
 
 ]) (./append.tex
 APPENDIX A.
-[48
+[51
 
 ]
  Section A.1.
-[49] [50]
+[52] [53]
  Section A.2.
-[51]
+[54]
  Section A.3.
  Section A.4.
-[52] [53] [54]
+[55] [56] [57]
 APPENDIX B.
-[55
+[58
 
 ]
  Section B.1.
-<images/normal_strain.pdf, id=245, 369.38pt x 259.97125pt>
+<images/normal_strain.pdf, id=255, 369.38pt x 259.97125pt>
 File: images/normal_strain.pdf Graphic file (type pdf)
 
 <use images/normal_strain.pdf>
 Package pdftex.def Info: images/normal_strain.pdf used on input line 238.
 (pdftex.def)             Requested size: 293.59412pt x 206.63252pt.
- [56 <./images/normal_strain.pdf>]
+ [59 <./images/normal_strain.pdf>]
  Section B.2.
-<images/ucboulderstrain4.png, id=253, 1130.2225pt x 633.36626pt>
+<images/ucboulderstrain4.png, id=263, 1130.2225pt x 633.36626pt>
 File: images/ucboulderstrain4.png Graphic file (type png)
 
 <use images/ucboulderstrain4.png>
 Package pdftex.def Info: images/ucboulderstrain4.png used on input line 295.
 (pdftex.def)             Requested size: 293.59412pt x 164.52637pt.
- [57] [58 <./images/ucboulderstrain4.png>]
+ [60] [61 <./images/ucboulderstrain4.png>]
  Section B.3.
-[59]) [60] (./thesis.aux) ) 
+[62]) [63] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 4773 strings out of 494985
- 71078 string characters out of 6180357
- 148298 words of memory out of 5000000
- 7863 multiletter control sequences out of 15000+600000
+ 4776 strings out of 494985
+ 71135 string characters out of 6180357
+ 149298 words of memory out of 5000000
+ 7866 multiletter control sequences out of 15000+600000
  29356 words of font info for 69 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 42i,13n,38p,1363b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,13n,38p,1363b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/
 8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
@@ -588,10 +596,10 @@ ls/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (70 pages, 543281 bytes).
+Output written on thesis.pdf (73 pages, 548642 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
- 219 compressed objects within 3 object streams
+ 334 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
