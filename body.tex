@@ -2,16 +2,21 @@
 \label{chap:intro}
 
 \section{Background}
-The study of rotating cantilever beams has been around since the early days of aviation. For example, the fundamental study in this area was published in 1921 by Southwell and Gough, Ref.~\textbf{[CITE]}. The dynamics of 
+The study of rotating cantilever beams has been around since the early days of aviation. For example, the fundamental study in this area was published in 1922 by Southwell and Gough, Ref.~\cite{southwell1922free}. The dynamics of airscrew blades were studied and an error calculation was provided to bound the error of the approximation. The work is important because it acknowledged that rotation speed affects the stiffness of a beam and then studied how the rotation speed changed the frequencies of the natural modes of vibration. The stiffening of the beam due to rotation increases the natural frequencies and this work provided an upper bound to the correction of the frequencies based upon rotation speed. In 1973, Belytschko and Hsieh studied the efficiency of convected coordinates on finite element approximation techniques Ref~\cite{belytschko1973non}. Hoa studied finite element approximation to blades with tip mass and varied setting angle in 1979, Ref.~\cite{hoa1979vibration}. In 1980, Hale and Meirovitch study a method of finite element analysis in which fewer degrees of freedom can be used as the system is reduced to substructures, Ref~\cite{hale1980general}. Christensen and Lee study nonlinear finite element analysis and time integration of rigid bodies undergoing large translations and rotations Ref.~\cite{christensen1986nonlinear}. In 1988, Yokoyama explored the vibration of rotating cantilever beams using the full Timoshenko beam theory approach to the finite element model in Ref.~\cite{yokoyama1988free}. Lee and Kuo study the effects of twist, taper, setting angle and hub connection elasticity on the natural frequencies of the rotating cantilever beam in their 1992 work Ref.~\cite{lee1992bending}. The work by Yoo, Ryan and Scott in 1995 greatly improved the accuracy of the numerical results for elastic beams by creating a transformation to a stretch coordinate frame for one of the displacement directions and coupling the stretch to the in plane and out of plane displacements, Ref.~\cite{yoo1995dynamics}. In 1998, Yoo and Shin study the effects of gyroscopic coupling on rotating beams in Ref.~\cite{yoo1998shin}. Yoo, Kwak and Chung as well as Yoo, Park and Park go on to study pre-twisted beams using the stretch coordinate frame transformation in 2001, Refs.~\cite{yoo2001twist},~\cite{yoo2001parkpark}. The 2008 Ozgumus and Kaya study investigated doubly tapered beams in Ref.~\cite{ozgumus2008flapwise} and the 2011 study by Zhu explored pretwisted rotating Timoshenko beams using finite element analysis in Ref.~\cite{zhu2011vibrations}. As recently as 2013, Kim, Yoo and Chung have studied rotating cantilever beams in Ref.\cite{kim2013dynamic}. In short, although rotating beams have been studied for a century, there is ongoing work in the field to improve the accuracy and reliability of finite element analysis techniques centered on accounting for more complex effects and geometries of the beams.
 
 \section{Organization}
+This study is organized as follows. First, the equations of motion are developed from first principles of physics in Chapter~\ref{chap:eom}. More specifically, Section~\ref{sec:energy_eqns} develops the energy equations, while Section~\ref{sec:variations} uses variational approximation to develop the equations of motion and Section~\ref{sec:discretizing} describes the discretization process.
+
+Chapter~\ref{ch:results} provides numerical results and analyzes the results. Section~\ref{sec:validation} validates the model against previous results and Section~\ref{sec:exp} develops the experimental design. Section~\ref{sec:results} provides the experimental results and analysis.
+
+Finally, Chapter~\ref{ch:conclusion} summarizes the work and describes what challenges lie ahead.
 
 \chapter{EQUATIONS OF MOTION}
 \label{chap:eom}
 The equations of motion of the rotating cantilever beam system are developed through the principles of variational approximation as covered in Appendix \ref{app:variations}. The discussion begins by describing the energy equations of the system, then applies variational approximation to formulate the approximating form and applies the discretizing interpolation for a single element two-node system. Finally, the system is expanded to $N$-dimensional form, and the system matrices are formulated. 
 
 \section{Energy Equations}
-
+\label{sec:energy_eqns}
 The energy equations consist of kinetic energy, denoted by $T$, and potential energy, denoted by $V$. These are precisely the quantities discussed in Appendix \ref{app:variations}, p.\pageref{app:variations}. In this case, the beam is discretized as a coupled mass-spring system. The coupling is determined by the equations of motion resultant from integration, simplification, and interpolation. The system that shall be considered is the system discussed by Ref.~\cite{chung2002dynamic}. In this system, it is assumed that the beam is long compared to the height and thickness, so that shear deformations may be neglected. 
 
 The beam is affixed to a central hub which is rotated at a frequency $\Omega$. The direction which is in-plane with the rotations and along the length of the beam is referred herein as the axial direction, labeled $u$. The direction which is in-plane with rotations and orthogonal to the $u$ direction is referred to as the chord-wise direction, and is labeled $v$. The out-of-plane direction which is orthogonal to both $u,v$ is referred to as the flap-wise direction and is labeled $w$.
@@ -151,7 +156,7 @@ where the chain rule yields
 \dot h_w &=& \int_0^x\frac{\partial w}{\partial\phi}\frac{\partial \dot w}{\partial\eta}\text{ d}\phi.
 \end{eqnarray}
 
-With the book-keeping surrounding stretch completed, it is now possible to ascertain the equations of motion. Note, however, that there were many assumptions that will require the numerics to include a sufficiently fine grid in both time and space such that the assumptions are valid. A discussion of what ``sufficiently fine'' pertains to is given in Section~\ref{subsec:discretizing}.
+With the book-keeping surrounding stretch completed, it is now possible to ascertain the equations of motion. Note, however, that there were many assumptions that will require the numerics to include a sufficiently fine grid in both time and space such that the assumptions are valid. A discussion of what ``sufficiently fine'' pertains to is given in Section~\ref{sec:discretizing}.
 
 \subsection{Kinetic Energy}
 The system's kinetic energy is given by the classical scalar kinetic energy formulation
@@ -291,6 +296,7 @@ U = \int_0^L\frac{E}{2}\left[I_{zz}\left(\frac{\partial^2 v}{\partial x^2}\right
 \end{equation}
 
 \section{Applying Variational Approximation}
+\label{sec:variations}
 Now that the kinetic and potential energy equations have been determined, the principles of variational approximation may be used to approximate the equations of motion. We begin by writing down the Lagrangian of the system, then rearranging the system by way of integration by parts to develop the Euler-Lagrange equations for the system. The non-vanishing terms that are not included in the Euler-Lagrange formulation are used to formulate approximation functions which both satisfy the boundary conditions and vanish as required to permit the use of variational approximation. Additionally, the properties of the physical system are considered when choosing the class of test functions which might be appropriate.
 
 \subsection{Developing the Euler-Lagrange Equations}
@@ -851,8 +857,8 @@ Note that the product of $s,h_v,h_w,$ and $\dot v$ with either $v_{x}$ or $w_{x}
 \label{eq:EL_w_final}
 \end{equation}
 
-\subsection{Discretizing the System}
-\label{subsec:discretizing}
+\section{Discretizing the System}
+\label{sec:discretizing}
 We now have the final equations of motion, with the caveat that `suitable' test functions $q_i$ must be selected. `Suitable' means that the functions are in $H^2$ in the interval $[0,L]$, and that all boundary and initial conditions are satisfied by the functions. There are standard test functions that are frequently used; choosing which class of test functions to use is dependent upon the physics of the problem. Furthermore, the test functions should match the behavior of the spatial displacements of the system. Polynomial shapes are reasonable approximations to how we expect the beam to displace from bending and stretching, so choosing polynomials for test functions is logical.
 
 In order that we might find suitable interpolating polynomials for the discretized system, we begin by considering a rod consisting of one element and two nodes.
@@ -1693,6 +1699,7 @@ for $j,k$ $\in\lbrace1,2,\dots,10\rbrace$. The process is the same for $\textbf{
 \label{ch:results}
 
 \section{Validation}
+\label{sec:validation}
 The test of the system is carried out by examining the natural modes of the discretization and comparing against published material. To do so, it is important to consider the system at equilibrium; in this case, we take angular acceleration to be zero so that $\dot\Omega=0$. We relabel the matrices as follows, consistent with the order of the derivative.
 \begin{eqnarray}
 \mathbf{X0} &=& \mathbf{[K]}+\Omega^2(\mathbf{[S]}-\mathbf{[P]}),\\
@@ -1933,7 +1940,12 @@ chordwise & 1 & 5 & 50 & 74.0094 & 74.0031 & 74.1949\\
 
 There is a clear correspondence between the model presented here and that of Ref.~\cite{chung2002dynamic}; furthermore, the model here agrees with the analytic solution provided by Ref.~\cite{wright82vibration}. Thus, we conclude that the model developed here is suitable for testing.
 
-\section{Experimentation}
+\section{Experimental Setup}
+\label{sec:exp}
 We now develop a coupling model for the purpose of analyzing the interaction of coupled rotating cantilever beams. 
 
+\section{Experimental Results}
+\label{sec:results}
+
 \chapter{CONCLUSION}
+\label{ch:conclusion}

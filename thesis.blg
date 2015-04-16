@@ -1,0 +1,178 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
+The top-level auxiliary file: thesis.aux
+The style file: siammod.bst
+Database file #1: thbib.bib
+You're missing a field name---line 2 of file thbib.bib
+ : 
+ : %  author =  "Abraham, T.",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 12 of file thbib.bib
+ : 
+ : %  key =   "Writing Style",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 20 of file thbib.bib
+ : 
+ : %  author =  "Bankhead, G. T.",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 30 of file thbib.bib
+ : 
+ : %  title =  {San Diego State Univeristy Dissertation and Thesis
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 37 of file thbib.bib
+ : 
+ : %  key =   {United},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 57 of file thbib.bib
+ : 
+ : %  author =  "DeWitt, R.",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 67 of file thbib.bib
+ : 
+ : %  author =  "Bach, B. J.",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 80 of file thbib.bib
+ : 
+ : %  author =   {},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 100 of file thbib.bib
+ : 
+ : %  author =  "Stuart, B. W.",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 113 of file thbib.bib
+ : 
+ : %  author =  "Lamport, L.",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 121 of file thbib.bib
+ : 
+ : %  author =  "Lamport, L.",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 129 of file thbib.bib
+ : 
+ : %  AUTHOR =  {Lehto, Olli},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 146 of file thbib.bib
+ : 
+ : %  author =  "Mahaffy, J. M. and Jorgensen, D. A. and
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 157 of file thbib.bib
+ : 
+ : %  author =  "Finknoddle, H. B.",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 166 of file thbib.bib
+ : 
+ : %  author =  {John W. Milnor},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 174 of file thbib.bib
+ : 
+ : %  title =  "Proceedings of the Conference on Mathematical
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 183 of file thbib.bib
+ : 
+ : %  author =   {Bill Gates},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 192 of file thbib.bib
+ : 
+ : %  author =  "Simon, I. T. and McGeorge, A. M.",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 201 of file thbib.bib
+ : 
+ : %  author =  "Slemrod, J. K.",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 208 of file thbib.bib
+ : 
+ : %  key =   {AuntWiki},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 521 of file thbib.bib
+ : @article{belytschko1973non
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 531 of file thbib.bib
+ : @article{hoa1979vibration
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 541 of file thbib.bib
+ : @article{hale1980general
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 551 of file thbib.bib
+ : @article{christensen1986nonlinear
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 561 of file thbib.bib
+ : @article{yokoyama1988free
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 571 of file thbib.bib
+ : @article{lee1992bending
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 581 of file thbib.bib
+ : @article{yoo1995dynamics
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 641 of file thbib.bib
+ : @article{kim2013dynamic
+ :                        ,
+I'm skipping whatever remains of this entry
+You've used 27 entries,
+            2032 wiz_defined-function locations,
+            662 strings with 7571 characters,
+and the built_in function-call counts, 8769 in all, are:
+= -- 855
+> -- 315
+< -- 0
++ -- 130
+- -- 98
+* -- 627
+:= -- 1338
+add.period$ -- 29
+call.type$ -- 27
+change.case$ -- 122
+chr.to.int$ -- 0
+cite$ -- 27
+duplicate$ -- 429
+empty$ -- 702
+format.name$ -- 98
+if$ -- 1893
+int.to.chr$ -- 0
+int.to.str$ -- 27
+missing$ -- 32
+newline$ -- 86
+num.names$ -- 54
+pop$ -- 132
+preamble$ -- 1
+purify$ -- 103
+quote$ -- 0
+skip$ -- 370
+stack$ -- 0
+substring$ -- 636
+swap$ -- 178
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 92
+warning$ -- 0
+while$ -- 99
+width$ -- 29
+write$ -- 240
+(There were 28 error messages)

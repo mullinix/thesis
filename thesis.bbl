@@ -1,0 +1,127 @@
+\begin{thebibliography}{10}
+
+\bibitem{axelsson1984finite}
+{\sc O.~Axelsson and V.~A. Barker}, {\em Finite element solution of boundary
+  value problems: theory and computation}, vol.~35, Siam, 1984.
+
+\bibitem{belytschko1973non}
+{\sc T.~Belytschko and B.~Hsieh}, {\em Non-linear transient finite element
+  analysis with convected co-ordinates}, International Journal for Numerical
+  Methods in Engineering, 7 (1973), pp.~255--271.
+
+\bibitem{brenner2008mathematical}
+{\sc S.~C. Brenner and R.~Scott}, {\em The mathematical theory of finite
+  element methods}, vol.~15, Springer, 2008.
+
+\bibitem{christensen1986nonlinear}
+{\sc E.~Christensen and S.~Lee}, {\em Nonlinear finite element modeling of the
+  dynamics of unrestrained flexible structures}, Computers \& structures, 23
+  (1986), pp.~819--829.
+
+\bibitem{chung2002dynamic}
+{\sc J.~Chung and H.~H. Yoo}, {\em Dynamic analysis of a rotating cantilever
+  beam by using the finite element method}, Journal of Sound and Vibration, 249
+  (2002), pp.~147--164.
+
+\bibitem{duchateau1992advanced}
+{\sc P.~DuChateau}, {\em Advanced mathematics for engineers and scientists},
+  HarperPerennial, 1992.
+
+\bibitem{boulderstrain4}
+{\sc C.~Felippa}, {\em Strains}.
+\newblock Univeristy of Colorado, Boulder. Aerospace Engineering Dept.,
+  http://www.colorado.edu/engineering/CAS/courses.d/Structures.d/IAST.Lect04.d%
+/IAST.Lect04.pdf, accessed June 2014, 2013.
+
+\bibitem{boulderstrain5}
+{\sc C.~Felippa}, {\em Stress-strain material laws}.
+\newblock Univeristy of Colorado, Boulder. Aerospace Engineering Dept.,
+  http://www.colorado.edu/engineering/CAS/courses.d/Structures.d/IAST.Lect05.d%
+/IAST.Lect05.pdf, accessed June 2014, 2013.
+
+\bibitem{hale1980general}
+{\sc A.~Hale and L.~Meirovitch}, {\em A general substructure synthesis method
+  for the dynamic simulation of complex structures}, Journal of Sound and
+  Vibration, 69 (1980), pp.~309--326.
+
+\bibitem{hoa1979vibration}
+{\sc S.~Hoa}, {\em Vibration of a rotating beam with tip mass}, Journal of
+  Sound and Vibration, 67 (1979), pp.~369--381.
+
+\bibitem{kim2013dynamic}
+{\sc H.~Kim, H.~Hee~Yoo, and J.~Chung}, {\em Dynamic model for free vibration
+  and response analysis of rotating beams}, Journal of Sound and Vibration, 332
+  (2013), pp.~5917--5928.
+
+\bibitem{cornelius1970variational}
+{\sc C.~Lanczos}, {\em The variational principles of mechanics}, vol.~4,
+  Courier Dover Publications, 1970.
+
+\bibitem{lee1992bending}
+{\sc S.~Lee and Y.~Kuo}, {\em Bending vibrations of a rotating non-uniform beam
+  with an elastically restrained root}, Journal of sound and vibration, 154
+  (1992), pp.~441--451.
+
+\bibitem{lima2012thesis}
+{\sc M.~A. Lima}, {\em Rotating cantilever beams: Finite element modeling and
+  vibration analysis}, Master's thesis, University of Porto, Porto, Portugal,
+  2012.
+
+\bibitem{ozgumus2008flapwise}
+{\sc O.~O. Ozgumus and M.~Kaya}, {\em Flapwise bending vibration analysis of a
+  rotating double-tapered timoshenko beam}, Archive of Applied Mechanics, 78
+  (2008), pp.~379--392.
+
+\bibitem{petyt1990introduction}
+{\sc M.~Petyt}, {\em Introduction to finite element vibration analysis},
+  Cambridge university press, 1990.
+
+\bibitem{reddy1984energy}
+{\sc J.~Reddy}, {\em Energy and Variational Methods}, John Wiley, New York,
+  1984.
+
+\bibitem{southwell1922free}
+{\sc R.~V. Southwell and B.~S. Gough}, {\em On the free transverse vibrations
+  of airscrew blades}, HM Stationery Office, 1922.
+
+\bibitem{Tisseur01thequadratic}
+{\sc F.~Tisseur and K.~Meerbergen}, {\em The quadratic eigenvalue problem},
+  SIAM Rev, 43 (2001), pp.~235--286.
+
+\bibitem{weinstock1974calculus}
+{\sc R.~Weinstock}, {\em Calculus of variations}, Courier Dover Publications,
+  1974.
+
+\bibitem{wright82vibration}
+{\sc A.~D. Wright, C.~E. Smith, R.~W. Thresher, and J.~L.~C. Wang}, {\em
+  {Vibration Modes of Centrifugally Stiffened Beams}}, Journal of Applied
+  Mechanics-transactions of The Asme, 49 (1982).
+
+\bibitem{yokoyama1988free}
+{\sc T.~Yokoyama}, {\em Free vibration characteristics of rotating timoshenko
+  beams}, International Journal of Mechanical Sciences, 30 (1988),
+  pp.~743--755.
+
+\bibitem{yoo2001twist}
+{\sc H.~Yoo, J.~Kwak, and J.~Chung}, {\em Vibration analysis of rotating
+  pre-twisted blades with a concentrated mass}, Journal of Sound and Vibration,
+  240 (2001), pp.~891--908.
+
+\bibitem{yoo1995dynamics}
+{\sc H.~Yoo, R.~Ryan, and R.~Scott}, {\em Dynamics of flexible beams undergoing
+  overall motions}, Journal of Sound and vibration, 181 (1995), pp.~261--278.
+
+\bibitem{yoo1998shin}
+{\sc H.~Yoo and S.~Shin}, {\em Vibration analysis of rotating cantilever
+  beams}, Journal of Sound and Vibration, 212 (1998), pp.~807--828.
+
+\bibitem{yoo2001parkpark}
+{\sc H.~H. Yoo, J.~H. Park, and J.~Park}, {\em Vibration analysis of rotating
+  pre-twisted blades}, Computers \& Structures, 79 (2001), pp.~1811--1819.
+
+\bibitem{zhu2011vibrations}
+{\sc T.-L. Zhu}, {\em The vibrations of pre-twisted rotating timoshenko beams
+  by the rayleigh--ritz method}, Computational Mechanics, 47 (2011),
+  pp.~395--408.
+
+\end{thebibliography}
