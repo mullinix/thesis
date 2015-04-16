@@ -1,0 +1,29 @@
+\contentsline {schapter}{ABSTRACT}{vi}
+\contentsline {schapter}{LIST OF TABLES}{viii}
+\contentsline {schapter}{LIST OF FIGURES}{ix}
+\contentsline {schapter}{ACKNOWLEDGMENTS}{x}
+\pagebreak [3]
+\contentsline {chaphd}{CHAPTER}{1}
+\nopagebreak 
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}
+\contentsline {section}{\numberline {1.1}Background}{1}
+\contentsline {section}{\numberline {1.2}Organization}{1}
+\contentsline {chapter}{\numberline {2}EQUATIONS OF MOTION}{2}
+\contentsline {section}{\numberline {2.1}Energy Equations}{2}
+\contentsline {subsection}{\numberline {2.1.1}Stretch Coordinate Frame}{3}
+\contentsline {subsection}{\numberline {2.1.2}Kinetic Energy}{6}
+\contentsline {subsection}{\numberline {2.1.3}Potential Energy}{7}
+\contentsline {subsubsection}{\numberline {2.1.3.1}Building the Strain Equations}{8}
+\contentsline {section}{\numberline {2.2}Applying Variational Approximation}{10}
+\contentsline {subsection}{\numberline {2.2.1}Developing the Euler-Lagrange Equations}{10}
+\contentsline {subsection}{\numberline {2.2.2}System Analysis}{16}
+\contentsline {subsection}{\numberline {2.2.3}Discretizing the System}{24}
+\contentsline {chapter}{\numberline {3}RESULTS}{44}
+\contentsline {section}{\numberline {3.1}Validation}{44}
+\contentsline {section}{\numberline {3.2}Experimentation}{48}
+\contentsline {chapter}{\numberline {4}CONCLUSION}{49}
+\pagebreak [3]
+\contentsline {chaphd}{APPENDICES}{49}
+\nopagebreak 
+\contentsline {chapter}{\numberline {A}VARIATIONAL APPROXIMATION AND CALCULUS OF VARIATIONS}{50}
+\contentsline {chapter}{\numberline {B}STRAIN EQUATIONS}{57}
