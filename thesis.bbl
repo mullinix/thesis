@@ -9,6 +9,11 @@
   analysis with convected co-ordinates}, International Journal for Numerical
   Methods in Engineering, 7 (1973), pp.~255--271.
 
+\bibitem{betcke2008optimal}
+{\sc T.~Betcke}, {\em Optimal scaling of generalized and polynomial eigenvalue
+  problems}, SIAM Journal on Matrix Analysis and Applications, 30 (2008),
+  pp.~1320--1338.
+
 \bibitem{brenner2008mathematical}
 {\sc S.~C. Brenner and R.~Scott}, {\em The mathematical theory of finite
   element methods}, vol.~15, Springer, 2008.
@@ -27,17 +32,22 @@
 {\sc P.~DuChateau}, {\em Advanced mathematics for engineers and scientists},
   HarperPerennial, 1992.
 
+\bibitem{fan2004normwise}
+{\sc H.-Y. Fan, W.-W. Lin, and P.~Van~Dooren}, {\em Normwise scaling of second
+  order polynomial matrices}, SIAM journal on matrix analysis and applications,
+  26 (2004), pp.~252--256.
+
 \bibitem{boulderstrain4}
 {\sc C.~Felippa}, {\em Strains}.
 \newblock Univeristy of Colorado, Boulder. Aerospace Engineering Dept.,
-  http://www.colorado.edu/engineering/CAS/courses.d/Structures.d/IAST.Lect04.d%
-/IAST.Lect04.pdf, accessed June 2014, 2013.
+  \url{http://www.colorado.edu/engineering/CAS/courses.d/Structures.d/IAST.Lec%
+t04.d/IAST.Lect04.pdf}, accessed June 2014, 2013.
 
 \bibitem{boulderstrain5}
 {\sc C.~Felippa}, {\em Stress-strain material laws}.
-\newblock Univeristy of Colorado, Boulder. Aerospace Engineering Dept.,
-  http://www.colorado.edu/engineering/CAS/courses.d/Structures.d/IAST.Lect05.d%
-/IAST.Lect05.pdf, accessed June 2014, 2013.
+\newblock Univeristy of Colorado, Boulder. Aerospace Engineering
+  Dept.,\url{http://www.colorado.edu/engineering/CAS/courses.d/Structures.d/IA%
+ST.Lect05.d/IAST.Lect05.pdf}, accessed June 2014, 2013.
 
 \bibitem{hale1980general}
 {\sc A.~Hale and L.~Meirovitch}, {\em A general substructure synthesis method
@@ -53,6 +63,10 @@
   and response analysis of rotating beams}, Journal of Sound and Vibration, 332
   (2013), pp.~5917--5928.
 
+\bibitem{lambert1991numerical}
+{\sc J.~D. Lambert}, {\em Numerical methods for ordinary differential systems:
+  the initial value problem}, John Wiley \& Sons, Inc., USA, 1991.
+
 \bibitem{cornelius1970variational}
 {\sc C.~Lanczos}, {\em The variational principles of mechanics}, vol.~4,
   Courier Dover Publications, 1970.
@@ -67,9 +81,13 @@
   vibration analysis}, Master's thesis, University of Porto, Porto, Portugal,
   2012.
 
+\bibitem{newmark1959method}
+{\sc N.~M. Newmark}, {\em A method of computation for structural dynamics},
+  Journal of the Engineering Mechanics Division, 85 (1959), pp.~67--94.
+
 \bibitem{ozgumus2008flapwise}
 {\sc O.~O. Ozgumus and M.~Kaya}, {\em Flapwise bending vibration analysis of a
-  rotating double-tapered timoshenko beam}, Archive of Applied Mechanics, 78
+  rotating double-tapered {T}imoshenko beam}, Archive of Applied Mechanics, 78
   (2008), pp.~379--392.
 
 \bibitem{petyt1990introduction}
@@ -88,6 +106,9 @@
 {\sc F.~Tisseur and K.~Meerbergen}, {\em The quadratic eigenvalue problem},
   SIAM Rev, 43 (2001), pp.~235--286.
 
+\bibitem{von1959theory}
+{\sc R.~Von~Mises}, {\em Theory of flight}, Courier Corporation, 1959.
+
 \bibitem{weinstock1974calculus}
 {\sc R.~Weinstock}, {\em Calculus of variations}, Courier Dover Publications,
   1974.
@@ -98,7 +119,7 @@
   Mechanics-transactions of The Asme, 49 (1982).
 
 \bibitem{yokoyama1988free}
-{\sc T.~Yokoyama}, {\em Free vibration characteristics of rotating timoshenko
+{\sc T.~Yokoyama}, {\em Free vibration characteristics of rotating {T}imoshenko
   beams}, International Journal of Mechanical Sciences, 30 (1988),
   pp.~743--755.
 
@@ -120,8 +141,8 @@
   pre-twisted blades}, Computers \& Structures, 79 (2001), pp.~1811--1819.
 
 \bibitem{zhu2011vibrations}
-{\sc T.-L. Zhu}, {\em The vibrations of pre-twisted rotating timoshenko beams
-  by the rayleigh--ritz method}, Computational Mechanics, 47 (2011),
+{\sc T.-L. Zhu}, {\em The vibrations of pre-twisted rotating {T}imoshenko beams
+  by the {R}ayleigh--{R}itz method}, Computational Mechanics, 47 (2011),
   pp.~395--408.
 
 \end{thebibliography}

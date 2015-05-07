@@ -1,7 +1,7 @@
 \contentsline {schapter}{ABSTRACT}{vi}
-\contentsline {schapter}{LIST OF TABLES}{viii}
-\contentsline {schapter}{LIST OF FIGURES}{ix}
-\contentsline {schapter}{ACKNOWLEDGMENTS}{x}
+\contentsline {schapter}{LIST OF TABLES}{ix}
+\contentsline {schapter}{LIST OF FIGURES}{x}
+\contentsline {schapter}{ACKNOWLEDGMENTS}{xi}
 \pagebreak [3]
 \contentsline {chaphd}{CHAPTER}{1}
 \nopagebreak 
@@ -10,22 +10,27 @@
 \contentsline {section}{\numberline {1.2}Organization}{2}
 \contentsline {chapter}{\numberline {2}EQUATIONS OF MOTION}{3}
 \contentsline {section}{\numberline {2.1}Energy Equations}{3}
-\contentsline {subsection}{\numberline {2.1.1}Stretch Coordinate Frame}{4}
+\contentsline {subsection}{\numberline {2.1.1}Stretch Coordinate Frame}{3}
 \contentsline {subsection}{\numberline {2.1.2}Kinetic Energy}{7}
 \contentsline {subsection}{\numberline {2.1.3}Potential Energy}{8}
-\contentsline {subsubsection}{\numberline {2.1.3.1}Building the Strain Equations}{9}
+\contentsline {subsubsection}{\numberline {2.1.3.1}Strain Energy}{9}
 \contentsline {section}{\numberline {2.2}Applying Variational Approximation}{11}
 \contentsline {subsection}{\numberline {2.2.1}Developing the Euler-Lagrange Equations}{11}
 \contentsline {subsection}{\numberline {2.2.2}System Analysis}{17}
 \contentsline {section}{\numberline {2.3}Discretizing the System}{25}
-\contentsline {chapter}{\numberline {3}RESULTS}{45}
-\contentsline {section}{\numberline {3.1}Validation}{45}
-\contentsline {section}{\numberline {3.2}Experimental Setup}{49}
-\contentsline {section}{\numberline {3.3}Experimental Results}{49}
-\contentsline {chapter}{\numberline {4}CONCLUSION}{51}
-\contentsline {schapter}{BIBLIOGRAPHY}{52}
+\contentsline {chapter}{\numberline {3}RESULTS}{46}
+\contentsline {section}{\numberline {3.1}Validation}{46}
+\contentsline {section}{\numberline {3.2}Experimental Setup}{50}
+\contentsline {subsection}{\numberline {3.2.1}Coupling Multiple Beams}{50}
+\contentsline {subsection}{\numberline {3.2.2}Forced Response Setup}{53}
+\contentsline {section}{\numberline {3.3}Experimental Results}{53}
+\contentsline {chapter}{\numberline {4}CONCLUSION}{59}
+\contentsline {section}{\numberline {4.1}Summary of Work}{59}
+\contentsline {section}{\numberline {4.2}Further Work}{60}
+\contentsline {schapter}{BIBLIOGRAPHY}{62}
 \pagebreak [3]
-\contentsline {chaphd}{APPENDICES}{54}
+\contentsline {chaphd}{APPENDICES}{64}
 \nopagebreak 
-\contentsline {chapter}{\numberline {A}VARIATIONAL APPROXIMATION AND CALCULUS OF VARIATIONS}{54}
-\contentsline {chapter}{\numberline {B}STRAIN EQUATIONS}{61}
+\contentsline {chapter}{\numberline {A}VARIATIONAL APPROXIMATION AND CALCULUS OF VARIATIONS}{64}
+\contentsline {chapter}{\numberline {B}STRAIN EQUATIONS}{71}
+\contentsline {chapter}{\numberline {C}LINEARITY ASSUMPTIONS}{77}

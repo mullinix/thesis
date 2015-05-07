@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2013.11.8)  16 APR 2015 10:28
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2013.11.8)  7 MAY 2015 12:50
 entering extended mode
 \write18 enabled.
  %&-line parsing enabled.
@@ -163,6 +163,13 @@ LaTeX Info: Redefining \] on input line 2667.
 \g_MT_multlinerow_int=\count106
 \l_MT_multwidth_dim=\dimen118
 )
+(/usr/share/texmf/tex/latex/natbib/bibentry.sty
+Package: bibentry 2000/06/20 1.4 (PWD)
+) (./thesis.bbl)
+(/usr/share/texmf/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip11
+Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
+)
 (/usr/share/texmf/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2001/10/25 v2.2f
 \symAMSa=\mathgroup5
@@ -234,19 +241,19 @@ Package: ulem 2000/05/26
  (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 216.
-LaTeX Font Info:    ... okay on input line 216.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 216.
-LaTeX Font Info:    ... okay on input line 216.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 216.
-LaTeX Font Info:    ... okay on input line 216.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 216.
-LaTeX Font Info:    ... okay on input line 216.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 216.
-LaTeX Font Info:    ... okay on input line 216.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 216.
-LaTeX Font Info:    ... okay on input line 216.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 216.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 221.
+LaTeX Font Info:    ... okay on input line 221.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 221.
 
 
 (/usr/share/texmf/tex/latex/psnfss/ot1ptm.fd
@@ -276,57 +283,58 @@ LaTeX Info: Redefining \selectfont on input line 125.
 \JustifyingParindent=\skip70
 )
 Package caption Info: longtable package v3.15 (or newer) detected on input line
- 216.
+ 221.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 220.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 225.
  [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 224.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 229.
  [2]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 229.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 234.
 
  (/usr/share/texmf/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 229.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 234.
 
 [3] [4
 
-] [5] (./abstract.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
- (/usr/share/texmf/tex/latex/amsfonts/umsa.fd
+] [5] (./abstract.tex) [6
+
+] (./thesis.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+
+(/usr/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
 
 (/usr/share/texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
-)) [6
+) [7
 
-] (./thesis.toc)
+])
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [7
-
-]
-(./thesis.lot)
+ [8] (./thesis.lot)
 \tf@lot=\write4
 \openout4 = `thesis.lot'.
 
- [8
+ [9
 
-] (./thesis.lof)
+]
+(./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [9
+ [10
 
-] [10
+] [11
 
 ] (./body.tex
 CHAPTER 1.
@@ -342,32 +350,35 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <12> not available
 [2]
 CHAPTER 2.
  Section 2.1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 26.
 
 
 pdfTeX warning: pdflatex (file ./images/chung_yoo_cantilever_beam.pdf): PDF inc
 lusion: found PDF version <1.5>, but at most version <1.4> allowed
-<images/chung_yoo_cantilever_beam.pdf, id=44, 1111.15125pt x 544.0325pt>
+<images/chung_yoo_cantilever_beam.pdf, id=50, 1111.15125pt x 544.0325pt>
 File: images/chung_yoo_cantilever_beam.pdf Graphic file (type pdf)
 
-<use images/chung_yoo_cantilever_beam.pdf> [3
-
- <./images/chung_yoo_cantilever_beam.pdf
-
-pdfTeX warning: pdflatex (file ./images/chung_yoo_cantilever_beam.pdf): PDF inc
-lusion: Page Group detected which pdfTeX can't handle. Ignoring it.
->]
+<use images/chung_yoo_cantilever_beam.pdf>
  Subsection 2.1.1.
 system(epstopdf images/stretch_coords.eps)...executed.
 
-<images/stretch_coords.pdf, id=56, 744.7825pt x 677.53125pt>
+<images/stretch_coords.pdf, id=51, 744.7825pt x 677.53125pt>
 File: images/stretch_coords.pdf Graphic file (type pdf)
 
-<use images/stretch_coords.pdf> [4 <./images/stretch_coords.pdf>] [5] [6]
+<use images/stretch_coords.pdf> [3
+
+] [4 <./images/chung_yoo_cantilever_beam.pdf
+
+pdfTeX warning: pdflatex (file ./images/chung_yoo_cantilever_beam.pdf): PDF inc
+lusion: Page Group detected which pdfTeX can't handle. Ignoring it.
+> <./images/stretch_coords.pdf>] [5] [6]
  Subsection 2.1.2.
 [7]
  Subsection 2.1.3.
+[8]
  Subsubsection 2.1.3.1.
-[8] [9] [10]
+[9] [10]
  Section 2.2.
  Subsection 2.2.1.
 [11] [12] [13] [14] [15] [16]
@@ -376,67 +387,92 @@ File: images/stretch_coords.pdf Graphic file (type pdf)
  Section 2.3.
 system(epstopdf images/2-node-rod.eps)...executed.
 
-<images/2-node-rod.pdf, id=136, 499.8675pt x 203.76125pt>
+<images/2-node-rod.pdf, id=140, 499.8675pt x 203.76125pt>
 File: images/2-node-rod.pdf Graphic file (type pdf)
 
-<use images/2-node-rod.pdf>
+<use images/2-node-rod.pdf> [25 <./images/2-node-rod.pdf>]
 system(epstopdf images/stretch_2node.eps)...executed.
 
 
-<images/stretch_2node.pdf, id=137, 643.40375pt x 402.50375pt>
+<images/stretch_2node.pdf, id=148, 643.40375pt x 402.50375pt>
 File: images/stretch_2node.pdf Graphic file (type pdf)
 
-<use images/stretch_2node.pdf> [25 <./images/2-node-rod.pdf>] [26 <./images/str
-etch_2node.pdf>] <images/beam_dof.png, id=152, 642.4pt x 401.5pt>
+<use images/stretch_2node.pdf> [26 <./images/stretch_2node.pdf>] [27]
+<images/beam_dof.png, id=161, 642.4pt x 401.5pt>
 File: images/beam_dof.png Graphic file (type png)
-
-<use images/beam_dof.png> [27] [28 <./images/beam_dof.png (PNG copy)>] [29]
-[30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
-Overfull \hbox (31.80417pt too wide) detected at line 1616
+ <use images/beam_dof.png>
+[28 <./images/beam_dof.png (PNG copy)>] [29] [30] [31] [32] [33] [34] [35]
+[36] [37] [38] [39] [40] [41]
+Overfull \hbox (31.80417pt too wide) detected at line 1615
 [] \OT1/cmr/m/n/12 = [] []
  []
 
-[42] [43] [44]
+[42] [43] [44] [45]
 CHAPTER 3.
  Section 3.1.
-[45
+[46
 
-] [46] [47]
+] [47] [48] [49]
  Section 3.2.
-[48]
+ Subsection 3.2.1.
+
+
+pdfTeX warning: pdflatex (file ./images/coupling_diagram.pdf): PDF inclusion: f
+ound PDF version <1.5>, but at most version <1.4> allowed
+<images/coupling_diagram.pdf, id=231, 383.4325pt x 254.9525pt>
+File: images/coupling_diagram.pdf Graphic file (type pdf)
+
+<use images/coupling_diagram.pdf> [50] [51 <./images/coupling_diagram.pdf
+
+pdfTeX warning: pdflatex (file ./images/coupling_diagram.pdf): PDF inclusion: P
+age Group detected which pdfTeX can't handle. Ignoring it.
+>] [52]
+ Subsection 3.2.2.
  Section 3.3.
-[49] [50]
+[53] <images/gamma_vs_omega.pdf, id=253, 368.37625pt x 306.14375pt>
+File: images/gamma_vs_omega.pdf Graphic file (type pdf)
+
+<use images/gamma_vs_omega.pdf> [54 <./images/gamma_vs_omega.pdf>] [55]
+<images/u_displ_4-5.pdf, id=278, 380.42125pt x 304.13625pt>
+File: images/u_displ_4-5.pdf Graphic file (type pdf)
+
+<use images/u_displ_4-5.pdf>
+<images/v_displ_4-5.pdf, id=279, 393.47pt x 303.1325pt>
+File: images/v_displ_4-5.pdf Graphic file (type pdf)
+
+<use images/v_displ_4-5.pdf>
+<images/w_forced_large_beta.pdf, id=280, 369.38pt x 304.13625pt>
+File: images/w_forced_large_beta.pdf Graphic file (type pdf)
+
+<use images/w_forced_large_beta.pdf>
+<images/w_forced_small_beta.pdf, id=281, 380.42125pt x 309.155pt>
+File: images/w_forced_small_beta.pdf Graphic file (type pdf)
+
+<use images/w_forced_small_beta.pdf> [56] [57 <./images/u_displ_4-5.pdf> <./ima
+ges/v_displ_4-5.pdf>] [58 <./images/w_forced_large_beta.pdf> <./images/w_forced
+_small_beta.pdf>]
 CHAPTER 4.
-) (./thesis.bbl [51
+ Section 4.1.
+[59
 
 ]
-Overfull \hbox (51.23476pt too wide) in paragraph at lines 31--35
-\OT1/ptm/m/n/12 http://www.colorado.edu/engineering/CAS/courses.d/Structures.d/
-IAST.Lect04.d/IAST.Lect04.pdf, 
- []
+ Section 4.2.
+[60]) (./thesis.bbl [61] [62
 
-
-Overfull \hbox (51.23476pt too wide) in paragraph at lines 37--41
-\OT1/ptm/m/n/12 http://www.colorado.edu/engineering/CAS/courses.d/Structures.d/
-IAST.Lect05.d/IAST.Lect05.pdf, 
- []
-
-[52
-
-] [53]) (./append.tex
+] [63]) (./append.tex
 APPENDIX A.
-[54
+[64
 
 ]
  Section A.1.
-[55] [56]
+[65] [66]
  Section A.2.
-[57]
+[67]
  Section A.3.
  Section A.4.
-[58] [59] [60]
+[68] [69] [70]
 APPENDIX B.
-[61
+[71
 
 ]
  Section B.1.
@@ -444,45 +480,50 @@ APPENDIX B.
 
 pdfTeX warning: pdflatex (file ./images/normal_strain.pdf): PDF inclusion: foun
 d PDF version <1.5>, but at most version <1.4> allowed
-<images/normal_strain.pdf, id=265, 369.38pt x 259.97125pt>
+<images/normal_strain.pdf, id=385, 369.38pt x 259.97125pt>
 File: images/normal_strain.pdf Graphic file (type pdf)
 
-<use images/normal_strain.pdf> [62 <./images/normal_strain.pdf
+<use images/normal_strain.pdf> [72 <./images/normal_strain.pdf
 
 pdfTeX warning: pdflatex (file ./images/normal_strain.pdf): PDF inclusion: Page
  Group detected which pdfTeX can't handle. Ignoring it.
 >]
  Section B.2.
-<images/ucboulderstrain4.png, id=273, 1130.2225pt x 633.36626pt>
+<images/ucboulderstrain4.png, id=393, 1130.2225pt x 633.36626pt>
 File: images/ucboulderstrain4.png Graphic file (type png)
 
-<use images/ucboulderstrain4.png> [63] [64 <./images/ucboulderstrain4.png (PNG 
+<use images/ucboulderstrain4.png> [73] [74 <./images/ucboulderstrain4.png (PNG 
 copy)>]
  Section B.3.
-[65]) [66] (./thesis.aux) ) 
+[75] [76]
+APPENDIX C.
+[77
+
+]) [78] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 3158 strings out of 256216
- 43049 string characters out of 1917072
- 109849 words of memory out of 1500000
- 6349 multiletter control sequences out of 10000+200000
- 29365 words of font info for 69 fonts, out of 1200000 for 2000
+ 3359 strings out of 256216
+ 46470 string characters out of 1917072
+ 121246 words of memory out of 1500000
+ 6532 multiletter control sequences out of 10000+200000
+ 32270 words of font info for 73 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 35i,13n,38p,3006b,262s stack positions out of 5000i,500n,6000p,200000b,15000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/
-share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/blu
-esky/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/sh
-are/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fonts/type1/bluesk
-y/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/t
-exmf/fonts/type1/bluesky/cm/cmr6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/c
-mr8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/f
-onts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/bluesky/ams/eurm1
-0.pfb></usr/share/texmf/fonts/type1/bluesky/ams/msbm10.pfb></usr/share/texmf/fo
-nts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.p
-fb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/t
-ype1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (76 pages, 1287370 bytes).
+ 35i,22n,38p,3008b,377s stack positions out of 5000i,500n,6000p,200000b,15000s
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/sha
+re/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesk
+y/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/share
+/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fonts/type1/bluesky/c
+m/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texm
+f/fonts/type1/bluesky/cm/cmr6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8
+.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/font
+s/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pf
+b></usr/share/texmf/fonts/type1/bluesky/ams/eurm10.pfb></usr/share/texmf/fonts/
+type1/bluesky/ams/msbm10.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb
+></usr/share/texmf/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf/fonts/ty
+pe1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></u
+sr/share/texmf/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (89 pages, 1465075 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
+ 474 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

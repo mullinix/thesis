@@ -1,7 +1,13 @@
-\contentsline {figure}{Figure\nobreakspace 2.1. \ignorespaces Cantilever Beam with Rotational Oscillation \cite {chung2002dynamic}}{3}
-\contentsline {figure}{Figure\nobreakspace 2.2. \ignorespaces Stretch Coordinate Relation Diagram \cite {lima2012thesis}}{4}
-\contentsline {figure}{Figure\nobreakspace 2.3. \ignorespaces Single Element, Two Node Beam}{25}
-\contentsline {figure}{Figure\nobreakspace 2.4. \ignorespaces Single Element, Two Node Stretch Displacement Diagram}{26}
-\contentsline {figure}{Figure\nobreakspace 2.5. \ignorespaces Single Element, Two Node Bending Displacement Diagram}{28}
-\contentsline {figure}{Figure\nobreakspace B.1. \ignorespaces Normal Strain in a 1D Rod}{62}
-\contentsline {figure}{Figure\nobreakspace B.2. \ignorespaces Shear Strain over a Square \cite {boulderstrain4}}{64}
+\contentsline {figure}{Figure\nobreakspace 2.1. \ignorespaces Cantilever beam with rotation about a central hub.}{4}
+\contentsline {figure}{Figure\nobreakspace 2.2. \ignorespaces Stretch coordinate relation diagram.}{4}
+\contentsline {figure}{Figure\nobreakspace 2.3. \ignorespaces Single element, two node beam.}{25}
+\contentsline {figure}{Figure\nobreakspace 2.4. \ignorespaces Single element, two node stretch displacement diagram.}{26}
+\contentsline {figure}{Figure\nobreakspace 2.5. \ignorespaces Single element, two node bending displacement diagram.}{28}
+\contentsline {figure}{Figure\nobreakspace 3.1. \ignorespaces Cantilever beam coupling about a central hub.}{51}
+\contentsline {figure}{Figure\nobreakspace 3.2. \ignorespaces Harmonic interaction curves: Eigenfrequency $\omega $ vs. hub rotation speed $\Omega _0$.}{54}
+\contentsline {figure}{Figure\nobreakspace 3.3. \ignorespaces U displacement at the beam tip with forcing of V at the hub on all beams.}{57}
+\contentsline {figure}{Figure\nobreakspace 3.4. \ignorespaces V displacement at the beam tip with forcing of V at the hub on all beams.}{57}
+\contentsline {figure}{Figure\nobreakspace 3.5. \ignorespaces W displacement at the beam tip with $\beta =10^{3}$.}{58}
+\contentsline {figure}{Figure\nobreakspace 3.6. \ignorespaces W displacement at the beam tip with $\beta =10^{-1}$.}{58}
+\contentsline {figure}{Figure\nobreakspace B.1. \ignorespaces Normal strain in a 1D rod.}{72}
+\contentsline {figure}{Figure\nobreakspace B.2. \ignorespaces Shear strain over a square.}{74}
